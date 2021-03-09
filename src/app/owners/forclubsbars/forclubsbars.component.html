@@ -1,0 +1,74 @@
+<div class="nohdmenus">
+    <app-headerafterlogin></app-headerafterlogin>
+</div>
+
+<div class="clubinfos bgachanges">
+    <div class="main-containersite">
+        <div class="clubshare editableparts cbsgridsspcs">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gridicosmain" [routerLink]="['/owners-manage/managevenues']">
+                        <a [routerLink]="['/owners-manage/managevenues']">
+                            <img src="./assets/img/manage_event.png">
+                            <p>Manage Venue</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4" *ngIf="userDetail.venueType == 'club&Bars'">
+                    <div class="gridicosmain" [routerLink]="['/owners-manage/createevents']">
+                        <a [routerLink]="['/owners-manage/createevents']">
+                            <img src="./assets/img/manage_eventse.png">
+                            <p>Manage Events</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="gridicosmain">
+                        <a *ngIf="!userDetail.createOffer" [routerLink]="['/owners-manage/createliveoffer']">
+                            <img src="./assets/img/manage_offer.png">
+                            <p>Manage Live Offers</p>
+                        </a>
+                        <a *ngIf="userDetail.createOffer" [routerLink]="['/owners-manage/manageliveofers']">
+                            <img src="./assets/img/manage_offer.png">
+                            <p>Manage Live Offers</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4" *ngIf="userDetail.venueType != 'club&Bars'">
+                    <div class="gridicosmain" [routerLink]="['/owners-manage/managebookings']">
+                        <a href="#" [routerLink]="['/owners-manage/managebookings']">
+                            <img src="./assets/img/manage_booking.png">
+                            <p>Manage Bookings</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4" *ngIf="userDetail.venueType == 'club&Bars'">
+                    <div class="gridicosmain" [routerLink]="['/owners-manage/licencedsecurity']">
+                        <a href="#" [routerLink]="['/owners-manage/licencedsecurity']">
+                            <img src="./assets/img/securityico.png">
+                            <p>Licenced Security Crowd Controller Hire</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="gridicosmain" [routerLink]="['/owners-manage/sendnotification']">
+                        <a href="#" [routerLink]="['/owners-manage/sendnotification']">
+                            <img src="./assets/img/notification.png">
+                            <p>Send Notification</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+
+    </div>
+</div>
+
+<app-footerowner></app-footerowner>

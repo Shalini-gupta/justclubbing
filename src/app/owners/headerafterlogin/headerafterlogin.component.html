@@ -1,0 +1,45 @@
+<header class="navfixed">
+    <div class="main-containersite">
+        <div class="logolanggen ownlgo">
+            <div class="logosdv">
+                <a href="#"><img src="./assets/img/logo.png"></a>
+            </div>
+
+        </div>
+
+        <div class="homemenucl ownermenu">
+            <ul>
+                <li><a href="#" [routerLink]="['/owners-manage/managevenues']" routerLinkActive="active-link">Manage
+                        Venue </a></li>
+                <li class="mgboks"><a href="#" [routerLink]="['/owners-manage/manageevents']"
+                        routerLinkActive="active-link">Manage Bookings</a></li>
+                <li><a href="#" [routerLink]="['/owners-manage/manageevents']" routerLinkActive="active-link">Manage
+                        Events</a></li>
+                <li><a href="#" [routerLink]="['/owners-manage/manageliveofers']" routerLinkActive="active-link">Manage
+                        Live Offers</a></li>
+                <li><a href="#" [routerLink]="['/owners-manage/licencedsecurity']"
+                        routerLinkActive="active-link">Licenced Security Crowd Controller Hire</a></li>
+                <li><a href="#" [routerLink]="['/owners-manage/manageevents']" routerLinkActive="active-link">Send
+                        Notification</a></li>
+
+            </ul>
+        </div>
+
+
+
+        <div class="userinfoprohead ownuser">
+
+            <div class="thumbusersh">
+                <a [routerLink]="['/favourites']">
+                    <img *ngIf="!userData" src="./assets/img/userpics.jpg">
+                    <img *ngIf="userData" src="{{userData?.profilePic}}">
+                </a>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+</header>

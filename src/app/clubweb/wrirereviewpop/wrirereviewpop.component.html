@@ -1,0 +1,24 @@
+<p class="crosicos" type="text" mat-dialog-close> X</p>
+<div class="simpleformpages">
+   <div class="">
+      <form [formGroup]="reviewForm" (ngSubmit)="reviewSubmit()">
+         <div class="row">
+            <div class="col-md-12">
+               <h5 style="margin-bottom: 30px;">Review</h5>
+               <div class="setformsicos">
+                  <mat-form-field>
+                     <textarea matInput placeholder="Share few words of your own experience..." formControlName="comment"></textarea>
+                     <mat-error
+                        *ngIf="reviewSubmitCheck && reviewForm.controls.comment.hasError('required')">
+                        Offer Title is required
+                     </mat-error>
+                  </mat-form-field>
+               </div>
+            </div>
+            <div class="setformsicos">
+               <button mat-button class="yellowbtsshw">SUBMIT</button>
+            </div>
+         </div>
+      </form>
+   </div>
+</div>

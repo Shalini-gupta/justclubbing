@@ -1,0 +1,164 @@
+<div class="nohdmenus">
+                <app-headerloginbackbtn></app-headerloginbackbtn>
+           </div>
+
+<div class="venuslidersectionsd manageslid">
+
+        <section id="demos" class="agentssliders">
+
+                        <div class="featrevts spcldtls">
+                                        <div class="funthumbs">
+                                         
+
+                                        </div>
+                        
+                                   </div>
+
+                <div class="owl-carousel jobavails owl-theme">
+                        
+                    <div class="item">
+                        <div class="featrevts spcldtls">
+                                <div class="funthumbs">
+                                 
+                                    <div class="thumbareasupd">
+                                            <img src="./assets/img/honeysingh.jpg">
+                                    </div>
+                                </div>
+                           </div>
+                    </div>
+
+                    <div class="item">
+                       <div class="funthumbs">
+                        <div class="thumbareasupd">
+                                <img src="./assets/img/honeysingh.jpg">
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="funthumbs">
+                                <div class="thumbareasupd">
+                                        <img src="./assets/img/honeysingh.jpg">
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="funthumbs">
+                                <div class="thumbareasupd">
+                                        <img src="./assets/img/honeysingh.jpg">
+                                </div>
+                        </div>               
+                    </div>
+
+                    <div class="item">
+                        <div class="funthumbs">
+                                <div class="thumbareasupd">
+                                        <img src="./assets/img/honeysingh.jpg">
+                                </div>
+                        </div>  
+                    </div>
+
+
+                    <div class="item">
+                        <div class="funthumbs">
+                                <div class="thumbareasupd">
+                                        <img src="./assets/img/honeysingh.jpg">
+                                </div>
+                        </div>  
+                    </div>
+
+                    <div class="item">
+                        <div class="funthumbs">
+                                <div class="thumbareasupd">
+                                        <img src="./assets/img/honeysingh.jpg">
+                                </div>
+                        </div>  
+                    </div>
+                </div>
+         </section>
+
+</div>
+
+<div class="clubinfos">
+   <div class="main-containersite">
+        <div class="clubshare">
+                <div class="dtaclub">
+                        <h4>Live Music Concert</h4>
+                        <p><img src="./assets/img/loc.png"> 850 Great Eastern Highway REDCLIFFE WA 6104</p>
+                        <p class="evdtsplr"><img src="./assets/img/calendar.png"> <strong>29 Nov, 2019</strong> <label>6:00PM to 10:00PM</label></p>
+                </div>
+
+                
+        </div>
+
+        <div class="agerrestri">
+                <p><strong>Age Limit : </strong> <img src="./assets/img/agelms.png"></p>
+        </div>
+
+        <div class="abuts">
+                <h4>Description</h4>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+                unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                It has survived not only five centuries, but also the leap into electronic typesetting, 
+                remaining essentially unchanged. It was popularised in the 1960s with the release of 
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply 
+                dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+                and scrambled it to make a type specimen book. It has survived not only five centuries,
+                but also the leap into electronic typesetting, remaining essentially unchanged. It was 
+                popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
+                passages, and more recently with desktop publishing software like Aldus PageMaker 
+                including versions of Lorem Ipsum.</p>
+        </div>
+
+        <div class="abuts">
+                <h4>Ticket Details</h4>
+
+
+                <div class="tablequnatiselect">
+                        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                                <!--- Note that these columns can be defined in any order.
+                                      The actual rendered columns are set as a property on the row definition" -->
+                              
+                                <!-- Position Column -->
+                               
+                                <!-- Name Column -->
+                                <ng-container matColumnDef="tickettype">
+                                  <th mat-header-cell *matHeaderCellDef> Ticket Type </th>
+                                  <td mat-cell *matCellDef="let element"> {{element.tickettype}} </td>
+                                </ng-container>
+                              
+                                 <!-- Symbol Column -->
+                                 <ng-container matColumnDef="price">
+                                        <th mat-header-cell *matHeaderCellDef> Ticket Price </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+                                 </ng-container>
+
+                                <!-- Weight Column -->
+                                <ng-container matColumnDef="qty">
+                                  <th mat-header-cell *matHeaderCellDef> Qty </th>
+                                  <td mat-cell *matCellDef="let element"> {{element.qty}}</td>
+                                </ng-container>
+                              
+                               
+                              
+                                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                              </table>
+                </div>
+
+        </div>
+
+        <div class="setformsicos mgofrs">
+                <button mat-button class="yellowbtsshw" [routerLink]="['/owners-manage/editevents']"><img  src="./assets/img/editpencd.png">Edit</button>
+        </div> 
+
+      
+   </div>
+</div>
+
+<app-footerowner></app-footerowner>

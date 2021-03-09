@@ -1,0 +1,4717 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/OpenSans-Regular.ttf');
+  }
+  
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: semi-bold;
+    font-weight: 600;
+    src: url('./assets/fonts/OpenSans-SemiBold.ttf');
+  }
+  
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: bold;
+    font-weight: 700;
+    src: url('./assets/fonts/OpenSans-Bold.ttf');
+  }
+  
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: extra-bold;
+    font-weight: 900;
+    src: url('./assets/fonts/OpenSans-ExtraBold.ttf');
+  }
+
+
+  @font-face {
+    font-family: 'Digital-7 Mono';
+ 
+    src: url('./assets/fonts/digital-7 (mono).ttf');
+  }
+
+  
+
+  .clubinfoname.vchrinfose p.vclfts b {
+    font-family: 'Digital-7 Mono';
+    font-weight: 100;
+}
+
+.mat-select-panel{
+    max-height: 300px;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+
+
+.main-containersite {
+    margin: 0 auto;
+    max-width: 1310px;
+    padding: 0 15px;
+}
+
+
+header.clbhdr {
+    background: #000;
+    float: left;
+    width: 100%;
+    padding: 5px 0;
+}
+
+header.navfixed {
+    position: fixed;
+    background: #000;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    transition: all ease 0.9s;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+ul,li,h1,h2,h3,h4,h5,h6,a,p{
+    margin:0;
+    padding:0;
+}
+
+a{
+    text-decoration:none;
+}
+
+
+.logosdv {
+    width: 69%;
+    float: left;
+}
+
+.logosdv img {
+    width: 100%;
+}
+
+.logolanggen {
+    float: left;
+    width: 8%;
+}
+
+.selctcountry {
+    float: left;
+    width: 10%;
+    margin-left: 22px;
+    margin-top: 6px;
+}
+
+.selctcountry .mat-form-field-appearance-legacy .mat-form-field-label{
+    color: #fff;
+}
+
+.selctcountry  .mat-select-arrow {
+    color: #fff;
+}
+
+.homemenucl {
+    float: left;
+    width: 57%;
+    display: flex;
+    flex-direction: column;
+    height: 71px;
+}
+
+.homemenucl ul {
+    margin: auto;
+    margin-right: 0px;
+}
+
+.homemenucl ul li {
+    display: inline-block;
+    margin: 0 25px;
+}
+
+.homemenucl ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.homemenucl ul li a:hover {
+    color: #feca05;
+}
+
+.signlogcmp {
+    float: right;
+    width: auto;
+    height: 72px;
+    display: flex;
+    flex-direction: row;
+}
+
+.signlogcmp a {
+    margin: auto;
+}
+
+.signlogcmp a.transpbtnsd {
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 11px 16px;
+    border-radius: 41px;
+    outline: none;
+    font-size: 14px;
+    box-shadow: inset #ffffff 0px 0px 1px 0.4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.signlogcmp a.transpbtnsd:hover {
+    background: #fff;
+    color: #000;
+}
+
+.signlogcmp a.yellowglobtn {
+    background: #feca05;
+    color: #000;
+    padding: 12px 32px;
+    border-radius: 28px;
+    font-size: 14px;
+}
+
+.homemenucl ul li a.active-link {
+    position: relative;
+}
+
+.homemenucl ul li a.active-link:after {content: "";position: absolute;border-bottom: 2px solid #feca05;height: 4px;width: 22px;bottom: -5px;left: 0;right: 0;margin: auto;}
+
+.sldhome {
+    background: url(./assets/img/bghme.jpg);
+    float: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 433px;
+    background-size: cover;
+}
+
+.serachsliders {
+    margin: auto;
+    width: 58%;
+}
+
+.designboxsd .mat-form-field-appearance-legacy .mat-form-field-label {
+    color: #000;
+}
+
+.designboxsd .mat-form-field {
+    background: #fff;
+    height: 44px;
+    width: 100%;
+}
+
+.designboxsd .mat-form-field input {
+    color: #000;
+}
+
+.designboxsd {
+    display: flex;
+    width: 57%;
+    margin: auto;
+}
+
+.designboxsd button.mat-button.mat-button-base {
+    background: #feca05;
+    border-radius: 0px;
+    margin-left: 9px;
+    padding: 0 29px;
+}
+
+.designboxsd input.mat-input-element{
+    margin-top: 5px;
+}
+
+.designboxsd .mat-form-field-appearance-legacy .mat-form-field-underline,
+.designboxsd .mat-form-field-appearance-legacy .mat-form-field-ripple{
+    height: 0px;
+}
+
+.serachsliders h4 {
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Open Sans';
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.srcdins {
+    display: flex;
+    background: #fff;
+    width: 78%;
+    padding-left: 9px;
+}
+
+.srcdins input {
+    border: none;
+    font-size: 15px;
+    padding: 14px 8px;
+    width: 100%;
+    outline: none;
+}
+
+.srcdins mat-icon.mat-icon.notranslate.material-icons.mat-icon-no-color {
+    margin: 0;
+    padding: 0;
+    line-height: 53px;
+    color: #0c0c0c;
+}
+
+
+.eventssections {
+    float: left;
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+
+
+.gridcommn {
+    float: left;
+    width: 32%;
+    margin-right: 16px;
+}
+
+app-clubandbar .gridcommn {
+    float: left;
+    width: 32%;
+    margin-right: 16px;
+}
+
+.funthumbs img {
+    max-width: 100%;
+    margin: auto;
+    max-height: 100%;
+    transform: scale(2.2);
+}
+
+.recbtns {
+    display: flex;
+    position: absolute;
+    background: rgba(182, 2, 228, 0.55);
+    flex-direction: row;
+    padding: 6px 17px;
+}
+
+.funthumbs .recbtns img {
+    width: 20px;
+}
+
+.venuslidersectionsd .funthumbs .recbtns img {
+    width: 20px;
+    max-width: initial;
+}
+
+.recbtns img {
+    transform: inherit;
+}
+
+.recbtns p {
+    color: #fff;
+    text-transform: uppercase;
+    margin: auto;
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+.evtdtsl {
+    float: left;
+    width: 100%;
+}
+
+.evtdtsl h5 {
+    font-size: 16px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.imglcs {
+    display: flex;
+}
+
+.imglcs p {
+    margin: auto;
+    margin-left: 7px;
+    color: #706868;
+    font-size: 14px;
+}
+
+.featrevts {
+    float: left;
+    width: 100%;
+}
+
+.funthumbs {
+    float: left;
+    width: 100%;
+}
+
+.eventssetsdis {
+    float: left;
+    width: 100%;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #ddd;
+    margin: 0 0 20px 0;
+}
+
+.viewhdand-bts {
+    float: left;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.viewhdand-bts h6.main-headnorms {
+    float: left;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.viewhdand-bts button.yellowbtsshw {
+    float: right;
+    background: #feca05;
+    border-radius: 23px;
+    padding: 0 25px;
+    margin-right: 16px;
+}
+
+.evtallgrid {
+    float: left;
+    width: 100%;
+}
+
+.thumbareasupd {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    height: 210px;
+    overflow: hidden;
+    background: #000;
+    flex-direction: column; 
+}
+
+.tickteds img {
+    width: 100%;
+}
+
+.ticketsvaries {
+    position: relative;
+    width: 100%;
+    min-height: 153px;
+}
+
+.ticinfoshowms {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 15px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.tickteds {
+    width: 100%;
+    float: left;
+}
+
+.vcrinfos {
+    display: flex;
+    height: 52px;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 15px;
+}
+
+.vcrinfos button.whtbtns {
+    margin: auto;
+    margin-right: 0;
+    background: #fff;
+    border-radius: 20px;
+    outline: none;
+    position: absolute;
+    right: 10px;
+    color: #000;
+}
+
+.ticinfoshowms p, .ticinfoshowms strong {
+    color: #fff;
+}
+
+.ticinfoshowms strong {
+    font-weight: 500;
+    margin-top: 0px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lcdistant {
+    display: flex;
+    float: right; 
+}
+
+.lcdistant p {
+    float: right;
+    margin: auto;
+    margin-left: 9px;
+    margin-right: 0;
+}
+
+.lcdistant img {
+    margin: auto;
+    float: right;
+    margin-right: 0px;
+}
+
+.vcrinfos p {
+    margin: auto;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.clubinfoname {
+    float: left;  
+}
+
+.clubinfoname p {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mat-button.yellowbtsshw {
+    background: #feca05;
+    border-radius: 23px;
+    padding: 2px 25px;
+}
+
+.eventbanners {
+    float: left;
+    width: 100%;
+    background: url(./assets/img/rockimgs.jpg);
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.clubinfoname.vchrinfose.mgtmds {
+    margin-top: 20px;
+}
+
+.clubinfoname.vchrinfose p.vclfts.vcnt b {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.clubinfoname.vchrinfose.tmlf {
+    margin-top: 20px;
+}
+
+.clubinfoname.vchrinfose {
+    width:64%;
+}
+
+.banncts {
+    margin: auto;
+    margin-left: 7%;
+}
+
+.banncts h5 {
+    color: #fff;
+    font-size: 33px;
+    margin-bottom: 28px;
+    font-family: 'Open Sans';
+    font-weight: 100;
+}
+
+.eventssetsdis:nth-child(6) {
+    margin-bottom: 0;
+    border-bottom: 0px;
+}
+
+.citienears {
+    float: left;
+    width: 100%;
+    padding: 40px 0 0;
+}
+
+.locationgrids {
+    float: left;
+    width: 50%;
+}
+
+.locationgrids ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.locationgrids ul li {
+    float: left;
+    width: 33.33%;
+    margin-bottom: 20px
+}
+
+.citienears h3 {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding: 0 0 5px 0;
+}
+
+.citienears h3:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 170px;
+    height: 2px;
+    background-color: #000;
+}
+
+.locationgrids ul li a {
+    color: #000;
+}
+
+.appdownlod {
+    box-sizing: border-box;
+    float: left;
+    width: 100%;
+    padding: 60px 0;
+    position: relative;
+}
+
+.aboveblank {
+    background: #f0f0f0;
+    float: left;
+    width: 100%;
+    height: 415px;
+}
+
+.downloadappct {
+    float: left;
+    width: 40%;
+    padding: 110px 0px 0px 75px;
+    box-sizing: border-box;
+}
+
+.mobilebga {
+    float: left;
+    width: 50%;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.mobilebga img {
+    width: 50%;
+    position: absolute;
+    bottom: 20px;
+}
+
+.appbtpla {
+    display: flex;
+    flex-direction: row;
+    float: left;
+    margin-top: 25px;
+}
+
+.appbtpla a {
+    float: left;
+    width: 30%;
+    margin: 10px 23px 10px 0px;
+}
+
+.appbtpla a img {
+    width: 100%;
+}
+
+.newsltrs {
+    float: left;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+
+.fromsnews {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.fromsnews .mat-form-field {
+    width: 93%;
+}
+
+.mainhd-newstags {
+    text-align: center;
+    float: left;
+    width: 100%;
+}
+
+.mainhd-newstags h2 {
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+/* .mainhd-newstags h2:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 110px;
+    height: 2px;
+    background-color: #000;
+    margin: auto;
+} */
+
+.mainhd-newstags p {
+    font-size: 17px;
+}
+
+.mat-button.blackrelbtsshw {
+    background: #000;
+    color: #feca05;
+    font-weight: 100;
+    padding: 2px 40px;
+    border-radius: 22px;
+}
+
+mat-grid-tile.subsbtsnd.mat-grid-tile {
+    position: relative;
+    float: left;
+    width: 100% !important;
+    text-align: center;
+    padding: 28px 0 !important;
+}
+
+.fromsnews .mat-form-field-label-wrapper{
+    text-indent: 24px;
+}
+
+.fromsnews  input{
+    text-indent: 20px;
+}
+
+.fromsnews i.far {
+    position: absolute;
+    left: 13px;
+    top: 66px;
+}
+
+.fromsnews .mat-form-field-infix {
+    width: 236px;
+}
+
+.webfooters {
+    background: url(./assets/img/foobga.jpg);
+    float: left;
+    width: 100%;
+    padding: 40px 0 0 0;
+    background-size: cover;
+}
+
+.widgetsfoo h3 {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+ 
+.widgetsfoo {
+    float: left;
+    width: 100%;
+}
+
+.widgetsfoo ul {
+    float: left;
+    width: 50%;
+    list-style-type: none;
+}
+
+.widgetsfoo ul li a {
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.widgetsfoo ul li {
+    margin-bottom: 20px;
+}
+
+.widgetsfoo ul li a:hover {
+    color: #feca05;
+}
+
+.socialflows ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.socialflows ul li a {
+    font-size: 20px;
+}
+
+.fulldisd {
+    float: left;
+    width: 100%;
+}
+
+.copyrights {
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.copyrights p {
+    color: #585858;
+    font-size: 14px;
+}
+
+
+/* css for Venues Page */
+
+.filterslfts ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.filterslfts h4 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.filterslfts .mat-checkbox-frame{
+    border-width: 1.4px;
+}
+
+.wishshwms ul li a i {
+    font-size: 17px;
+}
+
+.filterslfts {margin-bottom: 40px;}
+
+.filterareasven {
+    float: left;
+    width: 100%;
+    margin: 40px 0;
+}
+
+.filterareasven .mat-checkbox-frame {
+    border-color: rgba(196, 196, 196, 0.54);
+}
+
+.filterareasven  .mat-checkbox-checked.mat-accent .mat-checkbox-background, .filterareasven  .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: #feca05;
+}
+
+.filterareasven .mat-checkbox-checkmark-path {
+    stroke: #000000!important;
+}
+
+.filterslfts ul li {
+    margin-bottom: 27px;
+    font-size: 14px;
+}
+
+.bdrghtd {
+    border-right: 1px solid #ddd;
+}
+
+.citiylocationswise {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+}
+
+.citiylocationswise h4 {
+    font-size: 20px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.citiylocationswise h4 p.citydts {margin-left: 9px;}
+
+/* event thumbcomps */
+
+.wishshwms {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.venuslidersectionsd .wishshwms ul li img {
+    width: 14px;
+    height: 16px;
+}
+
+.openstats img {
+    width: 36px;
+    transform: inherit;
+}
+
+.venuslidersectionsd .funthumbs .openstats img {
+    width: 36px;
+}
+
+.clubspecific ul li img {
+    width: 17px;
+}
+
+.openstats {
+    position: absolute;
+    bottom: 8px;
+    left: 7px;
+}
+
+.shwtimesstats {
+    position: absolute;
+    right: 8px;
+    bottom: 6px;
+}
+
+.featrevts.spcldtls .funthumbs {
+    position: relative;
+}
+
+.wishshwms ul li {
+    display: inline-block;
+    margin: 9px 7px;
+    background: #fff;
+    border-radius: 100%;
+    width: 33px;
+    height: 33px;
+    text-align: center;
+    line-height: 32px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.wishshwms ul {
+    list-style-type: none;
+}
+
+
+.shwtimesstats p {
+    color: #feca05;
+    font-weight: 500;
+}
+
+.shwtimesstats span {
+    color: #fff;
+    font-size: 14px;
+    display: block;
+}
+
+
+.featrevts.spcldtls .evtdtsl h5 {
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    margin: 16px 0 0 0px;
+}
+
+.setformsicos.lefticodates .mat-form-field-prefix, .setformsicos.lefticodates .mat-form-field-suffix {
+    position: absolute;
+    top: 17px;
+    left: 0;
+    opacity: 0;
+}
+
+.clubspecific ul {
+    list-style-type: none;
+}
+
+.clubspecific ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.clubspecific {
+    float: right;
+    margin-top: 9px;
+}
+
+.featrevts.spcldtls .imglcs img {
+    margin: 0 0 auto 0;
+}
+
+.featrevts.spcldtls .imglcs {
+    float: left;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.distanceshw {
+    float: right;
+    margin-top: 10px;
+}
+
+.wishshwms ul li a i.fas {
+    color: #e91515;
+}
+
+.wishshwms ul li a {
+    font-size: 20px;
+}
+
+.featrevts.spcldtls .thumbareasupd:after {
+    position: absolute;
+    content: "";
+    background: rgba(0,0,0,0.1);
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.shwtimesstats, .openstats, .wishshwms, .recbtns{
+    z-index: 2;
+}
+
+.shwtimesstats {
+    text-align: right;
+}
+
+.featrevts.spcldtls {
+    margin-bottom: 38px;
+    float: left;
+    width: 100%;
+}
+
+.pagiinationgrds {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.pagiinationgrds nav {
+    display: inline-block;
+}
+
+.pagiinationgrds a.page-link {border: none;border-right: 1px solid #ddd;border-left: 1px solid #ddd;color: #bab6b6;}
+
+.pagiinationgrds ul li:nth-child(1) a.page-link {
+    border-left: 0px;
+}
+
+.pagiinationgrds .page-item.active .page-link {
+    background: transparent;
+    border: none;
+    color: #000;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.midcenterfrms.helpfroms .setformsicos .mat-select-value-text {
+    padding: 0 26px;
+}
+
+.pagiinationgrds .page-item:last-child .page-link {
+    border-right: 0px;
+}
+
+.pagiinationgrds a.page-link:hover {
+    color: #000;
+}
+
+.wishshwms ul li i.far {
+    color: #000;
+}
+
+.featrevts.spcldtls .evtdtsl h5:hover {
+    color: #65179d;
+}
+
+.venuslidersectionsd .thumbareasupd {
+    overflow: hidden;
+    height: 100%;
+}
+
+.venuslidersectionsd {
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.venuslidersectionsd .openstats {
+    right: 13px;
+    left: initial;
+}
+
+.venuslidersectionsd .featrevts.spcldtls .funthumbs:after{
+z-index: 8;
+}
+
+.shwtimesstats, .openstats, .wishshwms, .recbtns {
+    z-index: 9;
+}
+
+.shwtimesstats.ratingssts {
+    left: 0px;
+    right: inherit;
+}
+
+.shwtimesstats.ratingssts ul {
+    list-style-type: none;
+    float: left;
+}
+
+.shwtimesstats.ratingssts ul li {
+    display: inline-block;
+    color: #ddd;
+}
+
+.shwtimesstats.ratingssts ul li.active {
+    color: #feca05;
+}
+
+.shwtimesstats.ratingssts p.rvcounts {
+    float: left;
+    color: #fff;
+    margin-left: 10px;
+}
+
+section.agentssliders {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+section.agentssliders .featrevts.spcldtls {
+    position: absolute;
+    margin: 0;
+}
+
+.venuslidersectionsd .funthumbs {
+    height: 473px;
+}
+
+
+/* club infos details */
+
+.clubshare {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.clubinfos {
+    float: left;
+    width: 100%;
+}
+
+.dtaclub {
+    float: left;
+    width: 50%;
+}
+
+.dtashare {
+    float: left;
+    text-align: right;
+    width: 50%;
+}
+
+.dtashare ul {
+    list-style-type: none;
+}
+
+.dtashare ul li {
+    display: inline-block;
+    margin-left: 19px;
+}
+
+.dtashare p {
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+.dtaclub h4 {
+    font-size: 21px;
+    margin-bottom: 11px;
+    font-weight: 700;
+    font-family: 'Open Sans';
+}
+
+.dtaclub p {
+    display: flex;
+    flex-direction: row;
+    color: #656363;
+}
+
+.dtaclub p img {
+    margin: auto 10px auto 0;
+}
+
+.opendtaclbs {
+    float: left;
+    width: 100%;
+    margin: 33px 0;
+}
+
+.dropicoshw {
+    display: flex;
+    flex-direction: row;
+    width: 47%;
+    box-shadow: #c8bdbd 0px 2px 9px 0px;
+    margin: auto;
+    padding: 0 13px;
+}
+
+.dropicoshw .mat-select.shrgtson {
+    width: 49%;
+    position: absolute;
+    right: 7px;
+}
+
+.dropicoshw {
+    position: relative;
+}
+
+.dropicoshw p{
+    padding: 15px 0;
+}
+
+.dropicoshw p span {
+    color: #615e5e;
+font-weight: 500;
+font-size: 13.5px;
+margin: 0 0 0 0px; 
+float: right;
+}
+
+.dropicoshw img {
+    margin: auto 10px auto 0px;
+    width: 26px;
+}
+
+.dropicoshw p {
+    margin: auto 0;
+    color: #38ac28;
+    font-weight: 500;
+}
+
+.centerdropsd {
+    margin: 0 auto;
+    width: 67%;
+    float: none;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.clunbamenties {
+    float: left;
+    width: 100%;
+    margin-top: 37px;
+}
+
+.clunbamenties h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.amnsets ul {
+    list-style-type: none;
+}
+
+.amnsets ul li {
+    display: flex;
+    float: left;
+    width: 20%;
+    min-height: 52px;
+}
+
+.amnsets ul li img {
+    margin: auto 11px auto 0px;
+    width: 22px;
+}
+
+.amnsets ul li p {
+    margin: auto 0;
+}
+
+.clubinfos h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.amnsets {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.abuts {
+    float: left;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.maplocatesd img {
+    width: 100%;
+}
+
+.evetsindoonyls .gridcommn {
+    width: 15.3%;
+}
+
+.ratingreviewsclienst {
+    float: left;
+    width: 100%;
+}
+
+
+.clienpans {
+    text-align: center;
+    position: relative;
+}
+
+.companypanel a {
+    color: #000;
+}
+
+.coments-olys {
+    width: 100%;
+}
+
+.coments-olys {
+    padding: 10px;
+    padding-top: 54px;
+    float: left;
+}
+
+.thumbstesto img {
+    width: 100px;
+    margin-bottom: 30px;
+    height: 100px;
+}
+.filterolysets {
+    margin-bottom: 30px;
+    float: left;
+}
+
+.clients-olynames {
+    background: #f1f1f1;
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 36px 0 12px 0;
+    margin-top: 88px;
+    min-height: 140px;
+}
+
+.owl-carousel .owl-item .coments-olys p {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    color: #504949;
+    min-height: 102px;
+}
+
+.clroundimgs {
+    margin: 0 auto;
+    width: 100px;
+    overflow: hidden;
+    height: 100px;
+    border: 2px solid #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -57px;
+    border-radius: 100%;
+    box-shadow: #c3c3c3 0px 0px 6px 0px;
+}
+
+.clients-olynames p {
+    margin: 20px 0 0;
+    font-weight: 500;
+}
+
+p.companypos {
+    margin: 0;
+    font-size: 12px;
+    color: #017d89;
+}
+
+p.desigolysd {
+    margin: 0;
+    font-size: 12px;
+    color: #464646;
+}
+
+.companypanel {
+    border: 1px solid #ddd;
+    float: left;
+    width: 80%;
+    border-radius: 10px;
+    min-height: 330px;
+    margin: auto auto auto 10%;
+}
+
+.companypanel .shwtimesstats.ratingssts {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.companypanel .shwtimesstats.ratingssts ul {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.companypanel .shwtimesstats.ratingssts ul li.active {
+    color: #f6c405;
+}
+
+.ratingreviewsclienst .owl-theme .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 9999;
+}
+
+.ratingreviewsclienst {
+    position: relative;
+}
+
+.ratingreviewsclienst .owl-carousel .owl-nav button.owl-prev {
+    left: 0;
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    border: 1px solid #000;
+    background: #000;
+    border-radius: 100%;
+    color: #fff;
+    line-height: 17px;
+    font-size: 38px;
+    margin: 0;
+}
+
+.ratingreviewsclienst .owl-carousel .owl-nav button.owl-next {
+    right: 0;
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    border: 1px solid #000;
+    background: #000;
+    border-radius: 100%;
+    color: #fff;
+    line-height: 13px;
+    font-size: 38px;
+    margin: 0;
+}
+
+
+.clienpans:before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+    background: url(./assets/img/quote.png);
+    background-repeat: no-repeat;
+    top: 13px;
+}
+
+.evetsindoonyls .funthumbs {
+    height: 125px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+footer {
+    float: left;
+    width: 100%;
+}
+
+.shwtimesstats p.dateevtsd {
+    color: #fff;
+    text-align: left;
+}
+
+.eventslistssmall .thumbareasupd {
+    height: 200px;
+}
+
+.eventslistssmall .evtdtsl p {
+    color: #999595;
+    font-size: 13px;
+}
+
+
+.eventslistssmall .featrevts.spcldtls .evtdtsl h5 {
+    margin-bottom: 5px;
+}
+
+.dtaclub p.evdtsplr img {
+    width: 19px;
+}
+
+.dtaclub p.evdtsplr strong, .dtaclub p.evdtsplr label {
+    margin: auto 5px;
+}
+
+.dtaclub p.evdtsplr strong {
+    border-right: 1px solid #000;
+    padding-right: 10px;
+    font-weight: 500;
+}
+
+.dtaclub p.evdtsplr {
+    margin-top: 16px;
+    color: #000;
+}
+
+.dtashare ul li img {
+    width: 27px;
+}
+
+.butcentertickt {
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 51px 0;
+}
+
+.butcentertickt .yellowbtsshw {
+    border-radius: 28px;
+    padding: 5px 10%;
+    text-transform: uppercase;
+}
+
+p.crosicos {
+    float: right;
+    background: #ad131300;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.binsdds .dtaclub {
+    width: 100%;
+}
+
+.binsdds .clubshare {
+    border: none;
+}
+
+.binsdds {
+    width: 613px;
+}
+
+.newbs {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.binsdds .whtshaoswstcks {
+    box-shadow: #c2bcbc 0px 0px 7px 0px;
+    padding: 4px 18%;
+    border-radius: 20px;
+    color: #0190ff;
+    outline: none;
+}
+
+.binsdds .butcentertickt .yellowbtsshw {
+    padding: 4px 18%;
+    outline: none;
+}
+
+.tablequnatiselect table.mat-table {
+    width: 100%;
+}
+
+.tablequnatiselect {
+    margin-top: 20px;
+    float: left;
+    width: 100%;
+}
+
+.tablequnatiselect table.mat-table {
+    box-shadow: #ccc2c2 0px 0px 6px 0px;
+}
+
+.tablequnatiselect table.mat-table thead {
+    background: #000;
+    color: #fff;
+}
+
+.tablequnatiselect .mat-header-cell {
+    color: #fff;
+}
+
+.agerrestri {
+    float: left;
+    width: 100%;
+    margin: 15px 0 50px 0;
+}
+
+.agerrestri strong {
+    margin-right: 10px;
+}
+
+
+/* css for tickets */
+
+.clubinfos.tickdts .main-containersite {
+    max-width: 1131px;
+}
+
+.dtashare.qrsc img {
+    width: 79px;
+}
+
+.tcgrids {
+    float: left;
+    width: 100%;
+}
+
+.amountdispy {
+    float: left;
+    width: 100%;
+    margin-bottom: 22px;
+    padding-bottom: 20px;
+    border-bottom: 20px solid #010101;
+}
+
+.venudts {
+    float: left;
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+
+.tcgrids .agerrestri {
+    margin: 0;
+}
+
+
+p.vnmes {
+    color: #9b9b9b;
+    font-size: 14px;
+}
+
+p.rfpol {
+    float: left;
+    font-size: 14px;
+}
+
+p.amtpaid {
+    float: right;
+    font-size: 14px;
+}
+
+.venudts h6 {
+    font-weight: 400;
+}
+
+p.tcqyt label {
+    width: 120px;
+    margin: 0;
+}
+
+.amountdispy strong {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.tcgrids .row {
+    margin: 0;
+}
+
+p.rfpol label, p.amtpaid label {
+    color: #9b9b9b;
+    margin-right: 20px;
+}
+
+.venudts.spctp {
+    margin-top: 10px;
+}
+
+.tcgrids .agerrestri strong {
+    display: block;
+    font-weight: 400;
+    color: #9b9b9b;
+    font-size: 14px;
+}
+
+.tcgrids .agerrestri img {
+    margin: 4px 18px;
+}
+
+.clubinfos.tickdts .abuts {
+    width: 100%;
+    margin: 0 auto;
+    float: none;
+}
+
+.clubinfos.tickdts .abuts h4 {
+    font-size: 17px;
+    color: #9b9b9b;
+}
+
+.couponoffers {
+    float: left;
+    width: 100%;
+}
+
+.couponoffers h4 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.couponoffers .ticketsvaries {
+    margin-bottom: 30px;
+    float: left;
+}
+
+/*css for redemcode popup */
+
+.offshwsred {
+    text-align: center;
+    width: 100%;
+    float: left;
+}
+
+.formacts {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.offshwsred p {
+    font-size: 20px;
+    color: #000;
+    font-weight: 500;
+}
+
+.offshwsred h3 {
+    text-transform: uppercase;
+    font-size: 22px;
+    margin: 9px 0;
+    color: #fe5430;
+}
+
+.offshwsred img {
+    width: 59%;
+}
+
+.formacts p {
+    font-weight: 500;
+    width: 76%;
+    margin: auto;
+}
+
+.fourtxtfd {
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.fourtxtfd input {
+    border: none;
+    border-bottom: 1px solid #000;
+    width: 52px;
+    margin: 0 13px;
+    outline: none;
+    text-align: center;
+}
+
+.binsdds.redemsets {
+    width: 371px;
+}
+
+.binsdds.redemsets .butcentertickt {
+    padding: 43px 0 0 0;
+}
+
+p.ofsubrule {
+    margin-top: 16px;
+}
+
+p.ofsubrule span {
+    color: #307ae4;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+p.ofsubrule span:hover {
+    color: #0057d4;
+}
+
+.rulesofse h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.rulesofse ol li {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+
+/* sign in */
+
+.loginfrms {
+    float: left;
+    width: 100%;
+}
+
+.formssignall {
+    margin: 0 auto;
+    width: 52%;
+    position: relative;
+}
+
+.formssignall mat-tab-header.mat-tab-header {
+    text-align: center;
+    position: absolute;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 33%;
+    top: 12px;
+}
+
+.formssignall .mat-tab-label {
+    min-width: auto;
+}
+
+span.posltxt {
+    font-size: 15px;
+}
+
+.filterareasven.lgobgsa {
+    background: #f5f5f5;
+    margin: 0;
+    padding: 60px 0;
+}
+
+.formbgaprt {
+    background: #fff;
+    padding: 80px 35px 10px 35px;
+    width: 71%;
+    margin: 0 auto;
+    min-height: 540px;
+    box-shadow: #d8d6d6 0px 0px 8px 0px;
+    border-radius: 12px;
+}
+
+.setformsicos .mat-form-field {
+    width: 100%;
+}
+
+.setformsicos .mat-form-field-label-wrapper {
+    text-indent: 28px;
+}
+
+
+.setformsicos input {
+    text-indent: 24px;
+}
+
+.setformsicos {
+    position: relative;
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+
+.setformsicos p a{
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.setformsicos i.material-icons {
+    position: absolute;
+    top: 14px;
+    font-size: 20px;
+}
+
+.setformsicos i.material-icons img {
+    width: 18px;
+}
+
+.rempass {
+    float: left;
+}
+
+.passfrgt {
+    float: right;
+}
+
+.setformsicos .yellowbtsshw {
+    border-radius: 21px;
+    padding: 4px 88px;
+    margin: 20px 0;
+}
+
+.setformsicos span.ofope {
+    position: relative;
+}
+
+.setformsicos span.ofope:after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #999999;
+    width: 20px;
+    height: 7px;
+    top: 2px;
+    left: -23px;
+}
+
+.setformsicos span.ofope:before {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #999999;
+    width: 20px;
+    height: 7px;
+    top: 2px;
+    right: -23px;
+}
+
+.mat-button.fbbluebtnd {
+    border-radius: 21px;
+    padding: 4px 88px;
+    margin: 20px 0;
+    background: #3a589b;
+    color: #fff;
+    width: 100%;
+}
+
+.fbbluebtnd i.fab {
+    margin-right: 10px;
+}
+
+span.mat-button-wrapper {
+    margin: auto;
+    position: relative;
+}
+
+p.ctguest {
+    color: #0283e7;
+    border-bottom: 1px solid;
+    display: inline-block;
+    line-height: 20px;
+    font-size: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.formssignall .setformsicos .yellowbtsshw {
+    width: 100%;
+}
+
+.formbgaprt.signspaces.ng-star-inserted {
+    width: 98%;
+    box-shadow: #d8d6d6 0px 0px 8px 0px;
+}
+
+.formbgaprt .mat-select-value {
+    text-indent: 26px;
+}
+
+.formbgaprt .mat-form-field-appearance-legacy .mat-form-field-label {
+    color: #000;
+}
+
+.binsdds.frgtmodel {
+    width: 329px;
+}
+
+.binsdds.frgtmodel .clubshare {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.binsdds.frgtmodel .clubshare h6 {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.binsdds.frgtmodel .clubshare p {
+    font-size: 14px;
+}
+
+h6.vrfhdsa {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.setformsicos .cabcelbck.mat-button {
+    float: right;
+    text-transform: uppercase;
+    padding: 0 0;
+    margin-left: 12px;
+    color: #ff4646;
+}
+
+.setformsicos .cabcelbck.blueds.mat-button {
+    color: #3399d8;
+}
+
+.binsdds.frgtmodel .clubshare p.msginfos {
+    margin: 0px 0 14px 0;
+    float: left;
+    width: 100%;
+    font-size: 15px;
+}
+
+button.resendbtnd.mat-button {
+    margin-top: 20px;
+    color: #4ca2d6;
+    border-bottom: 1px solid #4ca2d6;
+    padding: 0;
+    border-radius: 0px;
+    height: auto;
+    line-height: 17px;
+    display: inline-block;
+}
+
+button.resendbtnd.mat-button {
+    position: relative;
+}
+
+button.resendbtnd.mat-button:after {
+    content: "";
+    position: absolute;
+    right: -19px;
+    top: 1px;
+    width: 14px;
+    height: 15px;
+    background: url('./assets/img/resendico.png');
+    background-size: cover;
+}
+
+.formbgaprt .rempass .mat-checkbox-inner-container{
+    width: 22px;
+    height: 22px;
+}
+
+.binsdds.frgtmodel.verifybts .yellowbtsshw.mat-button {
+    width: 100%;
+    border-radius: 0px;
+}
+
+.formssignall mat-tab-header.mat-tab-header {
+    border: none;
+}
+
+.formssignall mat-tab-header.mat-tab-header mat-ink-bar.mat-ink-bar {
+    background-color: transparent;
+    border-right: 0px solid #000;
+    height: 25px;
+    line-height: 0px;
+    top: 13px;
+}
+
+.formssignall .mat-tab-label:first-child {position: relative;}
+
+.formssignall .mat-tab-label:first-child:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 10px;
+    height: 20px;
+    border-right: 2px solid #000;
+}
+
+.simpleformpages {
+    text-align: center;
+    float: left;
+    width: 100%;
+}
+
+.simpleformpages h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.midcenterfrms {
+    margin: 0 auto;
+    width: 44%;
+}
+
+.simpleformpages textarea {
+    border: 1px solid #ddd;
+    height: 100px;
+    padding: 10px 0;
+    text-indent: 23px;
+}
+
+.selctcountry .mat-select-value {
+    color: #fff;
+    width: 85%;
+}
+
+.abtscontents h3 {
+    border-bottom: 1px solid #ddd;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.abtscontents mat-tab-header.mat-tab-header {
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.abtscontents p {
+    margin-bottom: 20px;
+}
+
+.fetchpicth {
+    width: 100px;
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 100%;
+    border: 1px solid #ddd;
+}
+
+.fetchpicth img {
+    width: 100%;
+    margin: auto;
+}
+
+.picshws {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+.editablepic img {
+    width: 35px;
+    position: absolute;
+}
+
+.editablepic input[type="file"] {
+    opacity: 0;
+    width: 34px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.editablepic {
+    position: absolute;
+    bottom: 0;
+    right: 35px;
+    cursor: pointer;
+}
+
+.usrinfnm {
+    margin-top: 0px;
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.usrinfnm h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.accsettings {
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.accsettings h4 {
+    float: left;
+    width: 100%;
+    font-size: 20px;
+}
+
+.menuaccountscbs ul {
+    list-style-type: none;
+}
+
+.menuaccountscbs ul li {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.menuaccountscbs {
+    float: left;
+    width: 100%;
+    margin-top: 24px;
+}
+
+.menuaccountscbs ul li a {
+    color: #9f9393;
+    font-size: 14px;
+}
+
+.menuaccountscbs ul li a.active-link{
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.menuaccountscbs ul li img {
+    margin-right: 10px;
+}
+
+.profilecontentwdth,
+.nopaddlfts .citiylocationswise {
+    padding: 0 3%;
+    float: left;
+    width: 100%;
+}
+
+.nopaddlfts {
+    padding: 0 0px;
+}
+
+.accsettings .progress {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #000;
+}
+
+.accsettings .progress-bar{
+    background-color: #feca05;
+    color: #000;
+}
+
+.menuaccountscbs ul li a.active-link {
+    color: #000;
+    width: 100%;
+    border-right: 0px solid #000;
+}
+
+.centerformsmid {
+    margin: 0 auto;
+    width: 77%;
+    float: none;
+}
+
+.profilecontentwdth .mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: rgba(177, 169, 169, 0.42);
+}
+
+.centerformsmid .mat-select-value span {
+    text-indent: 25px;
+    margin-left: 11px;
+}
+
+.attachareasrels {
+    float: left;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    display: flex;
+}
+
+.attachareasrels img {
+    width: 36px;
+    float: left;
+    z-index: 9999;
+}
+
+.fleloads {
+    position: relative;
+    left: 0px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 99;
+    width: 100%;
+    background: url(./assets/img/uploadicos.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
+}
+
+.fleloads input[type="file"] {
+    cursor: pointer;
+    position: absolute;
+    width: 55%;
+    z-index: 99999;
+    height: 37px;
+    left: 0;
+    padding: 0px 0 0 22%;
+    text-indent: 0px;
+    outline: none;
+}
+
+
+.fleloads input[type="file"]:after {
+    content: "";
+    left: 173px;
+    width: 103px;
+    background: #fff;
+    position: absolute;
+    height: 30px;
+}
+
+
+.fleloads:after {
+    content: "Please Attach ID:";
+    left: 49px;
+    position: absolute;
+    top: 3px;
+}
+
+.attachareasrels .rempass {
+    margin: 43px 0;
+}
+
+span.tncs {
+    color: #2f78e6;
+    border-bottom: 1px solid;
+}
+
+
+.eventvenuareas.feedbackbtns .mat-button.fbbluebtnd {
+    width: auto;
+}
+
+
+.thumbusersh img {width: 100%;}
+
+.userinfoprohead {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 29%;
+    height: 72px;
+}
+
+.inforeach {
+    position: absolute;
+    bottom: -72px;
+    width: 128px;
+    right: 0;
+    background: #fff;
+    box-shadow: #a79797 0px 0px 6px 0px;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease 0.4s;
+}
+
+.inforeach.openinfo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.thumbusersh {
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    margin: auto 7px;
+    border-radius: 100%;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    display: flex;
+}
+
+.funthumbs .wishshwms ul li img {
+    width: 14px;
+    max-width: initial;
+    transform: initial;
+}
+
+.inforeach ul {
+    padding: 10px 0 0;
+    list-style-type: none;
+}
+
+.inforeach ul li a {
+    color: #706767;
+    padding: 5px 10px;
+    display: block;
+    width: 100%;
+    font-size: 12px;
+}
+
+.inforeach ul li {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border-bottom: 1px dotted #484848;
+    display: flex;
+    flex-direction: row;
+}
+
+.inforeach ul li img {
+    width: 13px;
+    margin: auto 6px auto 0;
+}
+
+.signlogcmp.currentlylogin {
+    width: auto;
+}
+
+.homemenucl.currntlogmenu {
+    width: 44%;
+}
+
+.searchweb {
+    display: flex;
+    width: 16%;
+    overflow: hidden;
+    float: right;
+    flex-direction: row;
+    height: 72px;
+}
+
+
+.userinfoprohead.ownuser {
+    position: relative;
+}
+
+.userinfoprohead.ownuser:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 8px;
+    background: url(./assets/img/icosleft.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    right: -20px;
+    top: 30px;
+}
+
+.tablequnatiselect table.mat-table thead tr th {
+    font-size: 15px;
+}
+
+.happyhourspromotion .mat-radio-label {
+    width: auto;
+}
+
+.searchweb form {
+    margin: auto;
+}
+
+.searchweb button {
+    background: transparent;
+    border: none;
+    float: right;
+    outline: none;
+    margin-right: 9px;
+}
+
+.searchweb  input.notopeninpt.openinp {
+    width: 100%;
+    background: transparent;
+    border-bottom: 1px solid #ddd;
+    color: #fff;
+}
+
+.searchweb button img {
+    width: 20px;
+    height: 20px;
+}
+
+.searchweb input[type="search"] {
+    background: transparent;
+    border: none;
+    width: 0%;
+    float: right;
+    transition: all ease 0.6s;
+    outline: none;
+}
+
+.homemenucl.withoulgos {
+    width: 41%;
+}
+
+
+.userinfoprohead.ownuser {
+    width: auto;
+    flex-direction: row;
+}
+
+.usnameinfos {
+    float: left;
+    margin: auto 3px;
+}
+
+.userinfoprohead.ownuser .thumbusersh {
+    float: right;
+}
+
+.userinfoprohead.ownuser .usnameinfos p {color: #feca05;}
+
+.logolanggen.ownlgo {
+    width: 7%;
+}
+
+.logolanggen.ownlgo .logosdv {
+    width: 71%;
+}
+
+.homemenucl.ownermenu {
+    width: auto;
+}
+
+.dropicoshw .mat-form-field-appearance-legacy .mat-form-field-underline{
+    height: 0px;
+}
+
+.dropicoshw .mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: transparent;
+}
+
+.dropicoshw .mat-form-field-appearance-legacy .mat-form-field-infix {
+    padding: 4px 1px;
+}
+
+.dropicoshw p{
+    margin: auto 12px;
+    font-size: 14px;
+}
+
+.dropicoshw .mat-select-arrow {
+    border: none;
+    background: url(./assets/img/downarrw.png);
+    width: 10px !important;
+    height: 5px !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.clubinfos.bgachanges .dropicoshw .mat-select-arrow{
+    border: none;
+    background: url(./assets/img/downarrw.png);
+    width: 10px !important;
+    height: 5px !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+/* manage venue details */
+
+.venuslidersectionsd.manageslid .funthumbs img {
+    height: fit-content;
+}
+
+.socialgrids {
+    display: flex;
+    border: 1px solid;
+    padding: 9px;
+    border-radius: 6px;
+}
+
+.socialgrids img {
+    margin: auto 0;
+}
+
+.socialgrids p {
+    margin: auto 10px;
+}
+
+.socialedishowns {
+    float: left;
+    width: 100%;
+    margin: 43px 0;
+}
+
+.socialgrids p {
+    margin: auto 10px;
+    color: #3663f3;
+}
+
+.setformsicos .yellowbtsshw img {
+    width: 16px;
+    margin: auto 7px;
+}
+
+.setformsicos.manageven {
+    margin-top: 35px;
+}
+
+.socialgrids.fbdr {
+    border: 1px solid #3b5998;
+}
+
+.socialgrids.instabdr {
+    border: 1px solid #a429a4;
+}
+
+.socialgrids.formabdr {
+    border: 1px solid #595958;
+}
+
+.setformsicos.manageven .yellowbtsshw {
+    text-transform: uppercase;
+}
+
+.addimagesmore {
+    position: absolute;
+    right: 20px;
+    top: 28px;
+    z-index: 9;
+    width: 41px;
+    height: 40px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.addimagesmore:hover{
+    box-shadow: #fff 0px 0px 9px 0px;
+}
+
+.venuslidersectionsd.manageslid .addimagesmore img {width: 100%;height: auto;}
+
+.clubshare.editableparts {
+    border: none;
+}
+
+.happyhourspromotion {
+    display: flex;
+    width: 100%;
+}
+
+.promotxt {
+    margin-right: 20px;
+    width: 31%;
+}
+
+.chkbxpop {
+    width: 69%;
+}
+
+.chkbxpop .mat-radio-button {
+    width: 17%;
+}
+
+.blackchecks .mat-checkbox-checkmark-path {
+    stroke: #feca05!important;
+}
+
+.blackchecks .mat-checkbox-checked.mat-accent .mat-checkbox-background, 
+.blackchecks .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background{
+    background-color: #000000;
+}
+
+.abuts .mat-form-field textarea {
+    width: 100%;
+    height: 79px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.abuts .mat-form-field {
+    width: 100%;
+    float: left;
+}
+
+.abuts span.mat-form-field-label-wrapper {
+    text-indent: 9px;
+    text-align: left;
+}
+
+.abuts .mat-form-field-appearance-legacy .mat-form-field-underline {
+    height: 0px;
+}
+
+.abuts .mat-form-field textarea::placeholder {
+    text-align: left;
+}
+
+.socialgrids .mat-form-field {
+    margin: auto 9px;
+}
+
+.socialgrids .mat-form-field .mat-form-field-wrapper {
+    padding: 0px 0 0px 11px;
+}
+.socialgrids .mat-form-field-appearance-legacy .mat-form-field-underline {
+    height: 0px;
+}
+
+.socialgrids .mat-form-field-appearance-legacy .mat-form-field-ripple {
+    height: 0px;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: #000000;
+    border-width: 5px;
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle{
+    background-color: #feca05;
+}
+
+
+.clubinfos.bgachanges {
+    background: transparent;
+}
+
+
+
+.clubinfos.bgachanges 
+ .clubshare.editableparts {
+    background: #fff;
+    padding: 20px;
+    /*box-shadow: #c6bbbb 0px 1px 5px 0px;*/
+    margin-top: 50px;
+}
+
+.clubinfos.bgachanges  .amnsets ul li{
+    width: 25%;
+}
+
+.clubinfos.bgachanges .centerdropsd{
+    width: 78%;
+}
+
+.clubinfos.bgachanges .mat-select-arrow {
+    border: none;
+    background: url(./assets/img/arrowgradown.png);
+    width: 15px !important;
+    height: 7px !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin:0
+}
+
+.eventsinfos-jbs {
+    padding: 20px;
+}
+
+.eventsinfos-jbs ul {
+    list-style-type: none;
+}
+
+.eventsinfos-jbs ul li {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.eventsinfos-jbs ul li p {
+    width: 152px;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.eventsinfos-jbs ul li span {
+    font-weight: 200;
+    font-size: 13px;
+}
+
+.dropicoshw p a {
+    margin: 0 3px;
+    color: #c19d01;
+}
+.dropicoshw p a:hover{
+    color:#000;
+}
+
+.helpmodeopts img {
+    width: 20px;
+}
+
+.editableparts .setformsicos .mat-form-field-label-wrapper, .editableparts .setformsicos input {
+    text-indent: 0;
+}
+
+.helpmodeopts {
+    position: absolute;
+    right: -7px;
+    top: 19px;
+    z-index: 9;
+    cursor: pointer;
+}
+
+.editableparts .helpmodeopts{
+    right: 8px;
+}
+
+.editableparts .setformsicos.icoscohelp .mat-select-value {
+    width: 95%;
+}
+
+ .clubinfos.bgachanges .editableparts .setformsicos.icoscohelp .mat-select-arrow{
+    width: 45px !important;
+	    margin-top: 4px;
+}
+
+.setformsicos.icoscohelp .mat-form-field-appearance-legacy .mat-form-field-underline {
+    width: 95%;
+}
+
+.mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: #000000;
+}
+
+
+
+.setformsicos.icoscohelp .mat-form-field {
+    width: 98%;
+}
+
+.clubshare.editableparts .mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: #ddd;
+}
+
+.opnoptshow img {
+    float: right;
+    width: 19px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.mat-checkbox-layout .mat-checkbox-label{
+    font-size: 15px;
+}
+
+.opnoptshow h4 {display: inline-block;}
+
+.opnoptshow img:hover {
+    box-shadow: #edd167 0px 0px 20px 0px;
+}
+
+
+.venuinf {
+    text-align: center;
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.venuinf img {
+    width: 22px;
+}
+
+.venuinf  p {
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.clubtypeinfs {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.clubtypeinfs h4 {
+    font-size: 17px;
+}
+
+.clubtypeinfs p {
+    font-size: 15px;
+    margin: 10px 0 0;
+}
+
+.closeokset {
+    float: left;
+    width: 100%;
+    text-align: right;
+    margin: 10px 0px;
+}
+
+.closeokset p {
+    padding: 0 7px;
+    color: #3f8fbd;
+    cursor: pointer;
+}
+
+.binsdds.venuestcs .clubshare {
+    margin: 0;
+    padding: 0;
+}
+
+.mondte p {
+    border-bottom: 1px solid #ddd;
+    padding: 14px 0;
+}
+
+.additrs p {
+    font-weight: 500;
+    float: left;
+}
+
+.additrs img {
+    float: right;
+    width: 20px;
+}
+
+.additrs {
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.clubinfos.bgachanges.hpbgawgit {
+    background: transparent;
+}
+
+.setformsicos.newebts .yellowbtsshw {
+    padding: 4px 32px;
+}
+
+.setformsicos.newebts {
+    text-align: right;
+}
+
+.hrsetslimt {
+    margin-top: 17px;
+}
+
+.hrsetslimt .chkbxpop .mat-radio-button {
+    width: 43%;
+}
+
+.clubinfos .hrsetslimt h4 {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+
+
+.righticos .mat-form-field-prefix, .righticos .mat-form-field-suffix {
+    opacity: 0;
+}
+
+.ticketssetgrids {
+    float: left;
+    width: 100%;
+}
+
+.ticketssetgrids .mat-form-field {
+    width: 100%;
+}
+
+.setformsicos.righticos i.material-icons {
+    right: 0;
+}
+
+.setformsicos.righticos .mat-form-field-label-wrapper {
+    text-indent: 0px;
+}
+
+.setformsicos.righticos input {
+    text-indent: 0px;
+}
+
+.lcdistant.cpinfos {
+    text-align: center;
+    margin: 9px 0 0;
+    float: left;
+    width: 100%;
+}
+
+
+.Times{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ed1741;
+    z-index: 9;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+.Times p{
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 19px;
+    text-align: right;
+}
+.Times p span{
+    display: block;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+
+.clubinfoname.vchrinfose p.vcsld {
+    float: left;
+}
+
+.clubinfoname.vchrinfose p.vclfts {
+    float: right;
+}
+
+.lcdistant.cpinfos strong {
+    margin: auto;
+}
+
+.vcrinfos button.whtbtns.golivebts {
+    color: #22b226;
+    padding: 0 31px;
+}
+
+.frdgtfull {
+    float: left;
+    width: 100%;
+    margin-bottom: 45px;
+}
+
+.fourdgmids {
+    margin: 0 auto;
+    width: 39%;
+    box-shadow: #dbd7d7 1px 1px 9px 0px;
+    padding: 13px 21px;
+}
+
+.fourdgmids p {
+    display: inline;
+}
+
+.fourdgmids strong {
+    float: right;
+    font-weight: 500;
+}
+
+.dayshedulesofsd {
+    float: left;
+    width: 100%;
+}
+
+.dtsupdate {
+    float: left;
+    width: 100%;
+    margin: 25px 0;
+}
+
+.dtsupdate span {
+    margin: auto;
+    width: 40%;
+    display: inherit;
+    text-align: center;
+    position: relative;
+}
+
+.dtsupdate span:before {content: "";position: absolute;top: 8px;right: 67px;border-bottom: 1px solid #ddd;height: 3px;width: 100px;}
+.dtsupdate span:after{
+   content: "";
+   position: absolute;
+   top: 8px;
+   left: 67px;
+   border-bottom: 1px solid #ddd;
+   height: 3px;
+   width: 100px; 
+}
+
+.setformsicos.mgofrs {
+    margin-bottom: 30px;
+}
+
+.fleloads.briefing:after {content: "";}
+
+.fleloads.briefing p {
+    padding: 6px 49px;
+}
+
+.upgriddocs {
+    background: #3c4154;
+    display: flex;
+    text-align: center;
+    min-height: 169px;
+    width: 100%;
+}
+
+.upgriddocs a {
+    margin: auto;
+    font-size: 66px;
+    color: #fff;
+}
+
+.upgriddocs input[type="file"] {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    cursor: pointer;
+    top: 0;
+    height: 100%;
+    font-size: 12px;
+    padding: 120px 10px;
+}
+
+.upgriddocs {
+    position: relative;
+}
+
+.upgriddocs input[type="file"]:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 24%;
+    background: #3c4154;
+    height: 25px;
+}
+
+.upgriddocs.bgchng {
+    background: #dadada;
+}
+
+.upgriddocs.bgchng input[type="file"]:after {
+    background: #dadada;
+}
+
+.upgriddocs.bgchng a {
+    color: #3c4154;
+    cursor: pointer;
+}
+
+.fleloads.briefing {
+    margin-bottom: 20px;
+}
+
+.instructsd span {
+    font-weight: 500;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.row.nodegen p {
+    text-align: left;
+    font-size: 14px;
+}
+
+.row.nodegen:nth-child(even) {
+    background: #f2f2f2;
+    padding: 6px 0;
+}
+
+.fetchdtls {
+    text-align: left;
+}
+
+
+.fleloads.reciptflow:after {
+    content: "Upload receipt *";
+    left: 49px;
+    position: absolute;
+    top: 3px;
+}
+
+.fleloads.reciptflow input[type="file"]:after {
+    width: 148px;
+}
+
+.fleloads.reciptflow {
+    margin-top: 20px;
+}
+
+.reciptflows {
+    float: left;
+    width: 29%;
+    margin-top: 34px;
+    position: relative;
+    overflow: hidden;
+}
+
+.reciptflows img {
+    width: 100%;
+}
+
+
+.reciptflows a{
+    transition: all ease 0.9s;
+}
+
+.reciptflows:hover a:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.3);
+    left: 0; 
+    transition: all ease 0.9s;
+}
+
+.seqgrds h3 {
+    display: inline-block;
+    font-size: 17px;
+}
+
+.seqgrds p {
+    float: right;
+}
+
+.seqgrds {
+    padding: 10px;
+    box-shadow: #d2c9c9 1px 1px 11px 0px;
+    border-radius: 8px;
+    float: left;
+    width: 100%;
+    margin-bottom: 39px;
+}
+
+.seqgrds .imglcs {
+    margin-top: 10px;
+}
+
+.addimagesmore.centericos {
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    height: auto;
+}
+
+.venuslidersectionsd.manageslid .addimagesmore.centericos img{
+    width: 132px;
+    height: auto;
+    margin: auto;
+}
+
+.addimagesmore.centericos:hover {
+    box-shadow: none;
+}
+
+.addimagesmore.centericos p {
+    color: #999;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.setformsicos .yellowbtsshw.blcwhts {
+    margin: 0 21px;
+    background: #000;
+    color: #fff;
+}
+
+input[type="file"] {
+    outline: none;
+}
+
+.offerdtls h5 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.offerdtls {margin-bottom: 14px;float: left;width: 100%;}
+
+.chkbxpop.blockbasedopts {
+    float: left;
+    width: 100%;
+}
+
+.chkbxpop.blockbasedopts  .mat-radio-button {
+    display: block;
+}
+
+.inputvouvhers .mat-form-field {
+    width: 100%;
+}
+
+.offerdtls.ofrules span {
+    border-bottom: 1px solid #307ae4;
+    color: #307ae4;
+    cursor: pointer;
+}
+
+.showsets {
+    display: flex;
+    width: 100%;
+}
+
+.offerdtls .showsets h5 {
+    width: 100%;
+}
+
+.hlpshown img {
+    width: 19px;
+}
+
+.cpcode {
+    text-align: center;
+    width: 100%;
+    float: left;
+}
+
+.offerinoseg {
+    margin-top: 20px;
+    float: left;
+    width: 100%;
+}
+
+.offerinoseg h4 {
+    font-size: 18px;
+    margin-bottom: 13px;
+}
+
+.cpcode img {
+    width: 92px;
+}
+
+.hlpshown {
+    cursor: pointer;
+}
+
+tfoot td {
+    background: #ebebeb;
+    font-weight: 500;
+}
+
+
+.amtcalcu {
+    display: flex;
+    padding: 10px 40px;
+    background: #ebebeb;
+}
+
+.amtcalcu p {
+    width: 100%;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.amtcalcu p:last-child {
+    text-align: right;
+}
+
+.selctcountry .mat-select-arrow {
+    background: url(./assets/img/icosleft.png);
+    width:14px !important;
+    height: 7px !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.evtdtsl h5 {
+    cursor: pointer;
+    outline: none;
+}
+
+.evtdtsl h5:hover {
+    color: #65179d;
+}
+
+.flveds {
+    float: left;
+    width: 100%;
+}
+
+
+.menuicoburgs {
+    float: right;
+    display: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.menuicoburgs i.fas {
+    color: #fff;
+    font-size: 19px;
+}
+
+.thumbareasupd {
+    cursor: pointer;
+}
+
+
+section.agentssliders .owl-carousel .owl-nav button.owl-prev, section.agentssliders .owl-carousel .owl-nav button.owl-next {
+    float: left;
+    background: #000;
+    color: #fff;
+    border-radius: 100%;
+    width: 36px;
+    height: 36px;
+    line-height: 0px;
+    text-align: center;
+    font-size: 33px;
+    box-shadow: 0px 0px 5px 0px;
+}
+
+
+section.agentssliders .owl-carousel .owl-nav button.owl-next {
+    float: right;
+   
+}
+
+
+section.agentssliders button.owl-next {
+    float: right;
+}
+
+section.agentssliders .owl-theme .owl-nav {
+    position: absolute;
+    width: 100%;
+    top: 44%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease 0.5s;
+}
+
+section.agentssliders  .owl-theme .owl-nav [class*=owl-] {
+    padding: 10px;
+}
+
+
+
+section.agentssliders:hover .owl-theme .owl-nav {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.clubinfos.bgachanges .mat-select-arrow { 
+    width: 15px !important; 
+    margin: 0;
+}
+ 
+.Verifycity .mat-form-field-label-wrapper {
+    text-indent: 0;
+}
+
+.nohdmenus {
+    float: left;
+    width: 100%;
+}
+
+.nohdmenus .homemenucl.ownermenu {
+    display: none;
+}
+
+.showforcbsa .homemenucl ul li.mgboks {
+    display: none;
+}
+
+
+.gridicosmain {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 0px 0 29px 0;
+    cursor: pointer;
+}
+
+.gridicosmain a img {
+    width: 53%;
+    margin: auto;
+}
+
+.gridicosmain a {
+    width: 154px;
+    display: block;
+    margin: auto;
+    height: 154px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.gridicosmain a p {
+    font-size: 15px;
+    color: #000;
+    font-weight: 500;
+}
+
+
+.clubinfos.bgachanges .clubshare.editableparts.cbsgridsspcs {
+    margin-top: 94px;
+    float: left;
+}
+
+.bokinfosa label {
+    float: left;
+    width: 100%;
+    font-size: 13px;
+}
+
+.seqgrds .imglcs {
+    float: left;
+    width: 100%;
+}
+
+.bokinfosa {
+    float: left;
+    width: 100%;
+    margin: 10px 0 0 0;
+}
+
+.clunbamenties.bkcurs .seqgrds {
+    cursor: pointer;
+}
+
+.clunbamenties.bkcurs .seqgrds p {
+    margin: 0;
+}
+
+.venuslidersectionsd.manageslid.editsdelbts {
+    margin-top: 66px;
+}
+
+
+#cdk-overlay-0 .mat-select-panel{ max-height:300px;}
+ 
+
+.referclassfrnd {
+    float: left;
+    width: 100%;
+}
+
+.referfrdcenter {
+    margin: 0 auto;
+    width: 85%;
+    padding: 40px 0;
+}
+
+.clubinfoname.vchrinfose p.vclfts.lftdrs {
+    float: left;
+    margin-top: 10px;
+}
+
+.referleftguides .stpemakar p.stepdes {
+    float: left;
+    background: #000;
+    padding: 10px 41px;
+    color: #fff;
+    border-radius: 23px;
+    
+}
+
+.referleftguides .stpemakar img {
+    float: right;
+    width: 344px;
+}
+
+.referrightguides .stpemakar img {
+    width: 350px;
+}
+
+.stpemakar.referbutnds {
+    text-align: center;
+}
+
+.referbannersmain {
+    background: url(./assets/img/top_img.png);
+    float: left;
+    width: 100%;
+    height: 533px;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    position: relative;
+}
+
+.referleftguides {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.referrightguides .stpemakar p.stepdes {
+    float: right;
+    background: #000;
+    padding: 10px 41px;
+    color: #fff;
+    border-radius: 23px;
+
+}
+
+.referrightguides {
+    float: left;
+    width: 100%;
+    margin: 40px 0;
+}
+
+.stpemakar button.referfrdyello {
+    background: #e9b905;
+    color: #000;
+    border: none;
+    margin: 0 auto;
+    text-align: center;
+    padding: 8px 45px;
+}
+
+.addmoreimagesu {
+    position: absolute;
+    bottom: 6px;
+    z-index: 9;
+    text-align: center;
+    width: 100%;
+}
+
+.addmoreimagesu button {
+    border: none;
+    background: #000;
+    color: #fff;
+    padding: 9px 32px;
+}
+
+.textjbc {
+    width: 40%;
+    margin: auto;
+    margin-left: 79px;
+    z-index: 9;
+}
+
+.textjbc h1 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 43px;
+}
+
+.referbannersmain:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: rgba(0,0,0,0.0);
+    width: 100%;
+}
+
+.downloadappct.refertags {
+    padding: 0;
+    width: 100%;
+}
+
+.downloadappct.refertags h2 {
+    color: #fbce25;
+    margin: 28px 0 -15px 0;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+
+.referleftguides .textleftsw {
+    float: left;
+    padding: 20px;
+    width: 47%;
+    position: absolute;
+    top: 108px;
+}
+
+.referleftguides {
+    position: relative;
+}
+
+.referleftguides .textleftsw h5,
+.referrightguides .textrightsw h5 {
+    margin-bottom: 15px;
+}
+
+
+.referrightguides .textrightsw {
+    position: absolute;
+    right: 0;
+    width: 44%;
+    top: 150px;
+}
+
+.referrightguides {
+    position: relative;
+}
+
+.EmailArea {
+    margin: 50px 0 0 0;
+}
+
+.EmailArea h3{
+    font-size: 22px;
+    margin: 0 0 17px;
+}
+
+.EmailArea form {
+    background-color: #f5f5f5;
+    padding: 25px 25px 5px 25px;
+    border: 1px solid #e4e4e4;
+}
+
+.EmailArea form .form-group {
+    margin: 0 0 20px;
+}
+
+.EmailArea form .form-group label {
+    display: block;
+    font-weight: 500;
+    color: #000;
+    font-size: 15px;
+    font-family: 'Roboto';
+}
+
+.EmailArea form .form-group .form-control {
+    box-shadow: none;
+    border: 1px solid #c3c3c3;
+    height: 40px;
+    font-size: 14px;
+    color: #000;
+    line-height: 22px;
+}
+
+.EmailArea form .form-group .material-icons{
+    font-size: 35px;
+    margin: 0px 10px 0 0;
+}
+
+.EmailArea form .form-group .material-icons:hover{
+    color: #ca1010;
+}
+
+.EmailArea form .form-group textarea.form-control {
+    height: auto;
+}
+
+.EmailArea form .form-group button {
+    padding: 8px 50px;
+    display: inline-block;
+    background-color: #000;
+    margin: 0;
+    color: #fff;
+    transition: 0.5s all ease-in-out;
+    border: 2px solid #000;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    outline: 0;
+    text-transform: capitalize;
+}
+
+.EmailArea form .form-group button:hover {
+    background-color: #feca05;
+    color: #000;
+    border-color: #feca05;
+}
+
+.writereview {
+    margin-bottom: 46px;
+    cursor: pointer;
+}
+
+.EmailArea.rateparts {
+    float: left;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.EmailArea.rateparts  h3 {
+    font-size: 20px;
+}
+
+.stepsliderthrees {
+    position: relative;
+}
+
+.stepsliderthrees .owl-dots {
+    position: absolute;
+    width: 100%;
+    bottom: 54px;
+}
+
+.stepsliderthrees .owl-dots button.owl-dot.active span {
+    color: #000;
+    background: #fff;
+    border: 2px solid #000;
+}
+
+.stepsliderthrees .owl-dots button.owl-dot span{
+    background: #000f;
+    border: 2px solid #000;
+}
+
+.referleftguides .stpmdtxs {
+    width: 43%;
+    float: left;
+    text-align: center;
+    position: absolute;
+    top: 28%;
+}
+
+.referleftguides .stpmdtxs p.stepdes {
+    float: none;
+    width: 150px;
+    display: inline-block;
+}
+
+.referrightguides .stpmdtxs {
+    position: absolute;
+    right: 0;
+    width: 54%;
+    text-align: center;
+    top: 26%;
+}
+
+
+.referrightguides .stpmdtxs p.stepdes {
+    float: none;
+    width: 132px;
+    display: inline-block;
+}
+
+
+.showbeflog {
+    height: 70px;
+    display: flex;
+}
+
+.showbeflog a.transpbtnsd {
+    margin-right: 14px;
+}
+
+/* body.editVenueCross p.crosicos {
+    display: none;
+} */
+
+.EmailArea.rateparts ul {
+    list-style-type: none;
+}
+
+.EmailArea.rateparts ul li {
+    display: inline-block;
+}
+
+.EmailArea.rateparts li.star.selected i {
+    color: #e9bb0c;
+}
+
+.EmailArea.rateparts li.star{
+    cursor: pointer;
+}
+
+.maplocatesd {
+    margin-bottom: 30px;
+}
+
+.venuslidersectionsd .funthumbs img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    width: auto;
+}
+
+.maplocatesd {
+    float: left;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.maplocatesd div#map {
+    float: left;
+    width: 100%;
+   
+    height: 300px;
+}
+
+.getdirectjbs {
+    background: rgb(66, 66, 66);
+    padding: 12px 21px;
+    float: right;
+    width: 30%;
+    position: relative;
+    top: -44px;
+}
+
+.getdirectjbs a {
+    width: 100%;
+    float: right;
+    color: #fff;
+    font-size: 14px;
+}
+
+.maplocatesd .getdirectjbs img {
+    width: 60%;
+    float: right;
+    margin-left: 10px;
+    margin: auto;
+}
+
+.dropicoshw p.redclos {
+    color: red;
+
+}
+
+.dropicoshw .mat-select {
+    width: 65%;
+    float: right;
+    margin: auto;
+}
+
+.dropicoshw p{
+    width:100%;
+}
+
+.dropicoshw p 
+ span.closenpows {
+    color: red;
+    float: left;
+}
+
+.dropicoshw p 
+ span.opennowgrp {
+    color: #38ac28;
+    float: left;
+}
+
+.Times {
+    background-color: transparent;
+}
+
+.Times p.oposde {
+    background-color: green;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.Times p.closednos {
+    background-color: red;
+    padding: 3px 4px;
+    border-radius: 2px;
+}
+
+
+.mat-dialog-container { 
+    height: inherit !important;
+}
+
+.clubinfoname {
+    float: left;
+    width: 65%;
+}
+
+.featrevts.spcldtls .evtdtsl h5 { 
+    width: 50%;
+}
+
+p.tmtmr  app-liveofferdata{
+    font-family: 'Digital-7 Mono';
+    font-weight: 100;
+   
+}
+
+
+.eventssetsdis p.tmtmr app-liveofferdata{
+    margin-left: 0px;
+}
+
+p.tmtmr{
+    display: flex;
+    font-size: 17px;
+    float: left;
+    width: 100%;
+}
+
+.gridcommn:nth-child(1) .ticketsvaries {
+    background: url(./assets/img/redtcikets.png);
+    float: left;
+    background-repeat: no-repeat;
+}
+
+.gridcommn:nth-child(2) .ticketsvaries {
+    background: url(./assets/img/yellotickets.png);
+    float: left;
+    background-repeat: no-repeat;
+}
+
+.gridcommn:nth-child(3) .ticketsvaries {
+    background: url(./assets/img/violetsticktes.png);
+    float: left;
+    background-repeat: no-repeat;
+}
+
+.evtallgrid .ticketsvaries {
+    margin-bottom: 20px;
+}
+
+.newdatepickerbyjbs {
+    text-align: left;
+}
+
+.newdatepickerbyjbs input {
+    border: none;
+    padding: 0;
+    font-size: 15px;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.newdatepickerbyjbs mat-label {
+    font-size: 12px;
+    color: #9f9999;
+    float: left;
+    margin-bottom: 4px;
+}
+
+.ermsd {
+    color: red;
+    font-size: 12px;
+}
+
+.inputvouvhers.timeBased mat-label {
+    font-size: 15px;
+    color: #292929;
+}
+
+.editableparts 
+ .inputvouvhers.timeBased span {
+    text-indent: 22px;
+}
+
+.editableparts .setformsicos.lefticodates.nooff input {
+    text-indent: 23px;
+}
+
+.editableparts .setformsicos.lefticodates.nooff button.mat-icon-button.mat-button-base {
+    width: 100%;
+}
+
+.setformsicos.lefticodates .mat-form-field-suffix {
+    width: 100%;
+}
+
+
+.setformsicos.righticos.tmmse input {
+    text-indent: 23px;
+}
+
+.setformsicos.righticos.tmmse  i.material-icons.leftops {
+    left: 0;
+    right: inherit;
+    top: 27px;
+}
+
+.setformsicos .newdatepickerbyjbs i.material-icons.leftops {
+    top: 24px;
+}
+
+.setformsicos .newdatepickerbyjbs input {
+    text-indent: 23px;
+}
+
+.simpleformpages textarea#mat-input-0 {
+    text-indent: 0px;
+    padding: 8px 5px;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.setformsicos textarea {
+    padding: 6px 5px !important;
+    text-indent: 0px;
+}
+
+.midcenterfrms.helpfroms textarea.mat-input-element {
+    padding: 7px 6px;
+}
+
+.setformsicos label.mat-form-field-label {
+    margin-top: 6px;
+    margin-left: 5px;
+}
+
+
+.newdatepickerbyjbs.showinpops mat-label {
+    width: 100%;
+    float: left;
+}
+
+.newdatepickerbyjbs.showinpops  .ngx-timepicker-field-example {
+    float: left;
+    width: 100%;
+}
+
+.newdatepickerbyjbs.showinpops .ngx-timepicker-field-example input {
+    text-indent: 0;
+    font-size: 13px;
+}
+
+.newdatepickerbyjbs.showinpops .ngx-timepicker-field-example  .ngx-timepicker-control {
+    width: 40px;
+    padding: 0 4px 0 0px;
+}
+
+.newdatepickerbyjbs.showinpops .period span {
+    font-size: 14px;
+}
+
+.newdatepickerbyjbs.showinpops {
+    width: 100%;
+    position: relative;
+    top: -9px;
+}
+
+
+span.nomtxt {
+    font-family: Roboto;
+    font-weight: 400;
+}
+
+p.tmtmr span {
+    font-family: Roboto;
+    font-weight: 400;
+}
+
+.clubinfoname.vchrinfose p.vclfts.lfsvt {
+    float: left;
+}
+
+
+span.nosprm{
+    position:absolute;
+    right:15px;
+    bottom:18px;
+}
+span.nosprm span {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+span.nosprm.livebs{
+    position: relative;
+    right:initial;
+    bottom:initial;
+}
+
+
+span.nosprm{
+    font-family: 'Digital-7 Mono' !Important;
+    font-weight: 100;
+}
+
+span.offexp {
+    margin-right: 5px;
+}
+
+.couponoffers.livedisp .clubinfoname {
+    width: 60%;
+}
+
+.ticketsvaries {
+    background-size: 100% !important;
+    min-height: 160px;
+}
+
+
+.couponoffers.livedisp button.whtbtns {
+    margin-right: 0;
+}
+
+.couponoffers.livedisp .lcdistant p {
+    margin-right: 0px;
+} 
+
+.showsets.closeparts {
+    display: inline-block;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.showsets.closeparts label.switch {
+    float: right;
+    width: 20px;
+}
+
+.showsets.closeparts h5 {
+    float: left;
+}
+
+.showsets.closeparts .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  width: 36px;
+  height: 20px;
+}
+
+.showsets.closeparts .slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    box-shadow: #676060 0px 0px 4px 0px;
+}
+
+.showsets.closeparts input:checked + .slider {
+  background-color: #9f3c3c;
+}
+
+.showsets.closeparts input:focus + .slider {
+  box-shadow: 0 0 1px #9f3c3c;
+}
+
+.showsets.closeparts input:checked + .slider:before {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+}
+
+
+.showsets.closeparts .slider.round {
+  border-radius: 34px;
+}
+
+.showsets.closeparts .slider.round:before {
+  border-radius: 50%;
+}
+
+.gridcommn:nth-child(4) .ticketsvaries,
+.gridcommn:nth-child(5) .ticketsvaries
+.gridcommn:last-child .ticketsvaries
+ {
+    background: url(./assets/img/redtcikets.png);
+    float: left;
+    background-repeat: no-repeat;
+}
+
+/*css for Resposive srats here */
+
+@media screen and (max-width: 767px) and (min-width: 320px){
+
+    .referfrdcenter,   .referleftguides .stpemakar img,
+    .referrightguides, .textjbc {
+        width: 100%;
+    }
+
+    .textjbc{
+        margin-left: 9px;
+    }
+    .midcenterfrms.helpfroms {
+        width: 100%;
+    }
+    
+    
+
+    .getdirectjbs{
+        width: 100%;
+    }
+    .menushowmobs {
+        position: fixed;
+        left: 0;
+        width: 75%;
+        background: #000;
+        height: 100%;
+        top: 0;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9; 
+        transform: translateX(-600px);
+    transition: all ease 0.7s;
+    }
+
+    .menushowmobs.openslidesme {
+        opacity: 1;
+        visibility: visible;
+        transition: all ease 0.7s;
+        transform: translateX(0px);
+    }
+
+    .designboxsd{
+        width: 100%;
+    }
+
+    .logolanggen.ownlgo {
+        width: 28%;
+    }
+
+    .searchweb button{
+        margin-bottom: 10px;
+    }
+    
+    .menushowmobs .homemenucl.withoulgos {
+        width: 100%;
+        height: auto;
+    }
+    
+    .menushowmobs .homemenucl ul li {
+        display: block;
+        margin-bottom: 16px;
+    }
+    
+    .menushowmobs .homemenucl ul {
+        margin: 0;
+    }
+    
+    .menushowmobs .searchweb {
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin-top: 10px;
+        float: left;
+        top: 0;
+    }
+    
+    .menushowmobs .signlogcmp {
+        width: 100%;
+    }
+    
+    .menushowmobs .signlogcmp a {
+        padding: 7px 11px;
+    }
+    
+    .menuicoburgs i.fas.fa-times {
+        display: none;
+    }
+
+    .menuicoburgs {
+        display: block;
+    }
+
+    
+
+    .logolanggen {
+        width: 26%;
+    }
+
+    .logosdv {
+        width: 58%;
+    }
+
+    .selctcountry{
+        width: 66%;
+    }
+
+    .signlogcmp{
+        width: 76%;
+    }
+
+    .signlogcmp a.transpbtnsd{
+        padding: 5px 11px;
+        font-size: 11px;
+
+    }
+
+    .signlogcmp a.yellowglobtn{
+        padding: 7px 21px;
+        font-size: 11px;
+    }
+
+
+    header.clbhdr {
+        position: relative;
+        padding: 12px 0;
+    }
+    
+    .searchweb {
+        width: 57%;
+        position: absolute;
+        right: 0;
+        height: auto;
+        top: 27px;
+    }
+    
+    .searchweb input.notopeninpt.openinp {
+        z-index: 999;
+        background: #ddd;
+        padding: 1px 6px;
+    }
+    
+    .searchweb form {
+        margin: 0;
+        float: right;
+        width: 100%;
+    }
+    
+    .signlogcmp a {margin-top: 0;}
+    
+    .signlogcmp {
+        height: auto;
+        margin-top: 0px;
+    }
+
+    .searchweb input.notopeninpt.openinp{
+        width: 95%;
+    }
+    
+    header.navfixed {
+        padding: 10px 0;
+    }
+    
+    .serachsliders {
+        width: 92%;
+    }
+
+    .gridcommn{
+        float: left;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 32px;
+    }
+
+    .imglcs img {
+        margin: 4px 0 auto 0;
+    }
+
+    .locationgrids{
+        width: 100%;
+    }
+
+    .locationgrids ul li{
+        margin-bottom: 19px;
+    }
+
+    .downloadappct{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .mobilebga, .mobilebga img{
+        width: 100%;
+    }
+
+    .tickteds img {
+        height: fit-content;
+    }
+    
+    .ticketsvaries {
+        height: 170px;
+        overflow: hidden;
+    }
+
+    .widgetsfoo ul li a{
+        font-size: 14px;
+    }
+
+    .widgetsfoo ul li {
+        margin-bottom: 11px;
+    }
+
+    .widgetsfoo h3{
+        margin: 20px 0;
+    }
+
+
+    .fromsnews .mat-form-field-infix {
+        width: auto;
+    }
+
+    .fromsnews {
+        width: 100%;
+    }
+
+    .fromsnews i.far {
+        position: absolute;
+        left: 0px;
+        top: 26px;
+    }
+
+    .mainhd-newstags p {
+        font-size: 14px;
+    }
+
+    .formssignall{
+        width: 100%;
+    }
+
+    .formssignall mat-tab-header.mat-tab-header{
+        width: 100%;
+    }
+
+    .formbgaprt {
+        width: 100%;
+        padding: 55px 18px;
+    }
+
+    .mat-button.fbbluebtnd{
+        padding: 4px 0px;
+    }
+    .binsdds.frgtmodel {
+        width: auto;
+    }
+
+    .venuslidersectionsd .funthumbs {
+        height: 200px;
+    }
+
+    .centerdropsd{
+        display: flex;
+    flex-direction: column;
+    width: 100%;
+    }
+
+    .dropicoshw{
+        margin: 11px auto;
+        width: 100%;
+    }
+
+    .amnsets ul li{
+        width: 100%;
+    }
+
+    .maplocatesd {
+        margin-bottom: 20px;
+    }
+
+    .evetsindoonyls .gridcommn {
+        width: 50%;
+        padding: 0 6px;
+        margin: 0 0 6px 0;
+    }
+
+    .evetsindoonyls .funthumbs {
+        height: 83px;
+        overflow: hidden;
+    }
+
+    .evtdtsl h5{
+        font-size: 14px;
+    }
+    
+    .dropicoshw p{
+        font-size: 14px;
+    }
+
+    .dtaclub, .dtashare{
+        width: 100%;
+    }
+
+    .dtaclub p.evdtsplr img {
+        width: 15px;
+        margin: auto 3px;
+    }
+
+    .dtaclub p.evdtsplr {
+        margin-bottom: 16px;
+    }
+
+    .binsdds, .binsdds.redemsets {
+        width: 100%;
+    }
+
+    .binsdds.redemsets .formacts p{
+        width: 100%;
+    }
+
+    .mat-dialog-container{
+        padding: 10px !important;
+    }
+
+
+    .signlogcmp.currentlylogin {
+        width: 74%;
+        margin: 0;
+    }
+
+    .showbeflog{
+        margin: auto;
+    }
+
+    .userinfoprohead{
+        width: 21%;
+    }
+
+    .homemenucl.currntlogmenu {
+        display: block;
+    height: auto;
+    width: 100%;
+    }
+
+    .thumbareasupd{
+        height: 172px;
+    }
+
+    .thumbusersh {
+        margin: 0;
+    } 
+
+    .cdk-overlay-pane {
+        max-width: 90vw !important;
+    }
+
+    .fourtxtfd input{
+        width: 38px;
+    }
+
+    .profilecontentwdth {
+        margin: 0 0 !important;
+    }
+
+    .nopaddlfts:before {
+        width: 0px !important;
+    }
+
+    .clubinfos.bgachanges .centerdropsd{
+        width: 100%;
+    }
+
+    .clubinfos.bgachanges .clubshare.editableparts {
+        padding: 20px 0;
+    }
+
+    .dropicoshw {
+        width: 100% !important;
+        padding: 0 10px !important;
+    }
+
+    .socialgrids {
+        margin-bottom: 7px;
+    }
+
+    .chkbxpop .mat-radio-button {
+        width: 31%;
+    }
+
+    .happyhourspromotion {
+        display: block;
+    }
+
+    .promotxt {
+        width: 71%;
+        margin-bottom: 6px;
+    }
+
+    .clubinfos.bgachanges .amnsets ul li{
+        width:100%;
+    }
+
+    .clubinfos.bgachanges .clubshare.editableparts {
+        padding: 0;
+        margin: 0;
+    }
+
+    .userinfoprohead.ownuser{
+        height: auto;
+    }
+
+    .backusers {
+        float: right;
+        margin-right: 20px;
+    }
+
+    .UploadFileArea{
+        min-width: 100% !important;
+        margin-top: 25px;
+    }
+
+    .banncts h5{
+        font-size: 26px;
+    }
+
+    .viewhdand-bts button.yellowbtsshw {
+        margin-right: 0;
+        font-size: 11px;
+        padding: 0 20px;
+    }
+
+    .viewhdand-bts h6.main-headnorms{
+        font-size: 17px;
+    }
+
+    .featrevts.spcldtls{
+        margin-bottom: 0;
+    }
+
+    p.tmtmr{
+        font-size: 14px;
+        width:100%;
+    }
+    
+    .vcrinfos button.whtbtns{
+        padding: 0 10px;
+    }
+} 
+
+
+
+@media screen and (max-width: 1024px) and (min-width: 768px){
+    .getdirectjbs a{
+        font-size: 11px;
+    }
+
+    .centerdropsd{
+        width: 81%;
+    } 
+
+    .homemenucl.withoulgos {
+        width: 49%; 
+    }
+
+    .homemenucl ul li{
+        margin: 0 15px;
+    }
+
+    .selctcountry .mat-select-value {
+        color: #fff;
+        width: 70%;
+    }
+
+    .gridcommn{
+        width: 31%;
+    }
+
+    .centerdropsd {
+        margin: 0 auto;
+        width: 93%;
+    }
+
+}
+
+
+@media screen and (max-width: 1229px) and (min-width: 1025px){
+    .gridcommn{
+        width: 31.5%;
+    }
+
+    .homemenucl.withoulgos {
+        width: 49%; 
+    }
+
+    .homemenucl ul li{
+        margin: 0 15px;
+    }
+
+    .selctcountry .mat-select-value {
+        color: #fff;
+        width: 70%;
+    }
+
+    .centerdropsd {
+        margin: 0 auto;
+        width: 81%;
+    }
+}

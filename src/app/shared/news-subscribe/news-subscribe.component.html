@@ -1,0 +1,43 @@
+<div class="newsltrs">
+    <div class="main-containersite">
+        <div class="mainhd-newstags">
+            <h2>News & Tips</h2>
+            <p>Sign up to receive more news like this straight to your inbox</p>
+        </div>
+        <div class="fulldisd">
+            <div class="fromsnews">
+                <form [formGroup]="newsForm" (ngSubmit)="newsSubmit()">
+                    <mat-grid-list cols="2" rowHeight="2:1">
+                        <mat-grid-tile>
+                            <i class="far fa-user"></i>
+                            <mat-form-field>
+                                <input matInput placeholder="Name" formControlName="name">
+                                <mat-error *ngIf="newsFormSubmitCheck && newsForm.controls.name.hasError('required')">
+                                    Full Name is required
+                                </mat-error>
+                            </mat-form-field>
+                        </mat-grid-tile>
+
+                        <mat-grid-tile>
+                            <i class="far fa-envelope"></i>
+                            <mat-form-field>
+                                <input matInput placeholder="Email Address" formControlName="email">
+                                <mat-error *ngIf="newsFormSubmitCheck && newsForm.controls.email.hasError('required')">
+                                    Email is required
+                                </mat-error>
+                                <mat-error *ngIf="newsFormSubmitCheck && newsForm.controls.email.hasError('email')">
+                                    Email is not valid
+                                </mat-error>
+                            </mat-form-field>
+                        </mat-grid-tile>
+
+                        <mat-grid-tile class="subsbtsnd">
+                            <button mat-button class="blackrelbtsshw">Subscribe</button>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

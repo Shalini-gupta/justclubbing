@@ -1,0 +1,57 @@
+<div class="nohdmenus">
+        <app-headerloginbackbtn></app-headerloginbackbtn>
+    </div>
+
+<div class="filterareasven">
+    <div class="main-containersite">
+        <div class="couponoffers">
+            <div class="frdgtfull">
+                <div class="fourdgmids">
+                    <p>Your Unique 4 Digit PIN</p>
+                    <strong>{{offerList[0]?.pin}}</strong>
+                </div>
+            </div>
+            <div class="" style="float:left;width: 100%;">
+            <div class="row">
+                <div class="col-md-4" *ngFor="let offer of offerList; let i = index">
+                    <div class="ticketsvaries">
+                       
+                        <div class="tickteds redvarients">
+                            <img src="./assets/img/redtcikets.png">
+                        </div>                 
+                        <div class="ticinfoshowms">
+                            <div class="vcrinfos">
+                                <p>{{offer?.createdAt | date:'EEEE, d MMMM'}}</p>
+                                <button mat-button class="whtbtns golivebts" *ngIf="offer.status == 'Inactive'">Go Live</button>
+                                <button mat-button class="whtbtns golivebts" *ngIf="offer.status == 'Active'">Live</button>
+                            </div>
+                            <div class="lcdistant cpinfos" [routerLink]="['/owners-manage/viewliveoffer', offer._id]" style="cursor:pointer;">
+                                <strong>{{offer?.offerTitle}}</strong>
+                            </div>
+                            <div class="clubinfoname vchrinfose tmlf">
+                                <p class="vclfts" *ngIf="offer.offerType == 'numberBased'">Voucher Left - 
+                                    {{offer?.vouchersNumber - offer?.soldCount}}
+                                </p>
+                                <p class="vclfts lfsvt" *ngIf="offer.offerType == 'numberBased'">Voucher Sold - 
+                                    {{offer?.soldCount}}
+                                </p>
+                                <p *ngIf="offer.offerType == 'timeBased'">
+                                    <app-voucher [data]="{'fromDate': offer.fromDate,toDate: offer.toDate, timeDurationFrom: offer.timeDurationFrom, timeDurationTill: offer.timeDurationTill, offerSold: offer.soldCount}"></app-voucher>
+                                </p>
+                                <p class="tmtmr LiveTimedata" *ngIf="offer.offerType == 'timeBased'">
+                                    <app-liveofferdata [data]="{'offerId': offer._id, 'fromDate': offer.fromDate,toDate: offer.toDate, timeDurationFrom: offer.timeDurationFrom, timeDurationTill: offer.timeDurationTill}" ></app-liveofferdata>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="setformsicos mgofrs">
+            <button class="yellowbtsshw" mat-button [routerLink]="['/owners-manage/createliveoffer']">CREATE NEW OFFER</button>
+        </div>
+        </div>
+    </div>
+
+    <app-footerowner></app-footerowner>

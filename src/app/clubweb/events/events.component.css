@@ -1,0 +1,22 @@
+.bdrghtd{ border:none }
+
+.nopaddlfts {
+    padding: 0 15px;
+    position: relative;
+}
+  
+
+.profilecontentwdth, 
+.nopaddlfts  .citiylocationswise{
+    padding: 0px;
+}
+
+.profilecontentwdth{
+    width: 98%;
+    margin: 0 0 0px 20px;
+}
+
+.nopaddlfts .citiylocationswise{
+    width: 98%;
+    margin: 0 0 30px 20px;
+}

@@ -1,0 +1,92 @@
+<p class="crosicos" (click)="onNoClick()" type="text" mat-dialog-close> X</p>
+
+<div class="binsdds clubinfos bgachanges hpbgawgit">
+
+    <div class="venuinf">
+        <p>Happy Hours</p>
+    </div>
+
+    <div class="additrs">
+        <p>Happy Hours</p>
+        <img (click)="addItem()" src="./assets/img/addtime.png">
+    </div>
+    <form [formGroup]="happyHours" (ngSubmit)="happyHourSubmit()">
+        <div class="cubs" style="float: left; width: 99%;" formArrayName="opningAndClosing">
+            <div class="row" [formGroupName]="i"
+                *ngFor="let arrayItem of happyHours.get('opningAndClosing')['controls']; let i=index">
+                <div class="col-md-4">
+                    <div class="setformsicos">
+
+                        <mat-form-field>
+                            <mat-label>Day</mat-label>
+                            <mat-select formControlName="day">
+                                <mat-option value="">Select Day</mat-option>
+                                <mat-option value="Monday">Monday</mat-option>
+                                <mat-option value="Tuesday">Tuesday</mat-option>
+                                <mat-option value="Wednesday">Wednesday</mat-option>
+                                <mat-option value="Thursday">Thursday</mat-option>
+                                <mat-option value="Friday">Friday</mat-option>
+                                <mat-option value="Saturday">Saturday</mat-option>
+                                <mat-option value="Sunday">Sunday</mat-option>
+                            </mat-select>
+                            <mat-error *ngIf="venueSubmitCheck && arrayItem.controls.day.hasError('required')">
+                                Day is required
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="setformsicos">
+                        <div class="newdatepickerbyjbs">
+                            <i class="material-icons leftops">
+                               access_time
+                               </i>
+                            <mat-label>Opening Time</mat-label>
+                            <div class="default-time-example">
+                                <input aria-label="default time" [ngxTimepicker]="defaultValue" [value]="'05:11 pm'" readonly formControlName="openingTime">
+                                <ngx-material-timepicker #defaultValue></ngx-material-timepicker>
+                           </div>
+                           <div  class="ermsd" *ngIf="venueSubmitCheck && arrayItem.controls.openingTime.hasError('required')">
+                            Opening Time is required
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="setformsicos">
+                        <div class="newdatepickerbyjbs">
+                            <i class="material-icons leftops">
+                               access_time
+                               </i>
+                            <mat-label>Closing Time</mat-label>
+                            <div class="default-time-example">
+                                <input aria-label="default time" [ngxTimepicker]="defaultValue1" [value]="'05:11 pm'" readonly formControlName="closingTime">
+                                <ngx-material-timepicker #defaultValue1></ngx-material-timepicker>
+                           </div>
+                           <div  class="ermsd" *ngIf="venueSubmitCheck && arrayItem.controls.closingTime.hasError('required')">
+                            Closing Time is required
+                          </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+            <a href="javascript:void(0)" (click)="removeItem()">Remove</a>
+            <div class="col-md-12">
+                <div class="mondte">
+                    <p *ngFor="let item of happyHours.value.opningAndClosing">
+                        {{item.day}} {{item.openingTime ? item.openingTime+' to ' : '' }} {{item.closingTime}}
+                    </p>
+                </div>
+
+                <div class="setformsicos">
+                    <button class="yellowbtsshw" mat-button>Save</button>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>

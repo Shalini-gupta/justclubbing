@@ -1,0 +1,170 @@
+.SliderArea {
+    height: 473px;
+    overflow: hidden;
+}
+
+.SliderArea img {
+    width: 100%;
+}
+
+.HistoryArea {
+    float: left;
+    width: 100%;
+    padding: 30px 0 50px;
+}
+
+.HistoryArea .HistoryHead {
+    border-bottom: 1px solid #ddd;
+    margin: 0 0 30px 0;
+}
+
+.HistoryArea .HistoryHead h4 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 9px;
+}
+
+.HistoryArea .HistoryHead h5 {
+    float: right;
+    color: #747171;
+    font-size: 17px;
+    margin: 10px 0 0 0;
+}
+
+.HistoryArea .HistoryHead h5 span {
+    color: #000;
+    font-weight: 500;
+}
+
+.HistoryArea .HistoryHead h6 {
+    margin: 0 0 13px;
+    color: #c40c0c;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.HistoryArea .HistoryHead p {
+    font-size: 15px;
+    position: relative;
+    padding: 0 0 0 35px;
+    margin: 0 0 15px;
+}
+
+.HistoryArea .HistoryHead p span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+}
+
+
+
+.HistoryArea .HistoryHead p label {
+    border-left: 1px solid #ddd;
+    margin: 0 0 0 30px;
+    padding: 0 0 0 30px
+}
+
+.HistoryBody {}
+
+.HistoryBody table {
+    width: 100%;
+    border: 1px solid #ddd;
+    margin: 0 0 20px;
+}
+
+.HistoryBody table tr th,
+.HistoryBody table tr td {
+    padding: 10px 20px;
+}
+
+.HistoryBody table tr th {
+    background-color: #c6c6c6;
+    color: #000;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.HistoryBody table tr td {
+    border-bottom: 1px solid #ddd;
+}
+
+.HistoryBody table tr:nth-child(odd) {
+    background-color: #e7e7e7;
+}
+
+.HistoryBody table tr:last-child {
+    background-color: #000;
+    color: #fff;
+}
+
+.EmailArea {
+    margin: 50px 0 0 0;
+}
+
+.EmailArea h3{
+    font-size: 22px;
+    margin: 0 0 17px;
+}
+
+.EmailArea form {
+    background-color: #f5f5f5;
+    padding: 25px 25px 5px 25px;
+    border: 1px solid #e4e4e4;
+}
+
+.EmailArea form .form-group {
+    margin: 0 0 20px;
+}
+
+.EmailArea form .form-group label {
+    display: block;
+    font-weight: 500;
+    color: #000;
+    font-size: 15px;
+    font-family: 'Roboto';
+}
+
+.EmailArea form .form-group .form-control {
+    box-shadow: none;
+    border: 1px solid #c3c3c3;
+    height: 40px;
+    font-size: 14px;
+    color: #000;
+    line-height: 22px;
+}
+
+.EmailArea form .form-group .material-icons{
+    font-size: 35px;
+    margin: 0px 10px 0 0;
+}
+
+.EmailArea form .form-group .material-icons:hover{
+    color: #ca1010;
+}
+
+.EmailArea form .form-group textarea.form-control {
+    height: auto;
+}
+
+.EmailArea form .form-group button {
+    padding: 8px 50px;
+    display: inline-block;
+    background-color: #000;
+    margin: 0;
+    color: #fff;
+    transition: 0.5s all ease-in-out;
+    border: 2px solid #000;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    outline: 0;
+    text-transform: capitalize;
+}
+
+.EmailArea form .form-group button:hover {
+    background-color: #feca05;
+    color: #000;
+    border-color: #feca05;
+}

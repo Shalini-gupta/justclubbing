@@ -1,0 +1,117 @@
+<div class="nohdmenus">
+    <app-headerloginbackbtn></app-headerloginbackbtn>
+</div>
+<div class="clubinfos bgachanges">
+        <div class="main-containersite">
+             <div class="clubshare editableparts">
+                
+                     <div class="clunbamenties">
+                      
+                     <div class="row">
+     
+                             <div class="col-md-6">
+                                  <div class="offerdtls">
+                                      <div class="showsets">
+                                            <h5>Offer Title*</h5>
+                                            <div class="hlpshown" (click)="openDialog()"><img  src="./assets/img/helpinfo.png"></div>
+                                      </div>
+
+                                      <div class="abuts">
+                                            <mat-form-field>
+                                                    <textarea matInput placeholder="Max character 75"></textarea>
+                                            </mat-form-field>
+                                      </div>
+                                      
+                                  </div>
+                             </div>
+         
+                             <div class="col-md-6">
+                                    <div class="offerdtls">
+                                            <div class="showsets">
+                                                <h5>Extra Information</h5>
+                                                <div class="hlpshown" (click)="openDialog2()"><img  src="./assets/img/helpinfo.png"></div>
+                                            </div>
+
+                                            <div class="abuts">
+                                                    <mat-form-field>
+                                                            <textarea matInput placeholder="Max character 100"></textarea>
+                                                    </mat-form-field>
+                                              </div>
+                                        
+                                    </div>
+                             </div>
+
+
+                             <div class="col-md-6">
+                                    <div class="offerdtls">
+                                      
+                                        <div class="chkbxpop blockbasedopts">
+                                                <mat-radio-group aria-label="Select an option">
+                                                        <mat-radio-button value="1">Number of  Voucher Based </mat-radio-button>
+                                                        <mat-radio-button value="2">Time Based</mat-radio-button>
+                                                      </mat-radio-group>
+                                        </div>
+                                    </div>
+                               </div>
+           
+                               <div class="col-md-6">
+                                      <div class="offerdtls">
+                                            <div class="showsets">
+                                          <h5>Time Duration</h5>
+                                          </div>
+
+                                          <div class="inputvouvhers">
+                                              <div class="row">
+                                                  <div class="col-md-6">
+                                                        <div class="setformsicos righticos">
+                                                               
+                                                                <mat-form-field>
+                                                                        <mat-select>
+                                                                            <mat-option>Please Select Time</mat-option>
+                                                                            <mat-option value="option">9:00 AM</mat-option>
+                                                                            <mat-option value="option">2:00 PM</mat-option>
+                                                                            <mat-option value="option">10:00 PM</mat-option>
+                                                                        </mat-select>
+                                                                        <mat-label>From</mat-label>
+                                                                        </mat-form-field>
+                                                        </div>
+                                                  </div>
+
+                                                  <div class="col-md-6">
+                                                        <div class="setformsicos righticos">
+                                                               
+                                                                <mat-form-field>
+                                                                        <mat-select>
+                                                                            <mat-option>Please Select Time</mat-option>
+                                                                            <mat-option value="option">12:00 AM</mat-option>
+                                                                            <mat-option value="option">2:00 AM</mat-option>
+                                                                            <mat-option value="option">10:00 AM</mat-option>
+                                                                        </mat-select>
+                                                                        <mat-label>Till</mat-label>
+                                                                        </mat-form-field>
+                                                        </div>
+                                                  </div>
+                                              </div>
+                                                
+                                          </div>
+
+                                      </div>
+                               </div>
+
+                               <div class="col-md-6">
+                                    <div class="offerdtls ofrules">
+                                       <p>Offers are Subject to <span>Rules of Use</span></p>
+                                    </div>
+                             </div>
+
+                             <div class="setformsicos">
+                                    <button  class="yellowbtsshw" mat-button [routerLink]="['/owners-manage/manageliveofers']">GO LIVE</button>
+                                </div>
+
+                     </div>
+             </div>
+            
+             </div>
+        </div>
+     </div>
+<app-footerowner></app-footerowner>

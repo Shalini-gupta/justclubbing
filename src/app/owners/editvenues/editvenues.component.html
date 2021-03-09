@@ -1,0 +1,339 @@
+<div class="nohdmenus">
+        <app-headerloginbackbtn></app-headerloginbackbtn>
+     </div>
+     <div class="venuslidersectionsd manageslid editsdelbts">
+         <section id="demos" class="agentssliders">
+            <div class="featrevts spcldtls">
+               <div class="funthumbs">
+               </div>
+            </div>
+       
+            <div class="owl-carousel jobavails owl-theme">
+               <div class="item" *ngFor="let item of [0,1,2,3,4,5,6,7,8,9];let i =index">
+                  <div class="addmoreimagesu">
+                     <button (click)="fileDialog(i)"> Add image</button>
+                  </div>
+
+                  <div class="wishshwms">
+                     <ul>
+                        <li>
+                           <a (click)="removeImage(i)"><i class="fas fa-trash"></i></a>
+                        </li>
+                     </ul>
+                  </div>
+   
+                  <div class="funthumbs">
+                     <!-- <div class="thumbareasupd">
+                        <img src="{{uploadFileUrls[i] ? uploadFileUrls[i] : './assets/img/graybga.png'}}">
+                     </div> -->
+
+                     <div class="thumbareasupd" *ngIf="uploadFileUrls[i]">
+                        <img [src]="uploadFileUrls[i]"/>
+                    </div>
+                    <div class="thumbareasupd" *ngIf="!uploadFileUrls[i]">
+                        <img src="./assets/img/graybga.png">
+                        <div class="addimagesmore centericos">
+                           <img src="./assets/img/cameicos.png">
+                        </div>
+                    </div>
+                  </div>
+               </div>
+            </div>
+           </section>
+     </div>
+     <div class="clubinfos bgachanges">
+        <div class="main-containersite">
+           <div class="clubshare editableparts">
+            <form [formGroup]="editVenueForm" (ngSubmit)="venueSubmit()">
+              <div class="clunbamenties">
+                 <h4>Venue Details</h4>
+                 <div class="row">
+                    <div class="col-md-6">
+                       <div class="setformsicos">
+                          <mat-form-field>
+                             <input matInput placeholder="Venue Name" formControlName="venueName">
+                          </mat-form-field>
+                          <mat-error
+                          *ngIf="venueSubmitCheck && editVenueForm.controls.venueName.hasError('required')">
+                          Venue Name is required
+                          </mat-error>
+                       </div>
+                    </div>
+                    <div class="col-md-6">
+                       <div class="setformsicos icoscohelp">
+                          <div class="helpmodeopts" (click)="openDialog2()">
+                             <img src="./assets/img/helpinfo.png">
+                          </div>
+                          <mat-form-field>
+                             <mat-label>Venue Type</mat-label>
+                             <mat-select formControlName="venueType">
+                              <!-- <mat-option *ngFor = "let category of categories;" value="{{category.venueType}}"><p *ngIf="editVenueForm.value.venueType == category.venueType">{{category.categoryName}}</p></mat-option> -->
+                              <mat-option value="club&Bars" 
+                                 *ngIf="editVenueForm.value.venueType == 'club&Bars'">Clubs & Bars
+                              </mat-option>
+                               <mat-option value="party&WeddingHalls" *ngIf="editVenueForm.value.venueType == 'party&WeddingHalls'">Wedding & Function Halls</mat-option>
+                                <mat-option value="partyBus&LimoHire" *ngIf="editVenueForm.value.venueType == 'partyBus&LimoHire'">Party bus, Limo & Cruise</mat-option>
+                                 <mat-option value="play&Drinks" *ngIf="editVenueForm.value.venueType == 'play&Drinks'">Play & Drinks</mat-option>
+                                <mat-option value="tattoo&Piercing" *ngIf="editVenueForm.value.venueType == 'tattoo&Piercing'">Tattoo & Piercing</mat-option>
+                             </mat-select>
+                          </mat-form-field>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div class="clunbamenties" style="margin-top:0px ;">
+                 <div class="row">
+                    <div class="col-md-12">
+                       <div class="setformsicos">
+                          <mat-form-field>
+                             <input matInput placeholder="Address" formControlName="address" id="sourcePlace" value="{{sourcePlaceValue}}" (focus)="focusFunction('sourcePlace')">
+                             <mat-error
+                                 *ngIf="venueSubmitCheck && editVenueForm.controls.address.hasError('required')">Address is required
+                             </mat-error>
+                          </mat-form-field>
+                       </div>
+                    </div>
+                 
+                    <div class="col-md-3">
+                       <div class="setformsicos">
+                          <mat-form-field>
+                             <!-- <input matInput placeholder="City" formControlName="venueCity"> -->
+                             <mat-label>City</mat-label>
+                             <mat-select formControlName="venueCity">
+                                 <mat-option>Select City</mat-option>
+                                 <mat-option *ngFor="let city of citiesData" value="{{city.name}}">{{city.name}}</mat-option>
+                             </mat-select>
+                             <mat-error *ngIf="venueSubmitCheck && editVenueForm.controls.venueCity.hasError('required')">City is required
+                             </mat-error>
+                          </mat-form-field>
+                       </div>
+                    </div>
+                    <div class="col-md-3">
+                       <div class="setformsicos">
+                          <mat-form-field>
+                             <input matInput placeholder="Suburb" formControlName="venueSuburb">
+                             <mat-error
+                             *ngIf="venueSubmitCheck && editVenueForm.controls.venueSuburb.hasError('required')">
+                             Venue Suburb is required
+                           </mat-error>
+                          </mat-form-field>
+                       </div>
+                    </div>
+                    <div class="col-md-3">
+                       <div class="setformsicos">
+                          <mat-form-field>
+                             <mat-label>State</mat-label>
+                             <input matInput formControlName="venueState">
+                             <mat-error *ngIf="venueSubmitCheck && editVenueForm.controls.venueState.hasError('required')">
+                             Venue State is required
+                            </mat-error>
+                          </mat-form-field>
+                       </div>
+                    </div>
+                    <div class="col-md-3">
+                       <div class="setformsicos" >
+                          <mat-form-field>
+                             <input matInput placeholder="Postcode" formControlName="venuePostcode">
+                             <mat-error
+                                 *ngIf="venueSubmitCheck && editVenueForm.controls.venuePostcode.hasError('required')">
+                                 Venue Post Code is required
+                             </mat-error>
+                             <mat-error
+                                 *ngIf="venueSubmitCheck && editVenueForm.controls.venuePostcode.hasError('pattern')">
+                                 Valid Venue Post Code is required
+                             </mat-error>
+                          </mat-form-field>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div class="clunbamenties" formArrayName="opningAndClosing" *ngIf="editVenueForm.value.venueType == 'club&Bars' || editVenueForm.value.venueType == 'party&WeddingHalls' || editVenueForm.value.venueType == 'play&Drinks' || editVenueForm.value.venueType == 'tattoo&Piercing' ">
+                 <div class="opnoptshow">
+                    <h4>Opening and Closing Time</h4>
+                    <img (click)="addItem()" src="./assets/img/addtime.png">
+                 </div>
+                 <div class="row" [formGroupName]="i"
+                 *ngFor="let arrayItem of editVenueForm.get('opningAndClosing')['controls']; let i=index">
+                    <div class="col-md-4">
+                       <div class="setformsicos">
+                          <mat-form-field>
+                             <mat-label>Day</mat-label>
+                             <mat-select formControlName="day">
+                                 <mat-option value="">Select Day</mat-option>
+                                 <mat-option value="Monday">Monday</mat-option>
+                                 <mat-option value="Tuesday">Tuesday</mat-option>
+                                 <mat-option value="Wednesday">Wednesday</mat-option>
+                                 <mat-option value="Thursday">Thursday</mat-option>
+                                 <mat-option value="Friday">Friday</mat-option>
+                                 <mat-option value="Saturday">Saturday</mat-option>
+                                 <mat-option value="Sunday">Sunday</mat-option>
+                             </mat-select>
+                             <mat-error *ngIf="venueSubmitCheck && arrayItem.controls.day.hasError('required')">
+                                 Day is required
+                             </mat-error>
+                          </mat-form-field>
+                       </div>
+                    </div>
+                    <div class="col-md-4">
+                       <div class="setformsicos">
+                        <div class="newdatepickerbyjbs">
+                           <i class="material-icons leftops">
+                              access_time
+                              </i>
+                           <mat-label>Opening Time</mat-label>
+                           <div class="default-time-example">
+                              <input aria-label="default time" [ngxTimepicker]="defaultValue" readonly formControlName="openingTime">
+                              <ngx-material-timepicker #defaultValue></ngx-material-timepicker>
+                         </div> 
+                         <div  class="ermsd" *ngIf="venueSubmitCheck && arrayItem.controls.openingTime.hasError('required')">
+                           Opening Time is required
+                         </div>
+                        </div>
+                       </div>
+                    </div>
+                    <div class="col-md-4">
+                       <div class="setformsicos">
+                        <div class="newdatepickerbyjbs">
+                           <i class="material-icons leftops">
+                              access_time
+                              </i>
+                           <mat-label>Closing Time</mat-label>
+                           <div class="default-time-example">
+                              <input aria-label="default time" [ngxTimepicker]="defaultValue1"   readonly formControlName="closingTime">
+                              <ngx-material-timepicker #defaultValue1></ngx-material-timepicker>
+                           </div> 
+                           <div class="ermsd" *ngIf="venueSubmitCheck && arrayItem.controls.closingTime.hasError('required')">Closing Time is required
+                           </div>
+                           </div>
+                       </div>
+                    </div>
+                 </div>
+                 <a (click)="removeItem()">Remove</a>
+              </div>
+
+              <input type="hidden" formControlName="latitude">
+              <input type="hidden" formControlName="longitude">
+              <div class="clunbamenties" *ngIf="editVenueForm.value.venueType == 'club&Bars' || editVenueForm.value.venueType == 'play&Drinks' ">
+                 <h4>Happy Hours</h4>
+                 <div class="happyhourspromotion">
+                    <div class="promotxt">
+                       <p>Would you like to promote Happy Hours?</p>
+                    </div>
+                    <div class="chkbxpop">
+                       <mat-radio-group aria-label="Select an option" formControlName="happyHoursCheck">
+                          <mat-radio-button value=true (click)="showIcon(true)">Yes</mat-radio-button>
+                          <mat-radio-button value=false (click)="showIcon(false)">No</mat-radio-button>
+                          <i *ngIf="showHappyHourIcon" class="fas fa-edit" (click)="happyHours()"></i>
+                       </mat-radio-group>
+                    </div>
+                 </div>
+              </div>
+              <div class="clunbamenties">
+                 <h4>Amenities</h4>
+                 <div class="amnsets blackchecks"  *ngIf="editVenueForm.value.venueType == 'club&Bars'">
+                     <ul>
+                        <li *ngFor="let item of amentiesData.clubAndBars">
+                           <mat-checkbox formControlName="{{item.name}}">
+                                 <img src="./assets/img/{{item.image}}">{{item.text}}
+                           </mat-checkbox>
+                        </li>
+                    </ul>
+                 </div>
+                 <div class="amnsets blackchecks" *ngIf="editVenueForm.value.venueType == 'party&WeddingHalls'">
+                     <ul>
+                         <li *ngFor="let item of amentiesData.partyAndWeddingHall">
+                             <mat-checkbox formControlName="{{item.name}}">
+                                 <img src="./assets/img/{{item.image}}">{{item.text}}
+                             </mat-checkbox>
+                         </li>
+                     </ul>
+                 </div>
+                 <div class="amnsets blackchecks" *ngIf="editVenueForm.value.venueType == 'partyBus&LimoHire'">
+                     <ul>
+                         <li *ngFor="let item of amentiesData.partyBusAndLimoHire">
+                             <mat-checkbox formControlName="{{item.name}}">
+                                 <img src="./assets/img/{{item.image}}">{{item.text}}
+                             </mat-checkbox>
+                         </li>
+                     </ul>
+                 </div>
+                 <div class="amnsets blackchecks" *ngIf="editVenueForm.value.venueType == 'play&Drinks'">
+                     <ul>
+                         <li *ngFor="let item of amentiesData.playAndDrinks">
+                             <mat-checkbox formControlName="{{item.name}}">
+                                 <img src="./assets/img/{{item.image}}">{{item.text}}
+                             </mat-checkbox>
+                         </li>
+                     </ul>
+                 </div>
+                 <div class="amnsets blackchecks" *ngIf="editVenueForm.value.venueType == 'tattoo&Piercing'">
+                     <ul>
+                         <li *ngFor="let item of amentiesData.tattooAndPiercing">
+                             <mat-checkbox formControlName="{{item.name}}">
+                                 <img src="./assets/img/{{item.image}}">{{item.text}}
+                             </mat-checkbox>
+                         </li>
+                     </ul>
+                 </div>
+              </div>
+              <div class="abuts">
+                 <h4>Description</h4>
+                 <mat-form-field>
+                    <textarea matInput placeholder="Please add Venue description here..."
+                    formControlName="description"></textarea>
+                 </mat-form-field>
+                 <mat-error *ngIf="venueSubmitCheck && editVenueForm.controls.description.hasError('required')">
+                     Description is required
+                 </mat-error>
+              </div>
+              <div class="socialedishowns">
+                 <div class="row">
+                    <div class="col-md-4">
+                       <div class="socialgrids fbdr">
+                          <img src="./assets/img/faceico.png">
+                          <mat-form-field>
+                             <input matInput placeholder="Edit Facebook URL" formControlName="faceBookLink">
+                             <!-- <mat-error *ngIf="venueSubmitCheck && editVenueForm.controls.faceBookLink.hasError('required')"> Facebook URL is required
+                              </mat-error> -->
+                          </mat-form-field>
+                       </div>
+                    </div>
+                    <div class="col-md-4">
+                       <div class="socialgrids instabdr">
+                          <img src="./assets/img/insta.png">
+                          <mat-form-field>
+                             <input matInput placeholder="Edit Instagram URL" formControlName="instagramLink">
+                             <!-- <mat-error *ngIf="venueSubmitCheck && editVenueForm.controls.instagramLink.hasError('required')">
+                                 Instagram URL is required
+                              </mat-error> -->
+                          </mat-form-field>
+                       </div>
+                    </div>
+                    <div class="col-md-4">
+                       <div class="socialgrids formabdr">
+                          <img src="./assets/img/forma.png">
+                          <mat-form-field>
+                             <input matInput placeholder="Edit Website URL" formControlName="websiteLink">
+                             <!-- <mat-error *ngIf="venueSubmitCheck && editVenueForm.controls.websiteLink.hasError('required')"> Website URL is required
+                              </mat-error> -->
+                          </mat-form-field>
+                       </div>
+                    </div>
+
+                    <!-- <input type="hidden" formControlName="longitude"> -->
+                    <div id="map" style="display: none"></div>
+                    <div id="varids"></div>
+
+                    <div class="setformsicos manageven">
+                       <!-- <button class="yellowbtsshw" [disabled]="!editVenueForm.valid"
+                          [routerLink]="['/owners-manage/managevenues']"
+                          mat-button >Save</button> -->
+                        <button class="yellowbtsshw"  mat-button >Save</button>
+                    </div>
+                 </div>
+              </div>
+            </form>
+           </div>
+        </div>
+     </div>
+     <app-footerowner></app-footerowner>

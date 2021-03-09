@@ -1,0 +1,21 @@
+.filterareasven { 
+    margin: 90px 0 0;
+}
+
+.clubinfoname { 
+    width: 100%;
+}
+
+.tickteds img {
+    width: 100%;
+    min-height: 190px;
+}
+
+app-voucher p {
+    float: left;
+}
+
+.LiveTimedata{}
+.LiveTimedata p{}
+.LiveTimedata p:first-child{}
+

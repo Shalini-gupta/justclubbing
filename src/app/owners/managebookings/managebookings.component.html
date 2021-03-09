@@ -1,0 +1,116 @@
+<div class="nohdmenus">
+    <app-headerloginbackbtn></app-headerloginbackbtn>
+</div>
+
+<div class="clubinfos bgachanges">
+        <div class="main-containersite">
+             <div class="clubshare editableparts">
+
+                
+                <div class="clunbamenties bkcurs">
+                    <div class="row">
+                        <div class="col-md-6" *ngFor="let booking of bookingMsg">
+                            <div class="seqgrds" [routerLink]="['/owners-manage/bookingdetails', booking._id]">
+                                <h3>{{booking?.name}}</h3>
+                                <div class="imglcs">
+                                    <p>{{booking?.message}}</p>
+                                </div>
+                                <p>{{booking?.createdAt | date:'EE, d MMMM yyyy'}}</p>
+                            </div>
+                        </div>
+
+                        <!-- <div class="col-md-6">
+                                <div class="seqgrds" [routerLink]="['/owners-manage/bookingdetails']">
+                                        <h3>Aman Verma</h3>
+                                        <div class="imglcs">
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                        </div>
+                                        <p>Sunday, 6th Oct 2019</p>
+                                    </div>
+                        </div>
+
+                        <div class="col-md-6">
+                                <div class="seqgrds" [routerLink]="['/owners-manage/bookingdetails']">
+                                        <h3>Aman Verma</h3>
+                                        <div class="imglcs">
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                        </div>
+                                        <p>Sunday, 6th Oct 2019</p>
+                                    </div>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                    <div class="seqgrds" [routerLink]="['/owners-manage/bookingdetails']">
+                                            <h3>Aman Verma</h3>
+                                            <div class="imglcs">
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                            </div>
+                                            <p>Sunday, 6th Oct 2019</p>
+                                        </div>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                        <div class="seqgrds" [routerLink]="['/owners-manage/bookingdetails']">
+                                                <h3>Aman Verma</h3>
+                                                <div class="imglcs">
+                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                                </div>
+                                                <p>Sunday, 6th Oct 2019</p>
+                                            </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                            <div class="seqgrds" [routerLink]="['/owners-manage/bookingdetails']">
+                                                    <h3>Aman Verma</h3>
+                                                    <div class="imglcs">
+                                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                                    </div>
+                                                    <p>Sunday, 6th Oct 2019</p>
+                                                </div>
+                                        </div>
+
+
+                                        <div class="col-md-6">
+                                                <div class="seqgrds" [routerLink]="['/owners-manage/bookingdetails']">
+                                                        <h3>Aman Verma</h3>
+                                                        <div class="imglcs">
+                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                                        </div>
+                                                        <p>Sunday, 6th Oct 2019</p>
+                                                    </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                    <div class="seqgrds" [routerLink]="['/owners-manage/bookingdetails']">
+                                                            <h3>Aman Verma</h3>
+                                                            <div class="imglcs">
+                                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                                            </div>
+                                                            <p>Sunday, 6th Oct 2019</p>
+                                                        </div>
+                                                </div>
+
+
+                                                <div class="col-md-6">
+                                                        <div class="seqgrds" [routerLink]="['/owners-manage/bookingdetails']">
+                                                                <h3>Aman Verma</h3>
+                                                                <div class="imglcs">
+                                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                                                </div>
+                                                                <p>Sunday, 6th Oct 2019</p>
+                                                            </div>
+                                                    </div> -->
+                    </div>
+                    
+                </div>
+      
+             </div>
+     
+             
+             
+        </div>
+     </div>
+
+     <app-footerowner></app-footerowner>

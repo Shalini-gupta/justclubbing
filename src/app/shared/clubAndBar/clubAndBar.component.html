@@ -1,0 +1,37 @@
+<div class="gridcommn" *ngFor="let data of">
+    <div class="featrevts spcldtls">
+        <div class="funthumbs">
+            <div class="recbtns">
+                <img src="./assets/img/thub.png">
+                <p>Recommended</p>
+            </div>
+
+            <div class="openstats">
+                <img src="./assets/img/calaendr.png">
+            </div>
+
+            <div class="Times">
+                <p *ngIf="data.openingTime && data.closingTime"> Closed Now
+                    <span>7:00 To 8:00 </span>
+                </p>
+                <p *ngIf="!data.openingTime && !data.closingTime"> Closed Now
+                    <span>00:00 To 00:00 </span>
+                </p>
+            </div>
+
+            <div  class="ThumbImages" [routerLink]="['/venuesdetail']">
+                <img *ngIf="data?.venueImages.length == 0 " src="./assets/img/imageoneev.jpg">
+
+            </div>
+        </div>
+
+        <div class="evtdtsl">
+            <h5 [routerLink]="['/venuesdetail']">Rose</h5>
+            <div class="imglcs">
+                <img src="./assets/img/loc.png">
+                <p>Noida</p>
+            </div>
+        </div>
+    </div>      
+</div>
+

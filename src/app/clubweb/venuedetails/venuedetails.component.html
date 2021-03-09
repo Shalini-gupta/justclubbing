@@ -1,0 +1,331 @@
+<app-clubheader></app-clubheader>
+
+<div class="venuslidersectionsd">
+    <section id="demos" class="agentssliders">
+        <div class="featrevts spcldtls">
+            <div class="funthumbs">
+                <div class="recbtns" *ngIf="venueDetail?.venueDetail?.recommendedStatus == true">
+                    <img src="./assets/img/thub.png">
+                    <p>Recommended</p>
+                </div>
+
+                <div class="wishshwms">
+                    <ul>
+                        <li>
+                            <share-button button="facebook" class="Sharehdsfvb" style="background-image:url('assets/img/shareab.png')"> 
+                            </share-button>
+                        </li>
+                        <li><a *ngIf="!venueDetail?.venueDetail?.isFavorite" (click)="addToFavouite(venueDetail?.venueDetail?._id)">
+                            <i class="far fa-heart"></i></a>
+                            <a *ngIf="venueDetail?.venueDetail?.isFavorite" (click)="addToFavouite(venueDetail?.venueDetail?._id)"><i class="fas fa-heart"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="openstats">
+                    <img *ngIf="venueDetail?.eventList?.length > 0" src="./assets/img/timing.png">
+                    <!-- <img *ngIf="venueDetail?.venueDetail?.isHappyHours == true" src="./assets/img/timing.png"> -->
+                </div>
+                <!-- <div class="shwtimesstats ratingssts">
+                    <ul>
+                        <li class="active"><i class="fas fa-star"></i></li>
+                        <li class="active"><i class="fas fa-star"></i></li>
+                        <li class="active"><i class="fas fa-star"></i></li>
+                        <li class="active"><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                    </ul>
+                    <p class="rvcounts">3759 Reviews</p>
+                </div> -->
+            </div>
+        </div>
+        <div *ngIf="venueDetail && venueDetail.venueDetail">
+            <owl-carousel
+                [options]="{items: 1, dots: false, navigation: false, nav:true, loop:false}"
+                [items]="venueDetail.venueImages"
+                [carouselClasses]="['owl-theme', 'sliding']">
+                <div class="item" *ngFor="let item of venueDetail.venueDetail.venueImages ;let i =index">
+                    <div class="funthumbs">
+                        <div class="thumbareasupd">
+                            <img src="{{item?.image}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="item" *ngIf="venueDetail?.venueDetail?.venueImages.length == 0">
+                    <div class="funthumbs">
+                        <div class="thumbareasupd">
+                            <img src="./assets/img/imageoneev.jpg">
+                        </div>
+                    </div>
+                </div>
+            </owl-carousel>
+        </div>
+    </section>
+
+</div>
+
+
+<div class="clubinfos">
+    <div class="main-containersite">
+        <div class="clubshare">
+            <div class="dtaclub">
+                <h4>{{venueDetail?.venueDetail?.venueName}}</h4>
+                <div class="Rates">
+                    <ul>
+                        <li class="active" *ngFor="let item of counter(averageRating)">
+                            <i class="fas fa-star"></i></li>
+                        <li *ngFor="let item of counter(5-averageRating)" ><i class="fas fa-star"></i></li>
+                    </ul>
+                    <!-- <p class="rvcounts">{{venueDetail?.venueDetail?.avgRating}} Ratings</p> -->
+                    <p class="rvcounts">{{venueDetail?.ratingList?.length}} Reviews</p>
+                </div>
+
+                <p><img src="./assets/img/loc.png"> {{venueDetail?.venueDetail?.address}}</p>
+            </div>
+
+            <div class="dtashare">
+                <p *ngIf="venueDetail?.venueDetail?.distance != null">{{(venueDetail?.venueDetail?.distance).toFixed(1)}} km</p>
+                <ul>
+                    <li *ngIf="venueDetail?.venueDetail?.faceBookLink">
+                        <a target="_blank" href="{{venueDetail?.venueDetail?.faceBookLink}}"><img src="./assets/img/faceico.png"></a>
+                    </li>
+                    <li *ngIf="venueDetail?.venueDetail?.instagramLink">
+                        <a target="_blank" href="{{venueDetail?.venueDetail?.instagramLink}}"><img src="./assets/img/insta.png"></a>
+                    </li>
+                    <li *ngIf="venueDetail?.venueDetail?.websiteLink">
+                        <a target="_blank" href="{{venueDetail?.venueDetail?.websiteLink}}"><img src="./assets/img/forma.png"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="opendtaclbs">
+            <div class="centerdropsd">
+                <div class="dropicoshw" *ngIf="venueDetail?.venueDetail?.venueType != 'partyBus&LimoHire'">
+                    <img src="./assets/img/clco.png">
+                    <p class="oprnstastgr" *ngIf="venueDetail?.venueDetail?.venueOpenningAndClosingTime.length != 0"> 
+                        <span class="opennowgrp" *ngIf="venueDetail?.venueDetail?.isOpen == true">Open Now </span> 
+                        <span class="closenpows" *ngIf="venueDetail?.venueDetail?.isOpen == false">Closed Now</span>
+                        <mat-select class="shrgtson">
+                            <mat-option *ngFor="let time of venueDetail?.venueDetail?.venueOpenningAndClosingTime">{{time?.day}} ({{time?.openingTime}}-{{time?.closingTime}})</mat-option>
+                            <mat-option *ngFor="let time of closedDay">{{time}} (Closed)</mat-option>
+                        </mat-select>
+                        <span class="statsusoneonly" >{{selected}}</span> 
+                    </p>
+                    <p class="closenpows" *ngIf="venueDetail?.venueDetail?.venueOpenningAndClosingTime.length == 0">
+                        <span class="closenpows" style="width: 100%; text-align: center;">Closed Today</span>
+                    </p>
+                </div>
+
+                <div class="dropicoshw" *ngIf="venueDetail?.venueDetail?.venueType == 'club&Bars' || venueDetail?.venueDetail?.venueType == 'play&Drinks'" >
+                    <img src="./assets/img/clcokha.png">          
+                    <p>Happy Hours 
+                    <span *ngIf="venueDetail?.venueDetail?.happyHoursOpenningAndClossing.length == 0">No happy hours</span>
+                    <mat-select class="shrgtson" *ngIf="venueDetail?.venueDetail?.happyHoursOpenningAndClossing.length >0">
+                        <mat-option *ngFor="let time of venueDetail?.venueDetail?.happyHoursOpenningAndClossing; let i =index">
+                            {{time.day}} ({{time.openingTime}} - {{time.closingTime}})</mat-option>
+                    </mat-select>
+                    <span class="statsusoneonly" >{{selected1}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="clunbamenties">
+            <h4>Amenities</h4>
+            <div class="amnsets">
+                <ul>
+                    <li *ngFor="let item of sortAmenities">
+                        <p ><img src="./assets/img/{{item.image}}"> {{item.text}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="abuts">
+            <h4>About</h4>
+            <p>{{venueDetail?.venueDetail?.description}}</p>
+        </div>
+
+        <div class="maplocatesd">
+            <h4>Location</h4>
+            <!-- <div class="ifrmps">
+                <img src="./assets/img/locatiomps.png">
+            </div> -->
+            <div id ="map"></div>
+            <div class="getdirectjbs">
+                <a target = "_blank" href="https://www.google.com/maps/@{{venueDetail?.venueDetail?.latitude}},{{venueDetail?.venueDetail?.longitude}},15z">Get Directions <img src="./assets/img/bookget.png"></a>
+            </div>
+        </div>
+      
+        <div class="abuts" *ngIf="venueDetail?.eventList?.length > 0">
+            <h4>Events</h4>
+            <div class="evetsindoonyls">
+                <p *ngIf=" venueDetail && venueDetail.eventList && venueDetail.eventList.length == 0" class="nofounds">No Data Found</p>
+                <div class="gridcommn" *ngFor="let event of venueDetail?.eventList">
+                    <div class="featrevts">
+                        <div class="funthumbs" [routerLink]="['/eventsdetail']">
+                            <img src="{{event?.eventImages}}">
+                        </div>
+                        <div class="evtdtsl" [routerLink]="['/eventsdetail']">
+                            <h5>{{event?.eventTitle}}</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 
+
+                <div class="gridcommn">
+                    <div class="featrevts">
+                        <div class="funthumbs" [routerLink]="['/eventsdetail']">
+                            <img src="./assets/img/imagethree.jpg">
+                        </div>
+                        <div class="evtdtsl" [routerLink]="['/eventsdetail']">
+                            <h5>Live Music Concert</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gridcommn">
+                    <div class="featrevts">
+                        <div class="funthumbs" [routerLink]="['/eventsdetail']">
+                            <img src="./assets/img/evtsone.jpg">
+                        </div>
+                        <div class="evtdtsl">
+                            <h5>Live Music Concert</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gridcommn">
+                    <div class="featrevts">
+                        <div class="funthumbs" [routerLink]="['/eventsdetail']">
+                            <img src="./assets/img/evtstwo.jpg">
+                        </div>
+                        <div class="evtdtsl" [routerLink]="['/eventsdetail']">
+                            <h5>Live Music</h5>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+
+        <div class="eventssetsdis" >
+            <div class="viewhdand-bts" *ngIf="venueDetail?.offerList?.length > 0">
+                <h6 class="main-headnorms">Live Offers Running</h6>
+            </div>
+            <div class="evtallgrid">
+                <div class="gridcommn" *ngFor="let offer of venueDetail?.offerList">
+                    <div class="ticketsvaries">
+                       
+ 
+                        <div class="ticinfoshowms">
+                            <div class="vcrinfos">
+                                <p *ngIf="offer.offerType == 'numberBased'">Voucher Left {{offer?.vouchersNumber - offer?.soldCount}}</p>
+                                <button mat-button class="whtbtns" *ngIf="offer.offerType == 'numberBased'" (click)="redeemDialog(offer._id, offer.offerTitle, venueDetail?.venueDetail?.venueName)">Reedem Now</button>
+                                <button mat-button class="whtbtns" *ngIf="offer.reedemStatus && offer.offerType == 'numberBased'">Reedemed</button>
+                                <p class="tmtmr" *ngIf="offer.offerType == 'timeBased'">
+                                    <app-liveofferdata [data]="{'fromDate': offer.fromDate,toDate: offer.toDate, timeDurationFrom: offer.timeDurationFrom, timeDurationTill: offer.timeDurationTill}"></app-liveofferdata>
+                                    <app-redeembutton  (redeemChange)='refreshPage()' [data]="{'fromDate': offer.fromDate,toDate: offer.toDate, timeDurationFrom: offer.timeDurationFrom, timeDurationTill: offer.timeDurationTill}" [data1]="{'reedemStatus': offer.reedemStatus, offerId: offer._id, offerTitle: offer.offerTitle, venueName: venueDetail.venueDetail.venueName}"></app-redeembutton>
+                                </p>
+                            </div>
+                            <div class="lcdistant">
+                                <img src="./assets/img/locwht.png">
+                                <p>{{(venueDetail && venueDetail.venueDetail && venueDetail.venueDetail.distance).toFixed(1)}} km</p>
+                            </div>
+
+                            <div class="clubinfoname">
+                                <p>{{venueDetail?.venueDetail?.venueName}}</p>
+                                <strong>{{offer?.offerTitle}}</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ratingreviewsclienst" *ngIf="venueDetail?.ratingList?.length > 0">
+            <h4>Rating & Reviews</h4>
+            <p class="nofounds" *ngIf="venueDetail?.ratingList?.length == 0">No Data Found</p>
+
+           <owl-carousel
+            [options]="this.option"
+            [items]="venueDetail.ratingList"
+            [carouselClasses]="['owl-theme', 'row', 'sliding']">
+            <div class="item" *ngFor="let rate of venueDetail?.ratingList ;let i =index">
+                <div class="companypanel clienpans">
+
+                    <div class="coments-olys">
+                        <p>{{rate?.comment}}</p>
+                    </div>
+
+                    <div class="clients-olynames">
+                        <p>{{rate?.ratingBy?.firstName}}</p>
+                        <div class="clroundimgs">
+                            <img src="{{rate?.ratingBy?.profilePic}}">
+                        </div>
+                        <div class="shwtimesstats ratingssts">
+                            <ul>
+                                 <li class="active" *ngFor="let item of counter(rate?.rating)">
+                                    <i class="fas fa-star"></i></li>
+                                <li *ngFor="let item of counter(5-rate?.rating)" ><i style="color: #000;" class="fas fa-star"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </owl-carousel>
+
+        <!-- <owl-carousel-o [options]="customOptions">
+ 
+            <ng-container *ngFor="let rate of venueDetail.ratingList; let i = index">
+              <ng-template carouselSlide id="i.id">
+                <div class="companypanel clienpans">
+                    <div class="coments-olys">
+                        <p>{{rate?.comment}}</p>
+                    </div>
+
+                    <div class="clients-olynames">
+                        <p>{{rate?.ratingBy?.firstName}}</p>
+                        <div class="clroundimgs">
+                            <img src="{{rate?.ratingBy?.profilePic}}">
+                        </div>
+                    </div>
+                </div>
+              </ng-template>
+
+          
+
+            </ng-container>
+         
+          </owl-carousel-o> -->
+
+       
+
+        </div> 
+
+        <div class="EmailArea rateparts" *ngIf="!venueDetail?.venueDetail?.isRate">
+            <h3>Rate Your Experience</h3>
+            <div class="form-group" id="stars">
+                <div class='rating-stars'>
+                    <ul id='stars'>
+                      <li *ngFor= "let item of ['Poor', 'Fair', 'Good', 'Excellent', 'WOW!!!']; let i = index" class='star' title={{item}} (click)="rateExp(i+1)" [attr.data-value]="i+1">
+                        <i class="material-icons star"> star_border </i>
+                      </li>
+                    </ul>
+                  </div>
+
+                <div class="writereview">
+                    <a (click)="reviewDialog()">Write a Review</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="setformsicos" *ngIf="venueDetail?.venueDetail?.venueType !='club&Bars'">
+            <button class="yellowbtsshw" mat-button><a href="tel:+9696050053">Call</a></button>
+            <button *ngIf="venueDetail && venueDetail.venueDetail" class="yellowbtsshw blcwhts" mat-button [routerLink]="['/messagevent', venueDetail.venueDetail._id]">Message</button>
+        </div>
+    </div>
+</div>
+
+<app-webfooter></app-webfooter>

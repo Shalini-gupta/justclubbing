@@ -1,0 +1,64 @@
+<div class="nohdmenus">
+    <app-headerloginbackbtn></app-headerloginbackbtn>
+</div>
+
+
+<div class="clubinfos bgachanges">
+    <div class="main-containersite">
+        <div class="clubshare editableparts">
+
+            <div class="clunbamenties">
+
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="offerdtls">
+                            <h5>Offer Title <sup>*</sup></h5>
+                            <p>{{offerDetail?.offerTitle}}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="offerdtls">
+                            <h5>Extra Information</h5>
+                            <p> {{offerDetail?.extraInfo}}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="offerdtls" *ngIf="offerDetail?.offerType == 'numberBased'">
+                            <h5>Number of  Voucher Based </h5>
+                        </div>
+                        <div *ngIf="offerDetail?.offerType == 'timeBased'">
+                            <h5>Time Based</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="offerdtls" *ngIf="offerDetail?.offerType == 'numberBased'">
+                            <h5>Number of  Vouchers: {{offerDetail?.vouchersNumber}}</h5>
+                        </div>
+                        <div class="offerdtls" *ngIf="offerDetail?.offerType == 'timeBased'">
+                            <h5>Date : {{offerDetail?.fromDate}} to {{offerDetail?.toDate}}</h5>
+                        </div>
+                        <div class="offerdtls" *ngIf="offerDetail?.offerType == 'timeBased'">
+                            <h5>Time Duration : {{offerDetail?.timeDurationFrom}} to {{offerDetail?.timeDurationTill}}</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="offerdtls ofrules">
+                            <p>Offers are Subject to <span (click)="rulesUse()">Rules of Use</span></p>
+                        </div>
+                    </div>
+
+                    <div class="setformsicos">
+                        <button class="yellowbtsshw" mat-button [routerLink]="['/owners-manage/editliveoffer', offerDetail._id]"><img src="./assets/img/editpencd.png">Edit</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<app-footerowner></app-footerowner>

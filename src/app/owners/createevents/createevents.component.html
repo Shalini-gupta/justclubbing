@@ -1,0 +1,227 @@
+<div class="nohdmenus">
+    <app-headerloginbackbtn></app-headerloginbackbtn>
+</div>
+
+<div class="venuslidersectionsd manageslid editsdelbts">
+
+    <section id="demos" class="agentssliders">
+        <div class="featrevts spcldtls">
+            <!-- <div class="addimagesmore centericos" >
+                <img src="./assets/img/cameicos.png">
+            </div> -->
+
+            <div class="addmoreimagesu">
+                <button (click)="fileDialog(i)">Add More images</button>
+            </div>
+
+            <div class="wishshwms">
+                <ul>
+                    <li>
+                        <a ><i class="fas fa-trash"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="owl-carousel jobavails owl-theme">
+            <div class="item">
+                <div class="funthumbs">
+                    <div class="thumbareasupd" *ngIf="!imageSrc">
+                        <img src="./assets/img/graybga.png">
+                    </div>
+                    <div class="thumbareasupd" *ngIf="imageSrc">
+                        <img [src]="imageSrc">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<div class="clubinfos bgachanges">
+    <div class="main-containersite">
+        <div class="clubshare editableparts">
+            <form [formGroup]="eventsForm" (ngSubmit)="eventSubmit()">
+                <div class="clunbamenties">
+                    <!-- <h4>Venue Details</h4> -->
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="setformsicos righticos">
+                                <mat-form-field>
+                                    <input matInput placeholder="Event Title" formControlName="title">
+                                    <mat-error *ngIf="eventSubmitCheck && eventsForm.controls.title.hasError('required')">
+                                        Title is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="setformsicos righticos">
+                                <i class="material-icons">
+                                    <img src="./assets/img/calen.png">
+                                </i>
+                                <mat-form-field>
+                                    <input matInput [matDatepicker]="picker" placeholder="Event Date" formControlName="eventDate">
+                                    <mat-datepicker-toggle matSuffix [for]="picker">
+                                    </mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>
+                                    <mat-error *ngIf="eventSubmitCheck && eventsForm.controls.eventDate.hasError('required')">
+                                        Event Date is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clunbamenties">
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="setformsicos righticos">
+                                <div class="TimingFeild">
+                                    <span>Start Time</span>
+                                    <input aria-label="default time" [ngxTimepicker]="defaultValue" [value]="'05:11 pm'" readonly formControlName="openingTime">
+                                    <ngx-material-timepicker #defaultValue></ngx-material-timepicker>
+                                    <mat-error *ngIf="eventSubmitCheck && eventsForm.controls.openingTime.hasError('required')">
+                                        Start time is required
+                                    </mat-error>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <div class="setformsicos righticos">
+                                <div class="TimingFeild">
+                                    <span>End Time</span>
+                                    <input aria-label="default time" [ngxTimepicker]="defaultValue1" [value]="'05:11 pm'" readonly formControlName="closingTime">
+                                    <ngx-material-timepicker #defaultValue1></ngx-material-timepicker>
+                                    <mat-error *ngIf="eventSubmitCheck && eventsForm.controls.closingTime.hasError('required')">
+                                        End time is required
+                                    </mat-error>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="clunbamenties">
+                    <!-- <h4>Venue Details</h4> -->
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="setformsicos righticos">
+                                <mat-form-field>
+                                    <input matInput placeholder="Address" formControlName="address">
+                                    <mat-error *ngIf="eventSubmitCheck && eventsForm.controls.address.hasError('required')">
+                                        Address is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="hrsetslimt">
+
+                                <div class="happyhourspromotion">
+                                    <div class="promotxt">
+                                        <h4>Age Limits 18+</h4>
+                                    </div>
+                                    <div class="chkbxpop">
+                                        <mat-radio-group aria-label="Select an option" formControlName="ageLimit">
+                                            <mat-radio-button value="true">Yes
+                                            </mat-radio-button>
+                                            <mat-radio-button value="false">No
+                                            </mat-radio-button>
+                                            <mat-error *ngIf="eventSubmitCheck && eventsForm.controls.ageLimit.hasError('required')">
+                                                Age Limits is required
+                                            </mat-error>
+                                        </mat-radio-group>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="abuts">
+                    <h4>Description</h4>
+                    <mat-form-field>
+                        <textarea matInput formControlName="description" placeholder="Please add event description here... "></textarea >
+                        <mat-error *ngIf="eventSubmitCheck && eventsForm.controls.description.hasError('required')">
+                            Description is required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div  formArrayName="ticketDetails">
+                    <div class="additrs">
+                        <p>Tickets Details</p>
+                        <img (click)="addItem()" src="./assets/img/addtime.png">
+                    </div>
+
+                    <div class="ticketssetgrids" >
+                        <div class="row" [formGroupName]="i" 
+                        *ngFor="let arrayItem of eventsForm.get('ticketDetails')['controls']; let i=index">
+                            <div class="col-md-4">
+                                <mat-form-field>
+                                    <input matInput placeholder="Ticket Type" formControlName="ticketType">
+                                    <mat-error *ngIf="eventSubmitCheck && arrayItem.controls.ticketType.hasError('required')">
+                                        Ticket Type is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+
+                            <div class="col-md-4">
+                                <mat-form-field>
+                                    <input matInput placeholder="Ticket Price" formControlName="ticketPrice">
+                                    <mat-error *ngIf="eventSubmitCheck && arrayItem.controls.ticketPrice.hasError('required')">
+                                        Ticket Price is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-4">
+                                <mat-form-field>
+                                    <input matInput placeholder="Ticket Quantity" formControlName="ticketQty">
+                                    <mat-error *ngIf="eventSubmitCheck && arrayItem.controls.ticketQty.hasError('required')">
+                                        Ticket Quantity is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <a (click)="removeItem()">Remove</a>
+                    </div>
+                </div>
+                <div class="setformsicos">
+                    <div class="attachareasrels">
+                        <div class="rempass">
+                            <mat-checkbox  formControlName="iAgree">I agree to the <span class="tncs" (click)="tncDialog()">Terms & Conditions</span></mat-checkbox>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="setformsicos">
+                    <!-- <button class="yellowbtsshw" mat-button
+                        [routerLink]="['/owners-manage/manageevents']">CREATE</button> -->
+                    <button type="submit" [disabled]=!eventsForm.value.iAgree class="yellowbtsshw" mat-button
+                    >CREATE</button>
+                    <button class="yellowbtsshw blcwhts" mat-button>CANCEL</button>
+                </div>
+            </form>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+<app-footerowner></app-footerowner>

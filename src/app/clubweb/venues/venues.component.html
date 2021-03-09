@@ -1,0 +1,126 @@
+<app-clubheader></app-clubheader>
+<div class="filterareasven">
+   <div class="main-containersite">
+      <div class="row">
+         <div class="col-md-2 bdrghtd">
+            <div class="filterslfts">
+               <h4>Venue Types</h4>
+               <ul>
+                  <li *ngFor = "let category of categories; let i = index">
+                    <mat-radio-button (change)="categoryChange($event, category.categoryName)" name="category" value="{{category.venueType}}" [checked]="venueName == category.venueType">
+                        {{category.categoryName}}</mat-radio-button>
+                  </li>
+               </ul>
+            </div>
+            <div class="filterslfts" *ngIf="clubFilter == true">
+               <h4>Filter</h4>
+               <ul>
+                  <!-- <div *ngIf="clubFilter == true"> -->
+                  <div>
+                     <li *ngFor = "let category of clubAndBars1; let i = index" >
+                        <mat-checkbox (change)="categoryFilter(category, 'clubAndBars')" value="{{category.name}}">
+                        {{category.text}}</mat-checkbox>
+                     </li>
+                  </div>
+                  <!-- <div *ngIf="partyWeddingFilter == true">
+                     <li *ngFor = "let category of partyAndWeddingHall; let i = index">
+                        <mat-checkbox (change)="categoryFilter(category, 'partyAndWeddingHall')" value="{{category.name}}">
+                        {{category.text}}</mat-checkbox> 
+                     </li>
+                  </div>
+                  <div *ngIf="partyBusFilter == true">
+                     <li *ngFor = "let category of partyBusAndLimoHire; let i = index">
+                        <mat-checkbox (change)="categoryFilter(category, 'partyBusAndLimoHire')" value="{{category.name}}">
+                        {{category.text}}</mat-checkbox> 
+                     </li>
+                  </div>
+                  <div *ngIf="playDrinksFilter == true">
+                     <li *ngFor = "let category of playAndDrinks; let i = index">
+                        <mat-checkbox (change)="categoryFilter(category, 'playAndDrinks')" value="{{category.name}}">
+                        {{category.text}}</mat-checkbox> 
+                     </li>
+                  </div>
+                  <div *ngIf="tattooPiercingFilter == true">
+                     <li *ngFor = "let category of tattooAndPiercing; let i = index">
+                        <mat-checkbox (change)="categoryFilter(category, 'tattooAndPiercing')" value="{{category.name}}">
+                        {{category.text}}</mat-checkbox> 
+                     </li>
+                  </div> -->
+               </ul>
+            </div>
+            <div class="filterslfts">
+               <h4>Sort by</h4>
+               <ul>
+                    <li *ngFor = "let sortCategoy of sortCategories; let i = index">
+                    <mat-radio-button (change)="sortChange($event)" name="sortcategory" value="{{sortCategoy.value}}" 
+                    [checked]="i+1 == 1" >
+                        {{sortCategoy.name}}</mat-radio-button>
+                    </li>
+               </ul>
+            </div>
+         </div>
+         <div class="col-md-10 nopaddlfts">
+            <div class="citiylocationswise">
+               <h4>{{title}} </h4>
+            </div>
+            <div class="profilecontentwdth">
+               <div class="eventvenuareas">
+                  <div class="flveds">
+                     <div class="row">
+                        <div class="col-md-6" *ngFor="let data of venues"> 
+                            <div class="featrevts spcldtls">
+                                <div class="funthumbs">
+                                    <div class="recbtns" *ngIf="data.recommendedStatus == true">
+                                        <img src="./assets/img/thub.png">
+                                        <p>Recommended</p>
+                                    </div>
+                        
+                                    <div class="openstats">
+                                        <img *ngIf="data.isRunningEvent == true" src="./assets/img/calaendr.png">
+                                        <img *ngIf="data.isHappyHours == true" src="./assets/img/timing.png">
+                                    </div>
+                        
+                                    <div class="Times" *ngIf="data.venueType == 'club&Bars'">
+                                        <p class="oposde" *ngIf="data.isOpen == true"> Open Now
+                                          <span *ngIf="data.openingTime && data.closingTime">{{data?.openingTime}} To {{data?.closingTime}} </span>
+                                        </p>
+                                        <p class="closednos" *ngIf="data.venueOpenningAndClosingTime.length == 0"> Closed Today
+                                         </p>
+                                        <p class="closednos" *ngIf="data.venueOpenningAndClosingTime.length != 0 && data.isOpen == false"> Closed Now
+                                          <span *ngIf="data.openingTime && data.closingTime">{{data?.openingTime}} To {{data?.closingTime}} </span>
+                                       </p>
+                                    </div>
+
+                                    <div  class="thumbareasupd" [routerLink]="['/venuesdetail', data._id]" >
+                                        <img *ngIf="data?.venueImages.length> 0" src="{{data?.venueImages[0]?.image}}">
+                                        <img *ngIf="data?.venueImages.length == 0 " src="./assets/img/imageoneev.jpg">
+                                    </div>
+                                </div>
+                        
+                                <div class="evtdtsl">
+                                    <h5 [routerLink]="['/venuesdetail', data._id]">{{data?.venueName}}</h5>
+                                    <div class="imglcs">
+                                        <img src="./assets/img/loc.png">
+                                        <p>{{data?.address}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagiinationgrds">
+                           <nav aria-label="Page navigation example">
+                              <ul class="pagination">
+                                 <li class="page-item "><a class="page-link">Previous</a></li>
+                                 <li *ngFor="let item of counter(totalRec); let i = index" class="page-item active" (click)="increasePageNo(i+1)"><a class="page-link">{{i+1}}</a></li>
+                                 <li class="page-item"><a class="page-link">Next ></a></li>
+                              </ul>
+                           </nav>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<app-webfooter></app-webfooter>

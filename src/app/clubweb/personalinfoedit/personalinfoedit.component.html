@@ -1,0 +1,143 @@
+<app-clubheader></app-clubheader>
+<div class="filterareasven">
+    <div class="main-containersite">
+        <div class="row">
+            <div class="col-md-2 bdrghtd">
+                <app-sidebaraccount></app-sidebaraccount>
+            </div>
+            <div class="col-md-10 nopaddlfts">
+                <div class="citiylocationswise">
+                    <h4>Personal Information</h4>
+                </div>
+                <div class="profilecontentwdth">
+                    <div class="centerformsmid">
+                        <form [formGroup]="personalForm" (ngSubmit)="personalFormSubmit()">
+                            <div class="row">
+                                <div class="col-md-6">
+
+                                   
+
+                                    <div class="setformsicos">
+                                        <i class="material-icons">
+                                            <img src="./assets/img/fnameico.png">
+                                        </i>
+                                        <!-- <div class="12hr-example">
+                                                <input placeholder="12hr format (default settings)" aria-label="12hr format" [ngxTimepicker]="default" readonly>
+                                                <ngx-material-timepicker #default></ngx-material-timepicker>
+                                           </div> -->
+                                        <mat-form-field>
+                                            <input matInput placeholder="First Name" formControlName="firstName">
+                                            <mat-error
+                                                *ngIf="personalSubmitCheck && personalForm.controls.firstName.hasError('required')">
+                                                First Name is required
+                                            </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="setformsicos">
+                                        <i class="material-icons">
+                                            <img src="./assets/img/fnameico.png">
+                                        </i>
+                                        <mat-form-field>
+                                            <input matInput placeholder="Last Name" formControlName="lastName">
+                                            <mat-error
+                                                *ngIf="personalSubmitCheck && personalForm.controls.lastName.hasError('required')">
+                                                Last Name is required
+                                            </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="setformsicos">
+                                        <i class="material-icons">
+                                            <img src="./assets/img/mailericos.png">
+                                        </i>
+                                        <mat-form-field>
+                                            <input matInput placeholder="Enter Email Address" formControlName="email">
+                                            <mat-error
+                                                *ngIf="personalSubmitCheck && personalForm.controls.email.hasError('required')">
+                                                Email is required
+                                            </mat-error>
+                                            <mat-error
+                                                *ngIf="personalSubmitCheck && personalForm.controls.email.hasError('email')">
+                                                Email is not valid
+                                            </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="setformsicos">
+                                        <i class="material-icons">
+                                            <img src="./assets/img/phone.png">
+                                        </i>
+                                        <mat-form-field>
+                                            <input matInput placeholder="Phone Number" formControlName="mobileNumber"
+                                                readonly>
+                                            <mat-error
+                                                *ngIf="personalSubmitCheck && personalForm.controls.mobileNumber.hasError('required')">
+                                                Mobile Number required
+                                            </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="setformsicos">
+                                        <i class="material-icons">
+                                            <img src="./assets/img/toilets.png">
+                                        </i>
+                                        <mat-form-field>
+                                            <mat-select formControlName="gender">
+                                                <mat-option value="Female">
+                                                    Female
+                                                </mat-option>
+                                                <mat-option value="Male">
+                                                    Male
+                                                </mat-option>
+                                                <mat-option value="Other">
+                                                    Other
+                                                </mat-option>
+                                            </mat-select>
+                                            <mat-label>Please Select Gender
+                                            </mat-label>
+                                            <mat-error
+                                                *ngIf="personalSubmitCheck && personalForm.controls.gender.hasError('required')">
+                                                Gender required
+                                            </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="setformsicos lefticodates">
+                                        <i class="material-icons">
+                                            <img src="./assets/img/calen.png">
+                                        </i>
+                    
+                                        <mat-form-field>
+                                            <mat-select formControlName="age">
+                                                <mat-option value=''>--</mat-option>
+                                                <mat-option value="18-25">18-25</mat-option>
+                                                <mat-option value="25-35">25-35</mat-option>
+                                                <mat-option value="35 & Above">35 & Above</mat-option>
+                                            </mat-select>
+                                            <mat-label> Age</mat-label>
+                                            <mat-error
+                                                *ngIf="personalSubmitCheck && personalForm.controls.age.hasError('required')">
+                                                Age is required
+                                            </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="setformsicos">
+                                <button mat-button class="yellowbtsshw">Update
+                                    Profile</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-webfooter></app-webfooter>

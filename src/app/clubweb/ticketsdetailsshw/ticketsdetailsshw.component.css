@@ -1,0 +1,31 @@
+.Amount{
+    float: left;
+    width: 100%;
+}
+.Amount p.rfpol{
+    width: 100%;
+    font-size: 18px;
+}
+.Amount p.rfpol label{
+    margin: 0;
+}
+.Amount p.rfpol strong{
+    float: right;
+    font-weight: 500;
+}
+
+.Amount p.paid{
+    float: left;
+    width: 100%;
+    background-color: #000;
+    padding: 10px 20px;
+    color: #fff;
+    margin: 15px 0 30px;
+}
+.Amount p.paid label{
+    margin: 0;
+}
+.Amount p.paid strong{
+    float: right;
+    font-weight: 500;
+}

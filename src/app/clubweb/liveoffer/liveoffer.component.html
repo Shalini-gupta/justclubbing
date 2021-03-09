@@ -1,0 +1,94 @@
+<app-clubheader></app-clubheader>
+ 
+<div class="filterareasven">
+    <div class="main-containersite">
+        <div class="row">
+            <div class="col-md-2 bdrghtd">
+
+                <div class="filterslfts">
+                    <h4>Venue Types</h4>
+                    <ul>
+                        <li *ngFor = "let category of categories; let i = index">
+                            <mat-radio-button (change)="categoryChange($event)" name="category" value="{{category.venueType}}" [checked]="i+1 == 1">
+                                {{category.categoryName}}</mat-radio-button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-10 nopaddlfts">
+                <div class="citiylocationswise">
+                    <h4>Live Offer </h4>
+                </div>
+                <div class="profilecontentwdth">
+                    <div class="couponoffers livedisp">
+                        <h4>{{today | date:'EEEE, d MMMM'}}</h4>
+                        <div class="row">
+                            <div class="col-md-4" *ngFor="let offer of offerList">
+                                <div class="ticketsvaries">
+                                    <div class="tickteds redvarients">
+                                        <img src="./assets/img/redtcikets.png">
+                                    </div> 
+            
+                                    <div class="ticinfoshowms">
+                                        <div class="vcrinfos">
+                                            <p *ngIf="offer.offerType == 'numberBased'">Voucher Left {{offer?.vouchersNumber - offer?.soldCount}}</p>
+                                            <button mat-button class="whtbtns" *ngIf="offer.offerType == 'numberBased'" (click)="redeemDialog(offer._id, offer.offerTitle, offer.veneuData.venueName)">Reedem Now</button>
+                                            <button mat-button *ngIf="offer.reedemStatus && offer.offerType == 'numberBased'" class="whtbtns" >Reedemed</button>
+                                            <p class="tmtmr" *ngIf="offer.offerType == 'timeBased'">
+                                                <app-liveofferdata [data]="{'fromDate': offer.fromDate,toDate: offer.toDate, timeDurationFrom: offer.timeDurationFrom, timeDurationTill: offer.timeDurationTill}"></app-liveofferdata>
+                                            </p> 
+                                           <span *ngIf="offer.offerType == 'timeBased'"><app-redeembutton [data]="{'fromDate': offer.fromDate,toDate: offer.toDate, timeDurationFrom: offer.timeDurationFrom, timeDurationTill: offer.timeDurationTill}" [data1]="{'reedemStatus': offer.reedemStatus, offerId: offer._id, offerTitle: offer.offerTitle, venueName: offer.veneuData.venueName}"></app-redeembutton></span>
+                                        </div>
+                                        <div class="lcdistant">
+                                            <img src="./assets/img/locwht.png">
+                                            <p>{{(offer?.dist?.calculated / 1000).toFixed(1)}} km</p>
+                                        </div>
+            
+                                        <div class="clubinfoname">
+                                            <p>{{offer?.veneuData?.venueName}}</p>
+                                            <strong>{{offer?.offerTitle}}</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="" *ngIf="offerList.length == 0">
+                            No Data found
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<app-webfooter></app-webfooter>
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

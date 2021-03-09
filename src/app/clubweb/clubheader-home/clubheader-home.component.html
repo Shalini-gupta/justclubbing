@@ -1,0 +1,56 @@
+<header class="clbhdr">
+    <div class="main-containersite">
+        <div class="logolanggen">
+            <div class="logosdv">
+                <a [routerLink]="['/']"><img src="./assets/img/logo.png"></a>
+            </div>
+        </div>
+        <div class="menuicoburgs"><i class="fas fa-bars"></i> <i class="fas fa-times"></i></div>
+        <div class="menushowmobs">
+
+            <div class="selctcountry">
+                <mat-form-field>
+                    <mat-select [(value)]="selected" >
+                        <mat-option (click)="selectCity(city.name, city.lat, city.long, city.timezone)" *ngFor="let city of citiesData" value="{{city.name}}">{{city.name}}</mat-option>
+                    </mat-select>
+                    <mat-label>Your City</mat-label>
+                </mat-form-field>
+            </div>
+
+            <div class="homemenucl withoulgos">
+                <ul>
+                    <li><a href="#" [routerLink]="['/']" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" (click)="updateValue()">Home</a></li>
+                    <li><a href="#" [routerLink]="['/venues', venueCategory]" routerLinkActive="active-link " (click)="updateValue()">Venues</a></li>
+                    <li><a href="#" [routerLink]="['/events']" routerLinkActive="active-link" (click)="updateValue()">Events</a></li>
+                    <li><a href="#" [routerLink]="['/liveoffers']" routerLinkActive="active-link" (click)="updateValue()">Live Offers</a></li>
+                </ul>
+            </div>
+
+            <div class="signlogcmp">
+                <div *ngIf="userProvider.user">
+                    <div class="userinfoprohead">
+                        <div class="thumbusersh" [routerLink]="['/favourites']">
+                            <img src="{{userProvider.user?.profilePic}}">
+                        </div>
+                    </div>
+
+                    <div class="signlogcmp currentlylogin">
+                        <a (click)="listVenueCheck()" class="transpbtnsd">Become a Vendor</a>
+                    </div>
+                </div>
+
+                <div class="showbeflog" *ngIf="!userProvider.user">
+                    <a href="#" class="yellowglobtn" [routerLink]="['/usersignin']">Sign In</a>
+                </div>
+            </div>
+
+            <!-- <div class="searchweb">
+                <form>
+                    <input type="search" class="notopeninpt" placeholder="Search...">
+                </form>
+                <button type="submit" class="searchtab"><img src="./assets/img/searchicowht.png"></button>
+            </div> -->
+        </div>
+
+    </div>
+</header>

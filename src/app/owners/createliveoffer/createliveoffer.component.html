@@ -1,0 +1,164 @@
+<div class="nohdmenus">
+   <app-headerloginbackbtn></app-headerloginbackbtn>
+</div>
+<div class="clubinfos bgachanges">
+   <div class="main-containersite">
+      <div class="clubshare editableparts">
+         <div class="clunbamenties">
+            <form [formGroup]="createOfferForm" (ngSubmit)="createOfferSubmit()">
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="offerdtls">
+                        <div class="showsets">
+                           <h5>Offer Title*</h5>
+                           <div class="hlpshown" (click)="openDialog()"><img src="./assets/img/helpinfo.png"></div>
+                        </div>
+                        <div class="abuts">
+                           <mat-form-field>
+                              <textarea matInput placeholder="Max character 75" maxlength="75"
+                                 formControlName="offerTitle"></textarea>
+                              <mat-error
+                                 *ngIf="createOfferSubmitCheck && createOfferForm.controls.offerTitle.hasError('required')">
+                                 Offer Title is required
+                              </mat-error>
+                           </mat-form-field>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="offerdtls">
+                        <div class="showsets">
+                           <h5>Extra Information</h5>
+                           <div class="hlpshown" (click)="openDialog2()"><img src="./assets/img/helpinfo.png"></div>
+                        </div>
+                        <div class="abuts">
+                           <mat-form-field>
+                              <textarea matInput maxlength="100" placeholder="Max character 100"
+                                 formControlName="extraInfo"></textarea>
+                           </mat-form-field>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="offerdtls">
+                        <div class="chkbxpop blockbasedopts">
+                           <mat-radio-group aria-label="Select an option" formControlName="offerType">
+                              <mat-radio-button (change)="voucherType($event)" checked value="numberBased">Number of
+                                 Voucher Based </mat-radio-button>
+                              <mat-radio-button (change)="voucherType($event)" value="timeBased">Time Based
+                              </mat-radio-button>
+                           </mat-radio-group>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="offerdtls">
+                        <div class="inputvouvhers numberBased">
+                           <div class="showsets">
+                              <h5>Enter Number of Vouchers</h5>
+                           </div>
+                           <mat-form-field>
+                              <input matInput placeholder="Enter Number" formControlName="noOfVoucher">
+                              <mat-error
+                                 *ngIf="createOfferSubmitCheck && createOfferForm.controls.noOfVoucher.hasError('required')">
+                                 Number of Vouchers is required
+                              </mat-error>
+                           </mat-form-field>
+                        </div>
+                        <div class="inputvouvhers timeBased" style="display: none">
+                           <div class="showsets">
+                              <h5>Date Duration</h5>
+                           </div>
+
+                           <div class="row">
+                              <div class="col-md-6">
+                                 <div class="setformsicos lefticodates nooff">
+                                    <i class="material-icons">
+                                       <img src="./assets/img/calen.png">
+                                    </i>
+                                    <mat-form-field>
+                                       <input matInput [matDatepicker]="picker" placeholder="From" formControlName="fromDate">
+                                       <mat-datepicker-toggle matSuffix [for]="picker">
+                                       </mat-datepicker-toggle>
+                                       <mat-datepicker #picker>
+                                       </mat-datepicker>
+                                    </mat-form-field>
+                              </div>
+                           </div>
+
+                           <div class="col-md-6">
+                              <div class="setformsicos lefticodates nooff">
+                                 <i class="material-icons">
+                                    <img src="./assets/img/calen.png">
+                                 </i>
+                                 <mat-form-field>
+                                    <input matInput [matDatepicker]="picker2" placeholder="To" formControlName="toDate">
+                                    <mat-datepicker-toggle matSuffix [for]="picker2">
+                                    </mat-datepicker-toggle>
+                                    <mat-datepicker #picker2>
+                                    </mat-datepicker>
+                                 </mat-form-field>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="showsets">
+                           <h5>Time Duration</h5>
+                        </div>
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="setformsicos righticos tmmse">
+                                 <i class="material-icons leftops">
+                                    access_time
+                                    </i>
+                                 <div class="newdatepickerbyjbs">
+                                    <mat-label>From</mat-label>
+                                    <div class="default-time-example">
+                                          <input aria-label="default time" [ngxTimepicker]="defaultValue" [value]="'05:11 pm'"  readonly formControlName="timeDurationFrom">
+                                          <ngx-material-timepicker #defaultValue></ngx-material-timepicker>
+                                    </div> 
+                                    <div  class="ermsd" *ngIf="createOfferSubmitCheck && createOfferForm.controls.timeDurationFrom.hasError('required')">
+                                          Please select time
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="setformsicos righticos tmmse">
+                                 <i class="material-icons leftops">
+                                    access_time
+                                    </i>
+                                    <div class="newdatepickerbyjbs">
+                                       <mat-label>To</mat-label>
+                                       <div class="default-time-example">
+                                             <input aria-label="default time" [ngxTimepicker]="defaultValue1" [value]="'05:11 pm'"  readonly formControlName="timeDurationTill">
+                                             <ngx-material-timepicker #defaultValue1></ngx-material-timepicker>
+                                       </div> 
+                                       <div  class="ermsd" *ngIf="createOfferSubmitCheck && createOfferForm.controls.timeDurationTill.hasError('required')">
+                                             Please select time
+                                       </div>
+                                       <div class="ermsd"  *ngIf="createOfferSubmitCheck && createOfferForm.controls.timeDurationTill.hasError('notEquivalent')">
+                                          Time should be in right format
+                                          </div>
+                                    </div>
+                              </div>
+                           </div>
+                        </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="offerdtls ofrules">
+                        <p>Offers are Subject to <span (click)="rulesUse()">Rules of Use</span></p>
+                     </div>
+                  </div>
+                  <div class="setformsicos">
+                     <button type="submit" class="yellowbtsshw" mat-button>GO LIVE</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+<app-footerowner></app-footerowner>

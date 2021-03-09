@@ -1,0 +1,22 @@
+<p class="crosicos" type="text" mat-dialog-close> X</p>
+<h6 class="vrfhdsa">Verification Code</h6>
+<div class="binsdds frgtmodel verifybts">
+    <div class="clubshare">
+        <form [formGroup]="verifyForm" (ngSubmit)="verifySubmit()">
+            <p>We have sent a verification code to you. Please enter your code to continue.</p>
+            <div class="formacts">
+                <div class="fourtxtfd">
+                    <input type="text" maxlength="1" formControlName="input1" class="fgtp">
+                    <input type="text" maxlength="1" formControlName="input2" class="fgtp">
+                    <input type="text" maxlength="1" formControlName="input3" class="fgtp">
+                    <input type="text" maxlength="1" formControlName="input4" class="fgtp">
+                </div>
+                <button mat-button class="resendbtnd" (click)=resendOtp() >Resend Code </button>
+            </div>
+            <div class="setformsicos">
+                <!-- <button mat-button class="yellowbtsshw" [routerLink]="['/homelogged']" type="text" mat-dialog-close>SUBMIT</button> -->
+                <button type="submit" mat-button class="yellowbtsshw">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+</div>

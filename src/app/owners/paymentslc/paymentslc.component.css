@@ -1,0 +1,43 @@
+.fetchdtls span{
+    display: block;
+    font-weight: 500;
+    color: #000;
+}
+
+.tablequnatiselect table tr th,
+.tablequnatiselect table tr td{
+    width: 25%;
+    text-align: center;
+    position: relative;
+}
+
+.tablequnatiselect table tr th:last-child:before{
+    content: none;
+}
+
+.tablequnatiselect table tr th:before{
+    content: '';
+    position: absolute;
+    right: 10px;
+    width: 1px;
+    height: 30px;
+    background-color: #fff;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+
+.tablequnatiselect table tr th:first-child,
+.tablequnatiselect table tr td:first-child{
+    text-align: left;
+    padding: 0 0 0 50px;
+}
+ 
+
+.dtaclub span{
+    display: block;
+    font-weight: 500;
+    color: #282828;
+}
+ 

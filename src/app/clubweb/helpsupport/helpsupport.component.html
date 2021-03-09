@@ -1,0 +1,109 @@
+<app-clubheader></app-clubheader>
+
+<div class="filterareasven">
+    <div class="main-containersite">
+        <div class="simpleformpages">
+            <h3>We would love to hear from you</h3>
+            <div class="midcenterfrms helpfroms">
+                <form [formGroup]="helpForm" (ngSubmit)="helpSupportSubmit()">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="setformsicos">
+                                <i class="material-icons">
+                                    <img src="./assets/img/fnameico.png">
+                                </i>
+                                <mat-form-field>
+                                    <input matInput placeholder="Full Name" formControlName="name">
+                                    <mat-error
+                                        *ngIf="helpFormSubmitCheck && helpForm.controls.name.hasError('required')">
+                                        Full Name is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="setformsicos">
+                                <i class="material-icons">
+                                    <img src="./assets/img/mailericos.png">
+                                </i>
+                                <mat-form-field>
+                                    <input matInput placeholder="Email" formControlName="email">
+                                    <mat-error
+                                        *ngIf="helpFormSubmitCheck && helpForm.controls.email.hasError('required')">
+                                        Email is required
+                                    </mat-error>
+                                    <mat-error *ngIf="helpFormSubmitCheck && helpForm.controls.email.hasError('email')">
+                                        Email is not valid
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="setformsicos">
+                                <i class="material-icons">
+                                    <img src="./assets/img/phone.png">
+                                </i>
+                                <mat-form-field>
+                                    <input matInput placeholder="Phone Number" formControlName="mobileNumber">
+                                    <mat-error
+                                        *ngIf="helpFormSubmitCheck && helpForm.controls.mobileNumber.hasError('required')">
+                                        Phone Number is required
+                                    </mat-error>
+                                    <mat-error
+                                        *ngIf="helpFormSubmitCheck && helpForm.controls.mobileNumber.hasError('pattern')">
+                                        Phone Number is not valid
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="setformsicos">
+                                <i class="material-icons" style="font-size: 22px; color: #4f4f4f; top: 17px;">
+                                    help_outline
+                                </i>
+                                <mat-form-field>
+                                    <mat-select formControlName="reason">
+                                        <mat-option value="">Select Reason</mat-option>
+                                        <mat-option value="Ticket purchase issue">Ticket purchase issue</mat-option>
+                                        <mat-option value="Live offers issue">Live offers issue</mat-option>
+                                        <mat-option value="Payment issue">Payment issue</mat-option>
+                                        <mat-option value="Venue listing issue">Venue listing issue</mat-option>
+                                        <mat-option value="Other">Other</mat-option>
+                                    </mat-select>
+                                    <mat-label> Reason</mat-label>
+                                    <mat-error
+                                        *ngIf="helpFormSubmitCheck && helpForm.controls.reason.hasError('required')">
+                                        Reason is required
+                                    </mat-error>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="setformsicos">
+                                <mat-form-field>
+                                    <textarea matInput placeholder="Write your message here..."
+                                        formControlName="message"></textarea>
+                                    <mat-error
+                                        *ngIf="helpFormSubmitCheck && helpForm.controls.message.hasError('required')">
+                                        Message is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="setformsicos">
+                            <button mat-button class="yellowbtsshw">SEND MESSAGE</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-webfooter></app-webfooter>

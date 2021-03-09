@@ -1,0 +1,2 @@
+<button mat-button class="whtbtns" *ngIf="redeemStatus && !data1.reedemStatus" (click)="redeemDialog(data1.offerId, data1.offerTitle, data1.venueName)">Reedem Now</button>
+<button mat-button class="whtbtns" *ngIf="redeemStatus && data1.reedemStatus">Reedemed</button>

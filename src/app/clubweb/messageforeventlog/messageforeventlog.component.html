@@ -1,0 +1,79 @@
+<app-clubheader></app-clubheader>
+<div class="filterareasven">
+   <div class="main-containersite">
+      <div class="simpleformpages">
+         <div class="midcenterfrms">
+             <form [formGroup]="userMessageForm" (ngSubmit)="userMessageSubmit()">
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="setformsicos">
+                        <i class="material-icons">
+                        <img src="./assets/img/fnameico.png">
+                        </i>
+                        <mat-form-field>
+                           <input matInput placeholder="Full Name" formControlName="name" >
+                           <mat-error
+                           *ngIf="userMessageSubmitCheck && userMessageForm.controls.name.hasError('required')">
+                           Full Name is required
+                        </mat-error>
+                        </mat-form-field>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="setformsicos">
+                        <i class="material-icons">
+                        <img src="./assets/img/mailericos.png">
+                        </i>
+                        <mat-form-field>
+                           <input matInput placeholder="Email" formControlName="email" >
+                           <mat-error
+                           *ngIf="userMessageSubmitCheck && userMessageForm.controls.email.hasError('required')">
+                           Email is required
+                        </mat-error>
+                        <mat-error
+                           *ngIf="userMessageSubmitCheck && userMessageForm.controls.email.hasError('email')">
+                              Email not valid
+                        </mat-error>
+                        </mat-form-field>
+                     </div>
+                  </div>
+                  <div class="col-md-12">
+                     <div class="setformsicos">
+                        <i class="material-icons">
+                        <img src="./assets/img/phone.png">
+                        </i>
+                        <mat-form-field>
+                           <input matInput placeholder="Contact Number" formControlName="mobileNumber" >
+                           <mat-error
+                           *ngIf="userMessageSubmitCheck && userMessageForm.controls.mobileNumber.hasError('required')">
+                           Contact Number is required
+                        </mat-error>
+                        <mat-error
+                           *ngIf="userMessageSubmitCheck && userMessageForm.controls.mobileNumber.hasError('pattern')">
+                           Contact Number not valid
+                     </mat-error>
+                        </mat-form-field>
+                     </div>
+                  </div>
+                  <div class="col-md-12">
+                     <div class="setformsicos">
+                        <mat-form-field>
+                           <textarea matInput
+                              placeholder="Write your message here..." formControlName="message" ></textarea>
+                              <mat-error
+                              *ngIf="userMessageSubmitCheck && userMessageForm.controls.message.hasError('required')">
+                              Message is required
+                           </mat-error>
+                        </mat-form-field>
+                     </div>
+                  </div>
+                  <div class="setformsicos">
+                     <button mat-button type="submit" class="yellowbtsshw">SUBMIT</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+<app-webfooter></app-webfooter>

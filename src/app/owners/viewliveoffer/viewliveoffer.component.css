@@ -1,0 +1,25 @@
+.clubinfos.bgachanges .clubshare.editableparts { 
+    margin-top: 70px;
+}
+
+.offerdtls h5 sup{
+    color: #d80909;
+    font-size: 16px;
+    top: 0;
+}
+
+.offerdtls p{
+    font-size: 14px;
+}
+
+.offerdtls {
+    margin-bottom: 30px;
+}
+
+.ofrules{
+    margin: 0px 0 50px 0;
+}
+
+.ofrules p{
+    font-size: 15px;
+}

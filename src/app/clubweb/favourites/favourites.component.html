@@ -1,0 +1,56 @@
+<app-clubheader></app-clubheader>
+<div class="filterareasven">
+   <div class="main-containersite">
+      <div class="row">
+         <div class="col-md-2 bdrghtd">
+            <app-sidebaraccount></app-sidebaraccount>
+         </div>
+         <div class="col-md-10 nopaddlfts">
+            <div class="citiylocationswise">
+               <h4>Favourites</h4>
+            </div>
+            <div class="profilecontentwdth">
+               <div class="eventvenuareas">
+                  <div class="row">
+                     <div class="col-md-6" *ngFor="let item of favourites">
+                        <div class="featrevts spcldtls">
+                           <div class="funthumbs">
+                            <div class="recbtns" *ngIf="item?.recommendedStatus == true">
+                                <img src="./assets/img/thub.png">
+                                <p>Recommended</p>
+                            </div>
+                              <div class="wishshwms">
+                                 <ul>
+                                    <li><a href="#"><img src="./assets/img/shareab.png"></a></li>
+                                    <!-- <li><a href="#"><i class="fas fa-heart"></i></a></li> -->
+                                    <li><a (click)="addToFavouite(item._id)"><i class="fas fa-heart"></i></a></li>
+                                 </ul>
+                              </div>
+                              <div class="openstats" *ngIf="item.isHappyHours">
+                                    <img src="./assets/img/timing.png">
+                                </div>
+                              <div class="thumbareasupd" [routerLink]="['/venuesdetail', item._id]">
+                                 <img *ngIf="item?.venueImages.length> 0" src="{{item?.venueImages[0]?.image}}">
+                                 <img *ngIf="item?.venueImages.length == 0 " src="./assets/img/imageoneev.jpg">
+                              </div>
+                           </div>
+                           <div class="evtdtsl">
+                              <h5 [routerLink]="['/venuesdetail', item._id]">{{item?.venueName}}</h5>
+                              <div class="imglcs">
+                                 <img src="./assets/img/loc.png">
+                                 <p>{{item?.address}}</p>
+                              </div>
+                              <div class="distanceshw">
+                                 <p>{{(item?.dist?.calculated / 1000).toFixed(1)}} km</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<app-webfooter></app-webfooter>

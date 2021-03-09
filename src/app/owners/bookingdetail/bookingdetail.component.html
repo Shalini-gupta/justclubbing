@@ -1,0 +1,29 @@
+<div class="nohdmenus">
+    <app-headerloginbackbtn></app-headerloginbackbtn>
+</div>
+
+<div class="clubinfos bgachanges">
+        <div class="main-containersite">
+             <div class="clubshare editableparts">
+                <div class="clunbamenties bkcurs">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="seqgrds">
+                                <h3>{{bookingData?.name}}</h3>
+                                <div class="bokinfosa">
+                                    <label><span>Date and Time</span><p>{{bookingData?.createdAt | date:'EE, d MMMM yyyy'}}</p></label>
+                                    <label><span>Email</span><p>{{bookingData?.email}}</p></label>
+                                    <label><span>Contact Number</span><p>{{bookingData?.mobileNumber}}</p></label>
+                                </div>
+                                <div class="imglcs">
+                                    <p>{{bookingData?.message}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+     </div>
+
+     <app-footerowner></app-footerowner>

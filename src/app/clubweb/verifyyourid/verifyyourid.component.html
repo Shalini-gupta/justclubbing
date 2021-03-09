@@ -1,0 +1,204 @@
+<app-clubheader></app-clubheader>
+<div class="filterareasven">
+    <div class="main-containersite">
+        <div class="row">
+            <div class="col-md-2 bdrghtd">
+                <app-sidebaraccount></app-sidebaraccount>
+            </div>
+            <div class="col-md-10 nopaddlfts">
+                <div class="citiylocationswise">
+                    <h4>Verify your ID</h4>
+                </div>
+                <div class="profilecontentwdth">
+                    <div class="eventvenuareas">
+                        <div class="centerformsmid">
+                            <form [formGroup]="verifyIdForm" (ngSubmit)="verifyIdSubmit()">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="setformsicos">
+                                            <i class="material-icons">
+                                                <img src="./assets/img/iconresidential.png">
+                                            </i>
+                                            <mat-form-field>
+                                                <input matInput placeholder="Residential Address"
+                                                    formControlName="residential">
+                                                <mat-error
+                                                    *ngIf="verifySubmitCheck && verifyIdForm.controls.residential.hasError('required')">
+                                                    Residential address is required
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="setformsicos Verifycity">
+                                            <mat-form-field>
+                                                <input matInput placeholder="Suburb" formControlName="suburb">
+                                                <mat-error
+                                                    *ngIf="verifySubmitCheck && verifyIdForm.controls.suburb.hasError('required')">
+                                                    Suburb is required
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="setformsicos Verifycity">
+                                            <mat-form-field>
+                                                <mat-label>State</mat-label>
+                                                <mat-select formControlName="state">
+                                                    <mat-option value="NSW">NSW</mat-option>
+                                                    <mat-option value="ACT">ACT</mat-option>
+                                                    <mat-option value="VIC">VIC</mat-option>
+                                                    <mat-option value="QLD">QLD</mat-option>
+                                                    <mat-option value="SA">SA</mat-option>
+                                                    <mat-option value="WA">WA</mat-option>
+                                                    <mat-option value="TAS">TAS</mat-option>
+                                                    <mat-option value="NT">NT</mat-option>
+                                                </mat-select>
+                                                <mat-error
+                                                    *ngIf="verifySubmitCheck && verifyIdForm.controls.state.hasError('required')">
+                                                    State is required
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="setformsicos Verifycity">
+                                            <mat-form-field>
+                                                <input matInput placeholder="Postcode" formControlName="postcode">
+                                                <mat-error
+                                                    *ngIf="verifySubmitCheck && verifyIdForm.controls.postcode.hasError('required')">
+                                                    Postcode is required
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <div class="setformsicos">
+                                            <i class="material-icons">
+                                                <img src="./assets/img/idtype.png">
+                                            </i>
+                                            <mat-form-field>
+                                                <mat-select formControlName="idType">
+                                                    <mat-option value="">Please Select Type</mat-option>
+                                                    <mat-option value="Driver Licence">Driver Licence</mat-option>
+                                                    <mat-option value="Passport">Passport</mat-option>
+                                                    <mat-option value="Age Card">Age Card</mat-option>
+                                                </mat-select>
+                                                <mat-label>ID Type *</mat-label>
+                                                <mat-error
+                                                    *ngIf="verifySubmitCheck && verifyIdForm.controls.idType.hasError('required')">
+                                                    Id Type is required
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="setformsicos">
+                                            <i class="material-icons">
+                                                <img src="./assets/img/idnumb.png">
+                                            </i>
+                                            <mat-form-field>
+                                                <input matInput placeholder="ID Number * " formControlName="idNumber">
+                                                <mat-error
+                                                    *ngIf="verifySubmitCheck && verifyIdForm.controls.idNumber.hasError('required')">
+                                                    Id Number is required
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="setformsicos">
+                                            <i class="material-icons">
+                                                <img src="./assets/img/fladcou.png">
+                                            </i>
+                                            <mat-form-field>
+                                                <input matInput placeholder="'ID Country/State * "
+                                                    formControlName="idCountryOrState">
+                                                <mat-error
+                                                    *ngIf="verifySubmitCheck && verifyIdForm.controls.idCountryOrState.hasError('required')">
+                                                    Id Country/State is required
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="setformsicos lefticodates">
+                                            <i class="material-icons">
+                                                <img src="./assets/img/calen.png">
+                                            </i>
+                                            <mat-form-field>
+                                                <input matInput [matDatepicker]="picker" placeholder="ID Expiry Date"
+                                                    formControlName="idExpiryDate">
+                                                <mat-datepicker-toggle matSuffix [for]="picker">
+                                                </mat-datepicker-toggle>
+                                                <mat-datepicker #picker>
+                                                </mat-datepicker>
+                                                <mat-error
+                                                    *ngIf="verifySubmitCheck && verifyIdForm.controls.idExpiryDate.hasError('required')">
+                                                    Id Expiry Date is required
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="setformsicos">
+                                            <div class="attachareasrels">
+                                                <div class="Upload">
+                                                    <img src="assets/img/uploadicos.png">
+                                                    <input type="file" (change)="selectFile($event)"
+                                                        formControlName="attachedId">
+                                                    <mat-error
+                                                        *ngIf="verifySubmitCheck && verifyIdForm.controls.attachedId.hasError('required')">
+                                                        Attached Id is required
+                                                    </mat-error>
+                                                    <span>Please Attach ID<sup>*</sup></span>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="setformsicos">
+                                            <div class="attachareasrels">
+                                                <div class="rempass">
+                                                    <mat-checkbox formControlName="iAgree">I agree to the
+                                                        <span class="tncs" (click)="openDialog()">Terms &
+                                                            Conditions</span>
+                                                    </mat-checkbox>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="setformsicos">
+                                    <button mat-button class="yellowbtsshw">SUBMIT</button>
+                                </div>
+                            </form>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-webfooter></app-webfooter>

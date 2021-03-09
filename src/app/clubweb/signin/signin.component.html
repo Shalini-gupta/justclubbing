@@ -1,0 +1,256 @@
+<app-clubheader>
+</app-clubheader>
+<div class="filterareasven lgobgsa">
+    <div class="main-containersite">
+        <div class="loginfrms">
+            <div class="formssignall">
+                <mat-tab-group>
+                    <mat-tab label="Sign In">
+                        <div class="formbgaprt">
+                            <form [formGroup]="signInForm" (ngSubmit)="loginSubmit()">
+                                <div class="setformsicos">
+                                    <i class="material-icons">
+                                        <img src="./assets/img/mailericos.png">
+                                    </i>
+                                    <mat-form-field>
+                                        <input matInput placeholder="Email" formControlName="email">
+                                        <mat-error
+                                            *ngIf="loginSubmitCheck && signInForm.controls.email.hasError('required')">
+                                            Email is required
+                                        </mat-error>
+                                        <mat-error
+                                            *ngIf="loginSubmitCheck && signInForm.controls.email.hasError('email')">
+                                            Email not valid
+                                        </mat-error>
+                                    </mat-form-field>
+                                </div>
+                                <div class="setformsicos">
+                                    <i class="material-icons">
+                                        <img src="./assets/img/lockico.png">
+                                    </i>
+                                    <mat-form-field>
+                                        <input type="password" matInput placeholder="Password"
+                                            formControlName="password">
+                                        <mat-error
+                                            *ngIf="loginSubmitCheck && signInForm.controls.password.hasError('required')">
+                                            Password is required
+                                        </mat-error>
+                                        <mat-error
+                                            *ngIf="loginSubmitCheck && signInForm.controls.password.hasError('minlength')">
+                                            Password is must be greater then 6
+                                        </mat-error>
+                                    </mat-form-field>
+                                </div>
+                                <div class="setformsicos">
+                                    <div class="rempass">
+                                        <mat-checkbox formControlName="rememberMe">Remember me</mat-checkbox>
+                                    </div>
+
+                                    <div class="passfrgt">
+                                        <a href="javascript:void(0);" (click)="forgotPassword()">Forgot Password ?</a>
+                                    </div>
+                                </div>
+                                <div class="setformsicos">
+                                    <button mat-button class="yellowbtsshw">LOGIN</button>
+                                </div>
+                            </form>
+
+                            <div class="setformsicos">
+                                <span class="ofope">OR</span>
+                            </div>
+                            <div class="setformsicos">
+                                <button mat-button class="fbbluebtnd" (click)="submitLogin();">
+                                    <i class="fab fa-facebook-f"></i>Login/Signup with Facebook
+                                </button>
+                                <div class="setformsicos">
+                                    <p style="font-size: 13px; margin-bottom: 10px;">
+                                        By logging in, you agree to Just Clubbing
+                                        <a (click)="termsCondition()">Terms of Service</a> and
+                                        <a (click)="privacyPolicy()">Privacy Policy.</a>
+                                    </p>
+                                </div>
+                                <p class="ctguest" [routerLink]="['/']">Continue as Guest</p>
+                            </div>
+                        </div>
+                    </mat-tab>
+                    <mat-tab label="Sign Up">
+                        <div class="formbgaprt signspaces">
+                            <form [formGroup]="signUpForm" (ngSubmit)="signUpSubmit()">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="setformsicos">
+                                            <i class="material-icons">
+                                                <img src="./assets/img/fnameico.png">
+                                            </i>
+                                            <mat-form-field>
+                                                <input matInput placeholder="First Name" formControlName="firstName">
+                                                <mat-error
+                                                    *ngIf="signSubmitCheck && signUpForm.controls.firstName.hasError('required')">
+                                                    First Name is required
+                                                </mat-error>
+
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="setformsicos">
+                                            <i class="material-icons">
+                                                <img src="./assets/img/fnameico.png">
+                                            </i>
+                                            <mat-form-field>
+                                                <input matInput placeholder="Last Name" formControlName="lastName">
+                                                <mat-error
+                                                    *ngIf="signSubmitCheck && signUpForm.controls.lastName.hasError('required')">
+                                                    Last Name is required
+                                                </mat-error>
+
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="setformsicos">
+                                            <i class="material-icons">
+                                                <img src="./assets/img/mailericos.png">
+                                            </i>
+                                            <mat-form-field>
+
+                                                <input matInput placeholder="Email" formControlName="email">
+                                                <mat-error
+                                                    *ngIf="signSubmitCheck && signUpForm.controls.email.hasError('required')">
+                                                    Email is required
+                                                </mat-error>
+                                                <mat-error
+                                                    *ngIf="signSubmitCheck && signUpForm.controls.email.hasError('email')">
+                                                    Email is not valid
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="setformsicos">
+                                            <i class="material-icons">
+                                                <img src="./assets/img/phone.png">
+                                            </i>
+                                            <mat-form-field>
+                                                <input matInput placeholder="Phone Number"
+                                                    formControlName="mobileNumber">
+                                                <mat-error
+                                                    *ngIf="signSubmitCheck && signUpForm.controls.mobileNumber.hasError('required')">
+                                                    Phone Number is required
+                                                </mat-error>
+                                                <mat-error
+                                                    *ngIf="signSubmitCheck && signUpForm.controls.mobileNumber.hasError('pattern')">
+                                                    Phone Number not valid
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="setformsicos">
+                                            <i class="material-icons">
+                                                <img src="./assets/img/toilets.png">
+                                            </i>
+                                            <mat-form-field>
+                                                <mat-select formControlName="gender">
+                                                    <mat-option value="">Please Select Gender</mat-option>
+                                                    <mat-option value="Male">Male</mat-option>
+                                                    <mat-option value="Female">Female</mat-option>
+                                                    <mat-option value="Other">Other</mat-option>
+                                                </mat-select>
+                                                <mat-label>Gender</mat-label>
+                                                <mat-error
+                                                    *ngIf="signSubmitCheck && signUpForm.controls.gender.hasError('required')">
+                                                    Gender is required
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="setformsicos">
+                                            <i class="material-icons">
+                                                <img src="./assets/img/calen.png">
+                                            </i>
+                                            <mat-form-field>
+                                                <mat-select formControlName="age">
+                                                    <mat-option value=''>--</mat-option>
+                                                    <mat-option value="18-25">18-25</mat-option>
+                                                    <mat-option value="25-35">25-35</mat-option>
+                                                    <mat-option value="35 & Above">35 & Above</mat-option>
+                                                </mat-select>
+                                                <mat-label> Age</mat-label>
+                                                <mat-error
+                                                    *ngIf="signSubmitCheck && signUpForm.controls.age.hasError('required')">
+                                                    Age is required
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="setformsicos">
+                                            <i class="material-icons">
+                                                <img src="./assets/img/lockico.png">
+                                            </i>
+                                            <mat-form-field>
+                                                <input type="password" matInput
+                                                    placeholder="Password (at least 6 Characters)"
+                                                    formControlName="password">
+                                                <mat-error
+                                                    *ngIf="signSubmitCheck && signUpForm.controls.password.hasError('required')">
+                                                    Password is required
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="setformsicos">
+                                            <i class="material-icons">
+                                                <img src="./assets/img/unlcok.png">
+                                            </i>
+                                            <mat-form-field>
+                                                <input type="password" matInput placeholder="Confirm Password"
+                                                    formControlName="confirmPassword">
+                                                <mat-error
+                                                    *ngIf="signSubmitCheck && signUpForm.controls.confirmPassword.hasError('notEquivalent')">
+                                                    Confirm Password is not match
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="setformsicos">
+                                    <button mat-button class="yellowbtsshw">SIGN UP</button>
+                                </div>
+                            </form>
+
+
+
+                            <div class="setformsicos">
+                                <p style="font-size: 13px; margin-bottom: 10px;">By signing up, you agree to Just Clubbing 
+                                <a (click)="termsCondition()">Terms of Service</a> and 
+                                <a (click)="privacyPolicy()">Privacy Policy.</a></p>
+                            </div>
+
+                            <div class="setformsicos">
+                                <p class="ctguest" [routerLink]="['/']">Continue as Guest</p>
+                            </div>
+
+                        </div>
+
+                    </mat-tab>
+
+                </mat-tab-group>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<app-webfooter></app-webfooter>

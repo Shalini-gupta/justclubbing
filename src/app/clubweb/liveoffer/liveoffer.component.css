@@ -1,0 +1,61 @@
+.bdrghtd{ border:none }
+
+.nopaddlfts {
+    padding: 0 15px;
+    position: relative;
+}
+
+.nopaddlfts:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 1px;
+    height: 100%;
+    background-color: #d6d6d6;
+    min-height: 50vh;
+}
+
+.profilecontentwdth, 
+.nopaddlfts  .citiylocationswise{
+    padding: 0px;
+}
+
+.profilecontentwdth{
+    width: 98%;
+    margin: 0 0 0px 20px;
+}
+
+.nopaddlfts .citiylocationswise{
+    width: 98%;
+    margin: 0 0 30px 20px;
+}
+
+.profilecontentwdth .couponoffers .col-md-4{
+    padding: 0 0 0 15px;
+}
+
+.profilecontentwdth .couponoffers .tickteds img{
+    min-height: 164px;
+}
+
+
+
+
+p.tmtmr app-liveofferdata {
+    margin-left: 3px;
+}
+
+.vcrinfos{
+    height: 64px;
+}
+
+.vcrinfos[_ngcontent-blt-c2] span.nomtxt {
+    width: 100% !important;
+    float: left !important;
+}
+
+span.mat-button-wrapper{
+    font-size: 12px;
+}
+

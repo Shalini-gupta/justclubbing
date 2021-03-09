@@ -1,0 +1,74 @@
+<div class="userprofileflows">
+    <div class="userthumbedits">
+        <div class="picshws">
+            <div class="fetchpicth">
+                <img src="{{userProvider?.user?.profilePic}}">
+            </div>
+            <div class="editablepic">
+                <img src="./assets/img/editpgs.png">
+                <input type="file" (change)="selectFile($event)">
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="accsettings">
+
+        <div class="usrinfnm">
+            <h4>{{userProvider.user.firstName}} {{userProvider.user.lastName}}</h4>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" [style.width]="userProvider.user.profileCompletePer+'%'"
+                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{{userProvider.user.profileCompletePer}}%</div>
+        </div>
+
+        <h4>Account Settings</h4>
+        <div class="menuaccountscbs">
+            <ul>
+                <li>
+                    <a href="#" [routerLink]="['/favourites']" routerLinkActive="active-link">
+                        <img src="./assets/img/favico.png">Favourite
+                    </a>
+                </li>
+                <li>
+                    <a href="#" [routerLink]="['/personalinfo']" routerLinkActive="active-link">
+                        <img src="./assets/img/usr.png">Personal Information
+                    </a>
+                </li>
+                <li>
+                    <a href="#" [routerLink]="['/verifyid']" routerLinkActive="active-link">
+                        <img src="./assets/img/verifyusr.png">Verify your ID
+                    </a>
+                </li>
+                <li>
+                    <a href="#" [routerLink]="['/purchasehistory']" routerLinkActive="active-link">
+                        <img src="./assets/img/purchasehst.png">My Purchase History
+                    </a>
+                </li>
+                <li>
+                    <!-- [routerLink]="[ '/owners-manage','createvenues']" routerLinkActive="active-link" -->
+                    <a href="javascript:void(0)" (click)="listVenueCheck()">
+                        <img src="./assets/img/listico.png">List your Venue
+                    </a>
+                </li>
+                <li>
+                    <a href="#" [routerLink]="['/feedback']" routerLinkActive="active-link">
+                        <img src="./assets/img/feedback.png">Feedback
+                    </a>
+                </li>
+                <li>
+                    <a href="#" [routerLink]="['/aboutjustclubbing']" routerLinkActive="active-link">
+                        <img src="./assets/img/abouicos.png">About Just Clubbing
+                    </a>
+                </li>
+                <li>
+                    <a (click)="logOut()">
+                        <img src="./assets/img/lgout.png">Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

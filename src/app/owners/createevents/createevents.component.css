@@ -1,0 +1,25 @@
+.clubinfos.bgachanges .clubshare.editableparts,
+.venuslidersectionsd{
+    margin: 0;
+}
+section.agentssliders .featrevts.spcldtls { 
+    height: 100%;
+}
+
+.TimingFeild{
+    position: relative;
+}
+.TimingFeild span{
+    position: absolute;
+    top: 0;
+    font-weight: 500;
+}
+
+.TimingFeild input{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    height: 39px;
+    padding: 0 0px 10px 90px;
+    outline: 0
+}

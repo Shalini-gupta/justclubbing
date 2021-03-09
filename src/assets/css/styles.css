@@ -1,0 +1,596 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/OpenSans-Regular.ttf');
+  }
+  
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: semi-bold;
+    font-weight: 600;
+    src: url('./assets/fonts/OpenSans-SemiBold.ttf');
+  }
+  
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: bold;
+    font-weight: 700;
+    src: url('./assets/fonts/OpenSans-Bold.ttf');
+  }
+  
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: extra-bold;
+    font-weight: 900;
+    src: url('./assets/fonts/OpenSans-ExtraBold.ttf');
+  }
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+
+
+.main-containersite {
+    margin: 0 auto;
+    max-width: 1300px;
+}
+
+
+header.clbhdr {
+    background: #000;
+    float: left;
+    width: 100%;
+    padding: 5px 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+ul,li,h1,h2,h3,h4,h5,h6,a,p{
+    margin:0;
+    padding:0;
+}
+
+a{
+    text-decoration:none;
+}
+
+
+.logosdv {
+    width: 25%;
+    float: left;
+}
+
+.logosdv img {
+    width: 100%;
+}
+
+.logolanggen {
+    float: left;
+    width: 20%;
+}
+
+.selctcountry {
+    float: left;
+    width: 20%;
+    margin-left: 22px;
+}
+
+.selctcountry .mat-form-field-appearance-legacy .mat-form-field-label{
+    color: #fff;
+}
+
+.selctcountry  .mat-select-arrow {
+    color: #fff;
+}
+
+.homemenucl {
+    float: left;
+    width: 57%;
+    display: flex;
+    flex-direction: column;
+    height: 71px;
+}
+
+.homemenucl ul {
+    margin: auto;
+}
+
+.homemenucl ul li {
+    display: inline-block;
+    margin: 0 25px;
+}
+
+.homemenucl ul li a {
+    color: #fff;
+}
+
+.signlogcmp {
+    float: right;
+    width: 23%;
+    height: 72px;
+    display: flex;
+    flex-direction: row;
+}
+
+.signlogcmp a {
+    margin: auto;
+}
+
+.signlogcmp a.transpbtnsd {
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 11px 16px;
+    border-radius: 41px;
+    outline: none;
+    font-size: 14px;
+}
+
+.signlogcmp a.yellowglobtn {
+    background: #feca05;
+    color: #000;
+    padding: 12px 32px;
+    border-radius: 18px;
+    font-size: 14px;
+}
+
+.homemenucl ul li a.active-link {
+    position: relative;
+}
+
+.homemenucl ul li a.active-link:after {content: "";position: absolute;border-bottom: 2px solid #feca05;height: 4px;width: 22px;bottom: -5px;left: 0;right: 0;margin: auto;}
+
+.sldhome {
+    background: url(./assets/img/bghme.jpg);
+    float: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 433px;
+    background-size: cover;
+}
+
+.serachsliders {
+    margin: auto;
+    width: 35%;
+}
+
+.designboxsd .mat-form-field-appearance-legacy .mat-form-field-label {
+    color: #000;
+}
+
+.designboxsd .mat-form-field {
+    background: #fff;
+    height: 44px;
+    width: 100%;
+}
+
+.designboxsd .mat-form-field input {
+    color: #000;
+}
+
+.designboxsd {
+    display: flex;
+}
+
+.designboxsd button.mat-button.mat-button-base {
+    background: #feca05;
+    border-radius: 0px;
+    margin-left: 9px;
+    padding: 0 29px;
+}
+
+.designboxsd input.mat-input-element{
+    margin-top: 5px;
+}
+
+.designboxsd .mat-form-field-appearance-legacy .mat-form-field-underline,
+.designboxsd .mat-form-field-appearance-legacy .mat-form-field-ripple{
+    height: 0px;
+}
+
+.serachsliders h4 {
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Open Sans';
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.srcdins {
+    display: flex;
+    background: #fff;
+    width: 78%;
+    padding-left: 9px;
+}
+
+.srcdins input {
+    border: none;
+    font-size: 15px;
+    padding: 14px 8px;
+    width: 100%;
+    outline: none;
+}
+
+.srcdins mat-icon.mat-icon.notranslate.material-icons.mat-icon-no-color {
+    margin: 0;
+    padding: 0;
+    line-height: 45px;
+    color: #0c0c0c;
+}
+
+
+.eventssections {
+    float: left;
+    width: 100%;
+}
+
+.gridcommn {
+    float: left;
+    width: 32%;
+    margin-right: 16px;
+}
+
+.gridcommn:last-child {
+    margin-right: 0px;
+}
+
+.funthumbs img {
+    max-width: 100%;
+    margin: auto;
+    width: 100%;
+}
+
+.recbtns {
+    display: flex;
+    position: absolute;
+    background: #65179d;
+    flex-direction: row;
+    padding: 5px 8px;
+}
+
+.recbtns p {
+    color: #fff;
+    text-transform: uppercase;
+    margin: auto;
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+.evtdtsl {
+    float: left;
+    width: 100%;
+}
+
+.evtdtsl h5 {
+    font-size: 16px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.imglcs {
+    display: flex;
+}
+
+.imglcs p {
+    margin: auto;
+    margin-left: 7px;
+    color: #706868;
+    font-size: 14px;
+}
+
+.featrevts {
+    float: left;
+    width: 100%;
+}
+
+.funthumbs {
+    float: left;
+    width: 100%;
+}
+
+.eventssetsdis {
+    float: left;
+    width: 100%;
+    padding-bottom: 41px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid #ddd;
+}
+
+.viewhdand-bts {
+    float: left;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.viewhdand-bts h6.main-headnorms {
+    float: left;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.viewhdand-bts button.yellowbtsshw {
+    float: right;
+    background: #feca05;
+    border-radius: 23px;
+    padding: 0 25px;
+}
+
+.evtallgrid {
+    float: left;
+    width: 100%;
+}
+
+.thumbareasupd {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    height: 178px;
+    overflow: hidden;
+}
+
+.tickteds img {
+    width: 100%;
+}
+
+.ticketsvaries {
+    position: relative;
+    width: 100%;
+}
+
+.ticinfoshowms {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 15px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.tickteds {
+    width: 100%;
+    float: left;
+}
+
+.vcrinfos {
+    display: flex;
+    height: 57px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 10px;
+}
+
+.vcrinfos button.whtbtns {
+    margin: auto;
+    margin-right: 0;
+    background: #fff;
+    border-radius: 20px;
+}
+
+.ticinfoshowms p, .ticinfoshowms strong {
+    color: #fff;
+}
+
+.ticinfoshowms strong {
+    font-weight: 500;
+    margin-top: 7px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lcdistant {
+    display: flex;
+    float: left;
+    width: 100%;
+}
+
+.lcdistant p {
+    float: right;
+    margin: auto;
+    margin-left: 9px;
+    margin-right: 0;
+}
+
+.lcdistant img {
+    margin: auto;
+    float: right;
+    margin-right: 0px;
+}
+
+.vcrinfos p {
+    margin: auto;
+    margin-left: 0;
+}
+
+.clubinfoname {
+    float: left;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.clubinfoname p {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.yellowbtsshw {
+    background: #feca05;
+    border-radius: 23px;
+    padding: 2px 25px;
+}
+
+.eventbanners {
+    float: left;
+    width: 100%;
+    background: url(./assets/img/rockimgs.jpg);
+    height: 615px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.banncts {
+    margin: auto;
+    margin-left: 7%;
+}
+
+.banncts h5 {
+    color: #fff;
+    font-size: 38px;
+    margin-bottom: 28px;
+    font-family: 'Open Sans';
+}
+
+.eventssetsdis:nth-child(3) {
+    margin-bottom: 0;
+    border-bottom: 0px;
+}
+
+.citienears {
+    float: left;
+    width: 100%;
+    padding: 41px 0;
+}
+
+.locationgrids {
+    float: left;
+    width: 42%;
+}
+
+.locationgrids ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.locationgrids ul li {
+    float: left;
+    width: 50%;
+    margin-bottom: 34px;
+}
+
+.citienears h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.locationgrids ul li a {
+    color: #000;
+}
+
+.appdownlod {
+    box-sizing: border-box;
+    float: left;
+    width: 100%;
+    padding: 60px 0;
+    position: relative;
+}
+
+.aboveblank {
+    background: #f0f0f0;
+    float: left;
+    width: 100%;
+    height: 415px;
+}
+
+.downloadappct {
+    float: left;
+    width: 39%;
+    padding: 4% 0px 0px 65px;
+    box-sizing: border-box;
+}
+
+.mobilebga {
+    float: left;
+    width: 50%;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.mobilebga img {
+    width: 49%;
+    position: absolute;
+    bottom: -21px;
+}
+
+.appbtpla {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    margin-top: 25px;
+}
+
+.appbtpla a {
+    float: left;
+    width: 30%;
+    margin: 8px 0;
+}
+
+.appbtpla a img {
+    width: 100%;
+}
+
+.newsltrs {
+    float: left;
+    width: 100%;
+}
+
+
+.fromsnews {
+    margin: 0 auto;
+    width: 32%;
+}
+
+.mainhd-newstags {
+    text-align: center;
+}
+
+.mainhd-newstags h2 {
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+
+.mainhd-newstags p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.mat-button.blackrelbtsshw {
+    background: #ff0c0c; 
+    color: #feca05;
+    font-weight: 100;
+    padding: 2px 24px;
+    border-radius: 22px;
+}
+
+mat-grid-tile.subsbtsnd.mat-grid-tile {
+    position: relative;
+    float: left;
+    width: 100% !important;
+    text-align: center;
+    padding: 28px !important;
+}
+
+agm-map {
+    height: 500px;
+    height: 300px;
+  }
+  
+  #map {
+    width: 500px;
+    height: 300px;
+  }
+

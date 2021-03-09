@@ -1,0 +1,22 @@
+<p class="crosicos" type="text" mat-dialog-close> <i class="fas fa-times"></i></p>
+
+<div class="UploadFileArea"> 
+    <!-- <form> -->
+    <p><strong>Note:</strong> You Can Add Only 10 Images Per Venues<br> (max file Size 400KB)</p>
+    <!-- <input type="file" (change)="fileUpload($event)"> -->
+
+    <div class="user-profile">
+        <label class="hoverable" for="fileInput">
+            <img src="{{activeImage}}" *ngIf="activeImage" style="height:103px;width:117px">
+            <div class="ProfileLayer">
+                <span>Choose file</span>
+            </div>
+        </label> 
+        <input id="fileInput" type='file' (change)="fileUpload($event)"
+            accept="image/jpg,image/png, image/jpeg"  >
+    </div>
+    <div class="setformsicos">
+        <button class="yellowbtsshw" [mat-dialog-close]="data" cdkFocusInitial mat-button>Upload Images</button>
+    </div>
+    <!-- </form> -->
+</div>

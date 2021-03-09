@@ -1,0 +1,133 @@
+<div class="nohdmenus">
+    <app-headerloginbackbtn></app-headerloginbackbtn>
+</div>
+<div class="venuslidersectionsd manageslid editsdelbts">
+    <section id="demos" class="agentssliders">
+       <div class="featrevts spcldtls">
+          <div class="funthumbs">
+          </div>
+       </div>
+  
+       <!-- <div class="owl-carousel jobavails owl-theme" *ngIf="venueDetail.venueImages">
+          <div class="item" *ngFor="let item of venueDetail.venueImages ;let i =index">
+             <div class="funthumbs">
+                <div class="thumbareasupd">
+                   <img src="{{item?.image}}">
+                </div>
+             </div>
+          </div>
+       </div> -->
+       <div *ngIf="venueDetail">
+            <owl-carousel
+                [options]="{items: 1, dots: false, nav: true}"
+                [items]="venueDetail.venueImages"
+                [carouselClasses]="['owl-theme', 'sliding']">
+                <div class="item" *ngFor="let item of venueDetail.venueImages ;let i =index">
+                    <div class="funthumbs">
+                        <div class="thumbareasupd">
+                            <img src="{{item?.image}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="item" *ngIf="venueDetail?.venueImages.length == 0">
+                    <div class="funthumbs">
+                        <div class="thumbareasupd">
+                            <img src="./assets/img/imageoneev.jpg">
+                        </div>
+                    </div>
+                </div>
+            </owl-carousel>
+        </div>
+      </section>
+</div>
+
+<div class="clubinfos bgachanges">
+    <div class="main-containersite">
+        <div class="clubshare editableparts">
+            <div class="dtaclub">
+                <h4>{{venueDetail?.venueName}}</h4>
+                <p><img src="./assets/img/loc.png"> {{venueDetail?.address}}</p>
+            </div>
+            <div class="opendtaclbs">
+                <div class="centerdropsd">
+                    <div class="dropicoshw" *ngIf="venueDetail?.venueType != 'partyBus&LimoHire'">
+                        <img src="./assets/img/clco.png">
+                        <p class="oprnstastgr"> 
+                            <span class="opennowgrp" *ngIf="venueDetail?.isOpen == true">Open Now </span> 
+                            <span class="closenpows" *ngIf="venueDetail?.isOpen == false">Closed Now</span> 
+                            <mat-select class="shrgtson">
+                                <mat-option *ngFor="let time of venueDetail?.venueOpenningAndClosingTime">{{time?.day}} ({{time?.openingTime}}-{{time?.closingTime}})</mat-option>
+                                <mat-option *ngFor="let time of closedDay">{{time}} (Closed)</mat-option>
+                            </mat-select>
+                            <span class="statsusoneonly" >{{selected}}</span> 
+                        </p>
+                        <p class="closenpows" *ngIf="venueDetail?.venueOpenningAndClosingTime.length == 0">
+                            <span class="closenpows" style="width: 100%; text-align: center;">Closed Today</span>
+                        </p>
+                    </div>
+    
+                    <div class="dropicoshw" *ngIf="venueDetail?.venueType == 'club&Bars' || venueDetail?.venueType == 'play&Drinks'">
+                        <img src="./assets/img/clcokha.png">          
+                        <p>Happy Hours 
+                        <span *ngIf="venueDetail?.happyHoursOpenningAndClossing.length == 0">No happy Hours</span>
+                        <mat-select class="shrgtson" *ngIf="venueDetail?.happyHoursOpenningAndClossing.length >0">
+                            <mat-option *ngFor="let time of venueDetail?.happyHoursOpenningAndClossing; let i =index">
+                                {{time.day}} ({{time.openingTime}} - {{time.closingTime}})</mat-option>
+                        </mat-select>
+                        <span class="statsusoneonly" >{{selected1}}</span> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="clunbamenties">
+                <h4>Amenities</h4>
+                <div class="amnsets blackchecks">
+                    <ul>
+                        <li *ngFor="let item of sortAmenities">
+                            <p ><img src="./assets/img/{{item.image}}"> {{item.text}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="abuts">
+                <h4>About</h4>
+                <p>{{venueDetail?.description}}</p>
+            </div>
+
+            <div class="socialedishowns">
+                <div class="row">
+
+                    <div class="col-md-4" *ngIf="venueDetail?.faceBookLink">
+                        <div class="socialgrids fbdr">
+                            <img src="./assets/img/faceico.png">
+                            <p>{{venueDetail?.faceBookLink}}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" *ngIf="venueDetail?.instagramLink">
+                        <div class="socialgrids instabdr">
+                            <img src="./assets/img/insta.png">
+                            <p>{{venueDetail?.instagramLink}}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" *ngIf="venueDetail?.websiteLink">
+                        <div class="socialgrids formabdr">
+                            <img src="./assets/img/forma.png">
+                            <p>{{venueDetail?.websiteLink}}</p>
+                        </div>
+                    </div>
+
+                    <div class="setformsicos manageven">
+                        <button class="yellowbtsshw" mat-button [routerLink]="['/owners-manage/editvenues/', venueDetail?._id]"><img src="./assets/img/editpencd.png">Edit</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<app-footerowner></app-footerowner>

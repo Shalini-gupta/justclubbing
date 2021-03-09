@@ -1,0 +1,316 @@
+<app-clubheader-home></app-clubheader-home>
+
+<div class="sldhome">
+
+    <div class="serachsliders">
+        <h4>Find best offers running on venues around Australia</h4>
+        <form name="searchForm" #searchForm="ngForm" (ngSubmit)="onSearch()">
+            <div class="designboxsd">
+                <div class="srcdins">
+                    <mat-icon matPrefix>search</mat-icon>
+                    <input type="search" name="search" [(ngModel)]="searchText" placeholder="Search venues and events in your city...">
+                </div>
+                <button mat-button [disabled]="!searchForm.form.valid"  >Search</button>
+                <!-- <button mat-button (messageEvent)="messageEvent($event)">Search</button> -->
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="eventssections">
+    <div class="main-containersite">
+        <div class="eventssetsdis">
+            <div class="viewhdand-bts">
+                <h6 class="main-headnorms">Clubs and Bars</h6>
+                <button mat-button class="yellowbtsshw" (click)="updateValue()"  [routerLink]="['/venues', 'club&Bars']">View All</button>
+            </div>
+
+            <div class="evtallgrid">
+                <!-- <app-clubAndBar [data]="posts" [model]="parentModel"></app-clubAndBar> -->
+                <div class="gridcommn" *ngFor="let data of venues?.clubVenueList">
+                    <div class="featrevts spcldtls">
+                        <div class="funthumbs">
+                            <div class="recbtns" *ngIf="data.recommendedStatus == true">
+                                <img src="./assets/img/thub.png">
+                                <p>Recommended</p>
+                            </div>
+                
+                            <div class="openstats" *ngIf="data.isHappyHours">
+                                <img src="./assets/img/timing.png">
+                            </div>
+                
+                            <div class="Times">
+                                <p class="oposde" *ngIf="data.isOpen == true"> Open Now
+                                    <span *ngIf="data.openingTime && data.closingTime">{{data?.openingTime}} To {{data?.closingTime}} </span>
+                                </p>
+                                <p class="closednos" *ngIf="data.venueOpenningAndClosingTime.length == 0"> Closed Today {{data.openingTime}}
+                                </p>
+                                <p class="closednos" *ngIf="data.venueOpenningAndClosingTime.length != 0 && data.isOpen == false"> Closed Now
+                                    <span *ngIf="data.openingTime && data.closingTime">{{data?.openingTime}} To {{data?.closingTime}} </span>
+                                </p>
+                            </div>
+                
+                            <div  class="thumbareasupd" [routerLink]="['/venuesdetail', data._id]">
+                                <img *ngIf="data?.venueImages.length> 0" src="{{data?.venueImages[0]?.image}}">
+                                <img *ngIf="data?.venueImages.length == 0 " src="./assets/img/imageoneev.jpg">
+                            </div>
+                        </div>
+                
+                        <div class="evtdtsl">
+                            <h5 [routerLink]="['/venuesdetail', data._id]">{{data?.venueName}}</h5>
+                            <div class="clubspecific">
+                                <ul>
+                                    <li *ngIf="data.smokingArea"><img src="./assets/img/cigrates.png"></li>
+                                    <li *ngIf="data.igbt"><img src="./assets/img/flagshw.png"></li>
+                                    <li *ngIf="data.adult"><img src="./assets/img/strips.png"></li>
+                                    <li *ngIf="data.liveMusic"><img src="./assets/img/sing.png"></li>
+                                    <li *ngIf="data.parking && !data.smokingArea"><img src="./assets/img/park.png"></li>
+                                    <li *ngIf="data.cockTailsAvailable && !data.igbt"><img src="./assets/img/cocktail.png"></li> 
+                                    <li *ngIf="data.happyHours && !data.adult"><img src="./assets/img/happuhr.png"></li>
+                                    <li *ngIf="data.foodAvailable && !data.liveMusic"><img src="./assets/img/spoonfd.png"></li>
+                                </ul>
+                            </div>
+                            <div class="imglcs">
+                                <img src="./assets/img/loc.png">
+                                <p>{{data?.address}}</p>
+                            </div>
+                        </div>
+                    </div>      
+                </div>
+            </div>
+        </div>
+
+        <div class="eventssetsdis">
+            <div class="viewhdand-bts">
+                <h6 class="main-headnorms">Wedding & Function Halls</h6>
+                <!-- <button mat-button class="yellowbtsshw" [routerLink]="['/weddingfunction']">View All</button> -->
+                <button mat-button class="yellowbtsshw"  (click)="updateValue()"  [routerLink]="['/venues', 'party&WeddingHalls']">View All</button>
+            </div>
+
+            <div class="evtallgrid">
+                <div class="gridcommn" *ngFor="let data of venues?.weddingVenueList">
+                    <div class="featrevts spcldtls">
+                        <div class="funthumbs">
+                            <div class="recbtns" *ngIf="data.recommendedStatus == true">
+                                <img src="./assets/img/thub.png">
+                                <p>Recommended</p>
+                            </div>
+                
+                            <div  class="thumbareasupd" [routerLink]="['/venuesdetail', data._id]">
+                                <img *ngIf="data?.venueImages.length> 0" src="{{data?.venueImages[0]?.image}}">
+                                <img *ngIf="data?.venueImages.length == 0 " src="./assets/img/imageoneev.jpg">
+                
+                            </div>
+                        </div>
+                
+                        <div class="evtdtsl">
+                            <h5 [routerLink]="['/venuesdetail', data._id]">{{data?.venueName}}</h5>
+                            <div class="imglcs">
+                                <img src="./assets/img/loc.png">
+                                <p>{{data?.address}}</p>
+                            </div>
+                        </div>
+                    </div>      
+                </div>
+            </div>
+        </div>
+
+        <div class="eventssetsdis">
+            <div class="viewhdand-bts">
+                <h6 class="main-headnorms">Party bus, Limo & Cruise</h6>
+                <!-- <button mat-button class="yellowbtsshw" [routerLink]="['/weddingfunction']">View All</button> -->
+                <button mat-button class="yellowbtsshw"  (click)="updateValue()"  [routerLink]="['/venues', 'partyBus&LimoHire']">View All</button>
+            </div>
+
+            <div class="evtallgrid">
+                <div class="gridcommn" *ngFor="let data of venues?.busLimoVenueList">
+                    <div class="featrevts spcldtls">
+                        <div class="funthumbs">
+                            <div class="recbtns" *ngIf="data.recommendedStatus == true">
+                                <img src="./assets/img/thub.png">
+                                <p>Recommended</p>
+                            </div>
+                
+                            <div  class="thumbareasupd" [routerLink]="['/venuesdetail', data._id]">
+                                <img *ngIf="data?.venueImages.length> 0" src="{{data?.venueImages[0]?.image}}">
+                                <img *ngIf="data?.venueImages.length == 0 " src="./assets/img/imageoneev.jpg">
+                
+                            </div>
+                        </div>
+                
+                        <div class="evtdtsl">
+                            <h5 [routerLink]="['/venuesdetail', data._id]">{{data?.venueName}}</h5>
+                            <div class="imglcs">
+                                <img src="./assets/img/loc.png">
+                                <p>{{data?.address}}</p>
+                            </div>
+                        </div>
+                    </div>      
+                </div>
+            </div>
+        </div>
+
+        <div class="eventssetsdis">
+            <div class="viewhdand-bts">
+                <h6 class="main-headnorms">Play & Drinks</h6>
+                <button mat-button class="yellowbtsshw" (click)="updateValue()" [routerLink]="['/venues', 'play&Drinks']">View All</button>
+            </div>
+
+            <div class="evtallgrid">
+                <div class="gridcommn" *ngFor="let data of venues?.playDrinkVenueList">
+                    <div class="featrevts spcldtls">
+                        <div class="funthumbs">
+                            <div class="recbtns" *ngIf="data.recommendedStatus == true">
+                                <img src="./assets/img/thub.png">
+                                <p>Recommended</p>
+                            </div>
+                
+                            <div  class="thumbareasupd" [routerLink]="['/venuesdetail', data._id]">
+                                <img *ngIf="data?.venueImages.length> 0" src="{{data?.venueImages[0]?.image}}">
+                                <img *ngIf="data?.venueImages.length == 0 " src="./assets/img/imageoneev.jpg">
+                            </div>
+                        </div>
+                
+                        <div class="evtdtsl">
+                            <h5 [routerLink]="['/venuesdetail', data._id]">{{data?.venueName}}</h5>
+                            <div class="imglcs">
+                                <img src="./assets/img/loc.png">
+                                <p>{{data?.address}}</p>
+                            </div>
+                        </div>
+                    </div>      
+                </div>
+            </div>
+        </div>
+
+        <div class="eventssetsdis">
+            <div class="viewhdand-bts">
+                <h6 class="main-headnorms">Tattoo & Piercing</h6>
+                <button mat-button class="yellowbtsshw"  (click)="updateValue()"  [routerLink]="['/venues', 'tattoo&Piercing']">View All</button>
+            </div>
+
+            <div class="evtallgrid">
+                <div class="gridcommn" *ngFor="let data of venues?.tattooVenueList">
+                    <div class="featrevts spcldtls">
+                        <div class="funthumbs">
+                            <div class="recbtns" *ngIf="data.recommendedStatus == true">
+                                <img src="./assets/img/thub.png">
+                                <p>Recommended</p>
+                            </div>
+                
+                            <div  class="thumbareasupd" [routerLink]="['/venuesdetail', data._id]">
+                                <img *ngIf="data?.venueImages.length> 0" src="{{data?.venueImages[0]?.image}}">
+                                <img *ngIf="data?.venueImages.length == 0 " src="./assets/img/imageoneev.jpg">
+                
+                            </div>
+                        </div>
+                
+                        <div class="evtdtsl">
+                            <h5 [routerLink]="['/venuesdetail', data._id]">{{data?.venueName}}</h5>
+                            <div class="imglcs">
+                                <img src="./assets/img/loc.png">
+                                <p>{{data?.address}}</p>
+                            </div>
+                        </div>
+                    </div>      
+                </div>
+            </div>
+        </div>
+
+        <div class="eventssetsdis">
+            <div class="viewhdand-bts">
+                <h6 class="main-headnorms">Live Offers</h6>
+                <button mat-button class="yellowbtsshw" (click)="updateValue()"  [routerLink]="['/liveoffers']">View All</button>
+            </div>
+
+            <div class="evtallgrid">
+                <div class="gridcommn" *ngFor="let offer of offers">
+                    <div class="ticketsvaries" >
+                        <div class="ticinfoshowms">
+                            <div class="vcrinfos">
+                                <p *ngIf="offer.offerType == 'numberBased'">Voucher Left {{offer?.vouchersNumber - offer?.soldCount}}</p>
+                                <button mat-button class="whtbtns" *ngIf="offer.offerType == 'numberBased'" (click)="redeemDialog(offer._id, offer.offerTitle, offer.veneuData.venueName)">Reedem Now</button>
+                                <button mat-button *ngIf="offer.reedemStatus && offer.offerType == 'numberBased'" class="whtbtns" >Reedemed</button>
+
+                                <p class="tmtmr" *ngIf="offer.offerType == 'timeBased'">
+                                    <app-liveofferdata [data]="{'fromDate': offer.fromDate,toDate: offer.toDate, timeDurationFrom: offer.timeDurationFrom, timeDurationTill: offer.timeDurationTill}"></app-liveofferdata>
+                                    <app-redeembutton [data]="{'fromDate': offer.fromDate,toDate: offer.toDate, timeDurationFrom: offer.timeDurationFrom, timeDurationTill: offer.timeDurationTill}" [data1]="{'reedemStatus': offer.reedemStatus, offerId: offer._id, offerTitle: offer.offerTitle, venueName: offer.veneuData.venueName}"></app-redeembutton>
+                                </p>
+                            </div>
+                            <div class="lcdistant">
+                                <img src="./assets/img/locwht.png">
+                                <p>{{(offer?.dist?.calculated / 1000).toFixed(1)}} km</p>
+                            </div>
+
+                            <div class="clubinfoname">
+                                <p>{{offer?.veneuData?.venueName}}</p>
+                                <strong>{{offer?.offerTitle}}</strong>
+                            </div>
+                        </div>
+                        </div>
+                 </div>
+            </div>
+        </div>
+
+        <div class="eventssetsdis">
+            <div class="viewhdand-bts">
+                <h6 class="main-headnorms">Events</h6>
+                <button mat-button class="yellowbtsshw" [routerLink]="['/events']">View All</button>
+            </div>
+
+            <div class="evtallgrid">
+                <p >No Events Found</p>
+                <!-- <app-otherTiles></app-otherTiles>
+                <app-otherTiles></app-otherTiles>
+                <app-otherTiles></app-otherTiles> -->
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="eventbanners">
+    <div class="banncts animated  animated fadeInLeft">
+        <h5>Create offers and deals to promote venue</h5>
+        <button mat-button class="yellowbtsshw" (click)="listVenueCheck()">Add Your Venue</button>
+    </div>
+</div>
+
+<div class="citienears">
+    <div class="main-containersite">
+        <h3>Cities Near Me</h3>
+        <div class="locationgrids">
+            <ul>
+                <li><a href="#">Adelaide</a></li>
+                <li><a href="#">Brisbane</a></li>
+                <li><a href="#">Gold Coast</a></li>
+                <li><a href="#">Melbourne</a></li>
+                <li><a href="#">Perth</a></li>
+                <li><a href="#">Sydney</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div class="appdownlod">
+    <div class="aboveblank">
+        <div class="downloadappct animated  toponemy slideInRight">
+            <h2>Download the app</h2>
+            <div class="appbtpla">
+                <a href="#"><img src="./assets/img/gplaybtn.png"></a>
+                <a href="#"><img src="./assets/img/appplaybtn.png"></a>
+            </div>
+
+        </div>
+
+        <div class="mobilebga">
+            <img src="./assets/img/mobilebga.png">
+        </div>
+    </div>
+</div>
+
+<app-news-subscribe></app-news-subscribe>
+
+
+<app-webfooter></app-webfooter>

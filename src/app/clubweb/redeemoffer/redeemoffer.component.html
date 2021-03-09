@@ -1,0 +1,26 @@
+<p class="crosicos" type="text" mat-dialog-close> X</p>
+
+<div class="binsdds redemsets">
+
+    <div class="offshwsred">
+        <p>{{data.venue}}</p>
+        <h3>{{data.offer}}</h3>
+        <img src="./assets/img/coupon.png">
+    </div>
+
+    <form [formGroup]="redeemForm" (ngSubmit)="redeemSubmit()">
+        <div class="formacts">
+            <p>Please ask {{data.venue}} staff to enter their PIN</p>
+            <div class="fourtxtfd">
+                <input type="text" maxlength="1" formControlName="input1">
+                <input type="text" maxlength="1" formControlName="input2">
+                <input type="text" maxlength="1" formControlName="input3">
+                <input type="text" maxlength="1" formControlName="input4">
+            </div>
+        </div>
+        <div class="butcentertickt"> 
+            <button type="submit" [disabled]="!redeemForm.valid" mat-button class="yellowbtsshw">Done</button>
+            <p class="ofsubrule">Offers are subject to <span (click)="rulesUse()">Rules of Use</span></p>
+        </div> 
+    </form>
+</div>

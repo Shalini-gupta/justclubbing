@@ -1,0 +1,43 @@
+.Rates{
+    margin: -15px 0 8px 0;
+}
+
+.Rates ul{
+    display: inline-block;
+    margin: 0 10px 0px 0;
+}
+.Rates ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 6px 0 0;
+}
+.Rates ul li.active{
+    color: #feca05;
+}
+
+.Rates p{
+    display: inline-block;
+    color: #000;
+    font-weight: 500;
+}
+
+.wishshwms ul li share-button{
+    background-repeat: no-repeat;
+    display: unset;
+    align-items: inherit;
+    background-size: contain;
+    background-position: 4px 0;
+}
+
+.ratingreviewsclienst {
+    position: relative;
+    margin: 0 0 50px 0;
+}
+
+
+
+
+
+
+
+

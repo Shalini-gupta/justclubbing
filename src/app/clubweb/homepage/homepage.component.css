@@ -1,0 +1,37 @@
+.Times{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 9;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+.Times p{
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 19px;
+    text-align: right;
+}
+.Times p span{
+    display: block;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.ThumbImages{
+    height: 210px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.ThumbImages:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 55px;
+    z-index: 1;
+}
